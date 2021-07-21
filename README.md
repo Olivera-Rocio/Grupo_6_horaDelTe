@@ -2,9 +2,11 @@
 Los productos que venderemos serán principalmente diferentes tipos de Tazas como así también la venta de productos hechos para "La hora del Té" como una gran variedad de Té en saquitos, teteras, desayunadores para cama, entre otras cosas.
 Nuestra audiencia será generalmente para todo público ya que con las idea de las tazas personalizadas es aplicable a cualquier tipo de edad, aunque otro de nuestros enfoques es darle una visión más moderna a los diseños que se adapten a la vida cotidiana de los jóvenes.
 
-Integrantes del grupo:
+___
+##  Integrantes del grupo:
 
 Valentina Alegre
+
 Ramsés Adorno
 28 años, Residiendo actualmente en Lomas de Zamora, sur de Gran Buenos Aires.
 Productor Musical y emprendedor. Interesado en el diseño gráfico/producción audiovisual, apasionado por la música.
@@ -17,8 +19,12 @@ Interesada en la música y en el baile.
 
 Mariano Javier Virnik
 
+Natalia Escobar,
+18 años.
+Estudiante de Desarrollo web Full stack.
+Mis intereses residen en el canto y dibujo, además de la incorporación de nuevos conocimientos y herramientas.
 
-
+___
 
 Mas allá de que nuestra idea es hacer algo distinto nos inspiramos también en otros sitios tales como :
 
