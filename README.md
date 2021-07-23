@@ -6,6 +6,7 @@ ___
 ##  Integrantes del grupo:
 
 Valentina Alegre
+21 años, vivo en José C. Paz. Estudiante en Tecnicatura Universitaria en Informática.
 
 Ramsés Adorno
 28 años, Residiendo actualmente en Lomas de Zamora, sur de Gran Buenos Aires.
