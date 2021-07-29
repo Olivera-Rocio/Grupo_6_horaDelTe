@@ -33,19 +33,19 @@ ___
 ## Sitios de Referencia:
 
 - Mas allá de que nuestra idea es hacer algo distinto nos inspiramos también en otros sitios tales como:
-[Tienda de Sol Hirs]: https://www.solhirs.com/ :
+Tienda de Sol Hirs: https://www.solhirs.com/ 
 ● Por los clientes a los que apuntan que no son los habituales al mercado cotidiano de tazas, ya que a través de frases de uso contemporáneo como diseños originales, llama la atención de un público joven con gran potencial de compra de estos productos.
 
-[Mirakebueno ]: https://www.mirakebueno.com.ar/ :
+Mirakebueno: https://www.mirakebueno.com.ar/ 
 ● Por la gran variedad de productos que ofrecen se adapta a algunas de nuestras ideas que queremos implementar en la página.
 
-[Ines House]: https://ineshouse.com.ar/ :
+Ines House: https://ineshouse.com.ar/ 
 ● Por la estética, colores y las tipografías que presentan, así como el diseño en general se puede adaptar al proyecto en general.
 
-[Deco Tazas]: https://www.decotazas.com/ :
+Deco Tazas: https://www.decotazas.com/ 
 ● Por las animaciones y el diseño en general de las funciones son llamativos a comparación de las otras páginas de referencias que son más estáticas.
 
-[Ceramicas Nachas]: http://ceramicasnacha.com.ar/ :
+Ceramicas Nachas: http://ceramicasnacha.com.ar/ 
 ● Por la variedad de otros productos aparte de las tazas que ofrecen.
 
 
