@@ -1,6 +1,5 @@
 # Grupo_6_horaDelTe 
-
-https://raw.githubusercontent.com/Olivera-Rocio/Grupo_6_horaDelTe/main/design/Logo.jpeg
+![Logo](https://github.com/Olivera-Rocio/Grupo_6_horaDelTe/blob/main/design/Logo.jpeg)
 
 
 Los productos que venderemos serán principalmente diferentes tipos de Tazas como así también la venta de productos hechos para "La hora del Té" como una gran variedad de Té en saquitos, teteras, desayunadores para cama, entre otras cosas.
@@ -55,5 +54,5 @@ Prompt
 
 Paleta de Colores : 
 
-https://raw.githubusercontent.com/Olivera-Rocio/Grupo_6_horaDelTe/main/design/Paleta%20de%20Colores.jpeg
+![Paleta De Colores](https://github.com/Olivera-Rocio/Grupo_6_horaDelTe/blob/main/design/Paleta%20de%20Colores.jpeg)
 
