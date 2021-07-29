@@ -1,4 +1,4 @@
-##HORA DE TÉ##
+##HORA DEl TÉ##
 Tipografias : 
 Roboto Condensed
 Roboto
