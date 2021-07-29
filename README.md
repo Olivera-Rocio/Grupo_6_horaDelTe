@@ -32,7 +32,7 @@ Natalia Escobar:
 ___
 ## Sitios de Referencia:
 
-- Mas allá de que nuestra idea es hacer algo distinto nos inspiramos también en otros sitios tales como:
+Mas allá de que nuestra idea es hacer algo distinto nos inspiramos también en otros sitios tales como:
 Tienda de Sol Hirs: https://www.solhirs.com/ 
 ● Por los clientes a los que apuntan que no son los habituales al mercado cotidiano de tazas, ya que a través de frases de uso contemporáneo como diseños originales, llama la atención de un público joven con gran potencial de compra de estos productos.
 
