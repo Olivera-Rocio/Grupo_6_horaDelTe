@@ -1,4 +1,8 @@
-# Grupo_6_horaDelTe
+# Grupo_6_horaDelTe 
+
+https://raw.githubusercontent.com/Olivera-Rocio/Grupo_6_horaDelTe/blob/main/design/Logo.jpeg
+
+
 Los productos que venderemos serán principalmente diferentes tipos de Tazas como así también la venta de productos hechos para "La hora del Té" como una gran variedad de Té en saquitos, teteras, desayunadores para cama, entre otras cosas.
 Nuestra audiencia será generalmente para todo público ya que con las idea de las tazas personalizadas es aplicable a cualquier tipo de edad, aunque otro de nuestros enfoques es darle una visión más moderna a los diseños que se adapten a la vida cotidiana de los jóvenes.
 
@@ -49,4 +53,7 @@ Roboto Condensed
 Roboto
 Prompt
 
-Logo y Paleta de Colores incluidos en la carpeta /design .  
+Paleta de Colores : 
+
+https://raw.githubusercontent.com/Olivera-Rocio/Grupo_6_horaDelTe/blob/main/design/Paleta%20de%20Colores.jpeg
+
