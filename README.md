@@ -2,32 +2,33 @@
 ![Logo](https://github.com/Olivera-Rocio/Grupo_6_horaDelTe/blob/main/design/Logo.jpeg)
 
 
-Los productos que venderemos serán principalmente diferentes tipos de Tazas como así también la venta de productos hechos para "La hora del Té" como una gran variedad de Té en saquitos, teteras, desayunadores para cama, entre otras cosas.
-Nuestra audiencia será generalmente para todo público ya que con las idea de las tazas personalizadas es aplicable a cualquier tipo de edad, aunque otro de nuestros enfoques es darle una visión más moderna a los diseños que se adapten a la vida cotidiana de los jóvenes.
+Hola!! Bienvenidos a "La hora del Té". Los productos que se encuentran en nuestro sitio están orientados a la hora más cálida del día, el Desayuno o Merienda. La gran variedad de diseños de nuestros productos, se adaptan a la vida cotidiana desde la visión más antigua a la más moderna y nos permiten dirigirnos a todo tipo de público. Por lo tanto, aquí podrán encontrar diferentes tipos de Tazas (de cerámica, de porcelana, de vidrio, personalizadas, etc.) como así también la venta de una gran variedad de Té en saquitos, teteras, desayunadores para cama y demás accesorios.
 
-___
-##  Integrantes del grupo:
+Así como contamos con un lugar físico para la compra y retiro de nuestros productos, también ofrecemos un excelente servicio de envió y entrega a domicilio a lo largo de todo el país.
 
-Valentina Alegre
-21 años, vivo en José C. Paz. Estudiante en Tecnicatura Universitaria en Informática.
+Integrantes del grupo:
 
-Ramsés Adorno
-28 años, Residiendo actualmente en Lomas de Zamora, sur de Gran Buenos Aires.
-Productor Musical y emprendedor. Interesado en el diseño gráfico/producción audiovisual, apasionado por la música.
+Valentina Alegre:
+-21 años, vivo en José C. Paz.
+-Estudiante en Tecnicatura Universitaria en Informática.
 
-Magali Olivera
-27 años.
-Secretaria administrativa.
-Estudiante de programación web y Profesorado de danzas con orientación en folklore.
-Interesada en la música y en el baile.
+Ramsés Adorno:
+-28 años, Residiendo actualmente en Lomas de Zamora, sur de Gran Buenos Aires.
+-Productor Musical y emprendedor.
+-Interesado en el diseño gráfico/producción audiovisual, apasionado por la música.
 
-Mariano Javier Virnik
+Magali Olivera:
+-27 años. Vivo en Joaquín V. González-Salta.
+-Secretaria administrativa.
+-Estudiante de programación web y Profesorado de danzas con orientación en folklore.
+-Interesada en la música y en el baile.
 
-Natalia Escobar,
-18 años.
-Estudiante de Desarrollo web Full stack.
-Mis intereses residen en el canto y dibujo, además de la incorporación de nuevos conocimientos y herramientas.
+Mariano Javier Virnik:
 
+Natalia Escobar:
+-18 años.
+-Estudiante de Desarrollo web Full stack.
+-Mis intereses residen en el canto y dibujo, además de la incorporación de nuevos conocimientos y herramientas
 ___
 
 Mas allá de que nuestra idea es hacer algo distinto nos inspiramos también en otros sitios tales como :
