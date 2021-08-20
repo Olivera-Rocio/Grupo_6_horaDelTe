@@ -79,6 +79,7 @@ header nav ul.login-bar{
 }
 header div nav ul li i{
     padding: 0 3px;
+    color: var(--GrisMedio);
 }
 
 /*Parte inferior del header: menu hamburguesa*/
@@ -152,9 +153,12 @@ header div div.burger-menu{
         display: flex;
         flex-direction: row;
     }
+    header div nav ul li i{
+        color: var(--Negro);
+    }
 } 
 
-/*tablet*/
+/*desktop*/
 @media (min-width: 1024px){
     header div.caja-superior {
         justify-content: space-around;

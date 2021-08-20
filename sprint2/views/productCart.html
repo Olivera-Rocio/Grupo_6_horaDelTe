@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>carrito</title>
+    <title>Carrito</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 rel="stylesheet" />
 </head>
-<body>
+<body class="carrito">
 
     <header>
         <div class="caja-superior">
@@ -41,131 +41,147 @@ rel="stylesheet" />
     </header>
 
     <main>
+
         <section class="caja">
+
             <h2>Tu pedido</h2>
-            <h4><i class="fas fa-angle-left"></i>Continuar comprando</h4>
-            <section class="caja-pedido">
-                <p>Producto</p>
+
+            <a href="/"><i class="fas fa-angle-left"></i>Continuar comprando</a>
+            
+            <h3>Producto</h3>
+
+            <section class="pedido">
                 <article>
-                    <a href="Eliminar">Eliminar<i class="fas fa-trash-alt"></i></a>
-                    <img class="foto-producto" src="/img/Mate-Olaf.jpg" alt="">
-                    <p class="nombre-producto">Mate Olaf</p>
-                    <p class="cantidad-producto">Cantidad:</p>
-                    <div class="caja-contador">
-                        <button type="button" class="caja-resta">
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <div class="caja-numero">
-                            <input class="numero" type="number" value="1">
-                        </div>
-                        <button type="button" class="caja-suma">
-                            <i class="fas fa-plus"></i>
-                        </button>
+                    <div class="caja-eliminar">
+                        <button type="submit">Eliminar<i class="fas fa-trash-alt"></i></button>
                     </div>
-                    <p class="precio-producto">Precio:</p>
-                    <p class="valor-precio">$0,00</p>
-                    <p class="subtotal-producto">Sub total:</p>
-                    <p class="valor-subtotal">$0,00</p>
+                    <div class="caja-img-nombre">
+                        <img src="/img/Mate-Olaf.jpg" width="100" height="100" alt="">
+                        <p >Mate-Olaf</p>
+                    </div>
+                    <div class="info">
+                        <div class="cantidad-contador">
+                            <p class="cantidad">Cantidad:</p>
+                            <div class="contador">
+                                <button type="button">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <div class="numero">
+                                    <input type="number" value="1">
+                                </div>
+                                <button type="button">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="caja-precio">
+                            <p>Precio:</p>
+                            <p>$0,00</p>
+                        </div>
+                        <div class="caja-subtotal">
+                            <p>Sub total:</p>
+                            <p>$0,00</p>
+                        </div>
+                    </div>
+                </article> 
+                <article>
+                    <div class="caja-eliminar">
+                        <button type="submit">Eliminar<i class="fas fa-trash-alt"></i></button>
+                    </div>
+                    <div class="caja-img-nombre">
+                        <img src="/img/Taza-Chanchito.jpg" width="100" height="100" alt="">
+                        <p>Taza-Chanchito</p>
+                    </div>
+                    <div class="info">
+                        <div class="cantidad-contador">
+                            <p class="cantidad">Cantidad:</p>
+                            <div class="contador">
+                                <button type="button">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <div class="numero">
+                                    <input type="number" value="1">
+                                </div>
+                                <button type="button">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="caja-precio">
+                            <p>Precio:</p>
+                            <p>$0,00</p>
+                        </div>
+                        <div class="caja-subtotal">
+                            <p>Sub total:</p>
+                            <p>$0,00</p>
+                        </div>
+                    </div>
                 </article>
                 <article>
-                    <a href="Eliminar">Eliminar<i class="fas fa-trash-alt"></i></a>
-                    <img class="foto-producto" src="/img/Taza-Chanchito.jpg" alt="">
-                    <p class="nombre-producto">Taza-Chanchito</p>
-                    <p class="cantidad-producto">Cantidad:</p>
-                    <div class="caja-contador">
-                        <button type="button" class="caja-resta">
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <div class="caja-numero">
-                            <input class="numero" type="number" value="1">
-                        </div>
-                        <button type="button" class="caja-suma">
-                            <i class="fas fa-plus"></i>
-                        </button>
+                    <div class="caja-eliminar">
+                        <button type="submit">Eliminar<i class="fas fa-trash-alt"></i></button>
                     </div>
-                    <p class="precio-producto">Precio:</p>
-                    <p class="valor-precio">$0,00</p>
-                    <p class="subtotal-producto">Sub total:</p>
-                    <p class="valor-subtotal">$0,00</p>
-                </article>
-                <article>
-                    <a href="Eliminar">Eliminar<i class="fas fa-trash-alt"></i></a>
-                    <img class="foto-producto" src="/img/Tetera-Sra Potss.jpg" alt="">
-                    <p class="nombre-producto">Tetera-Sra Potss</p>
-                    <p class="cantidad-producto">Cantidad:</p>
-                    <div class="caja-contador">
-                        <button type="button" class="caja-resta">
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <div class="caja-numero">
-                            <input class="numero" type="number" value="1">
-                        </div>
-                        <button type="button" class="caja-suma">
-                            <i class="fas fa-plus"></i>
-                        </button>
+                    <div class="caja-img-nombre">
+                        <img src="/img/Tetera-Sra Potss.jpg" width="100" height="100" alt="">
+                        <p>Tetera-Sra Potss</p>
                     </div>
-                    <p class="precio-producto">Precio:</p>
-                    <p class="valor-precio">$0,00</p>
-                    <p class="subtotal-producto">Sub total:</p>
-                    <p class="valor-subtotal">$0,00</p>
-                </article>
-                <article>
-                    <a href="Eliminar">Eliminar<i class="fas fa-trash-alt"></i></a>
-                    <img class="foto-producto" src="/img/Azucarera-PatoLucas.jpg" alt="">
-                    <p class="nombre-producto">Azucarera-PatoLucas</p>
-                    <p class="cantidad-producto">Cantidad:</p>
-                    <div class="caja-contador">
-                        <button type="button" class="caja-resta">
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <div class="caja-numero">
-                            <input class="numero" type="number" value="1">
+                    <div class="info">
+                        <div class="cantidad-contador">
+                            <p class="cantidad">Cantidad:</p>
+                            <div class="contador">
+                                <button type="button">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <div class="numero">
+                                    <input type="number" value="1">
+                                </div>
+                                <button type="button">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
                         </div>
-                        <button type="button" class="caja-suma">
-                            <i class="fas fa-plus"></i>
-                        </button>
+                        <div class="caja-precio">
+                            <p>Precio:</p>
+                            <p>$0,00</p>
+                        </div>
+                        <div class="caja-subtotal">
+                            <p>Sub total:</p>
+                            <p>$0,00</p>
+                        </div>
                     </div>
-                    <p class="precio-producto">Precio:</p>
-                    <p class="valor-precio">$0,00</p>
-                    <p class="subtotal-producto">Sub total:</p>
-                    <p class="valor-subtotal">$0,00</p>
                 </article>
             </section>
-            <section class="caja-resumen">
+
+            <section class="resumen">
                 <article>
-                    <div class="titulo-resumen">
-                        <h3>Resumen de tu compra</h3>
-                    </div>
-                    <div class="subtotal-resumen">
-                        <p>Sub total (sin costo de envio):</p>
-                        <p>$0,00</p>
-                    </div>
-                    <div>
-                        <i class="far fa-window-minimize"></i>
-                    </div>
-                    <div class="caja-entrega">
-                        <div class="caja-envio">
+                        <h3 class="titulo">Resumen de la compra</h3>
+                        <div class="subtotal">
+                            <p>SUB TOTAL (sin costo de envío):</p>
+                            <p>$0,00</p>
+                        </div>
+                        <div class="entrega">
                             <p><i class="fas fa-truck"></i>Envío a domicilio:</p>
-                            <p><input type="radio" name="entrega" value="Envío a domicilio" />Correo Argentino-Envío a domicilio</p>
-                            <p class="valor">$0,00</p>
-                        </div>
-                        <div class="caja-retiro">
+                            <div class="caja-envio">
+                                <p class="envio"><input type="radio" name="entrega" value="Envío a domicilio" />Correo Argentino-Envío a domicilio</p>
+                                <p class="valor">$0,00</p>
+                            </div>
                             <p><i class="fas fa-map-marker-alt"></i>Retiro del local:</p>
-                            <p><input type="radio" name="entrega" value="Retiro del local" />Dirección: Av. Siempre Viva 7777, Springfield</p>
+                            <div class="caja-retiro">
+                                <p class="envio"><input type="radio" name="entrega" value="Retiro del local" />Dirección: Av. Siempre Viva 7777, Springfield</p>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <h3>Total:</h3>
-                        <h3>$0,00</h3>
-                    </div>
+                        <div class="total">
+                            <h3>Total:</h3>
+                            <h3>$0,00</h3>
+                        </div>
+                        <div class="compra">
+                            <button type="submit">Realizar compra</button>
+                        </div>
                 </article>
             </section>
-            <section class="caja-compra">
-                <div>
-                    <button type="submit">Realizar compra</button>
-                </div>
-            </section>
+
         </section>
+
     </main>
 
 </body>
