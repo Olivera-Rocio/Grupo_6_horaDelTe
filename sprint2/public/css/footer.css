@@ -1,0 +1,98 @@
+/*Fondo*/
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background:  rgba(247,211,184,1);
+  
+  }
+  
+   
+  footer .footer{
+    max-width: 1350px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  /*Color texto hipervinculos*/ 
+  footer .footer p,a{
+    color: rgb(0, 0, 0);
+  }
+  
+  /*Tamaño fuente*/ 
+  
+  footer .footer .titulofooter{
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-bottom: 16px;
+  
+  }
+  
+  /*espacios*/
+  footer .footer .lower .titulofooter{
+    margin: 24px 0 5px 0;
+  }
+  
+  
+  /*iconos*/ 
+  footer .footer .iconos a{
+    font-size: 16px;
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 5px;
+    border: 2px solid #222222;
+    margin: 30px 5px 0 0;
+    transition: all 0.3s ease;
+  }
+  
+    
+  
+  /*imagen mercado pago*/
+  .mercadopagologo {
+      width: 142px;
+      height: 64px;
+      background: url("/public/images/pngfind.com-mercado-png-4241421.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      top: 104px;
+      left: 593px;
+      overflow: hidden;
+    }
+  
+  
+    
+  @media (max-width:1100px) {
+      footer .footer .medio{
+        padding-left: 0px;
+      }
+    }
+    @media (max-width:950px){
+      footer .footer .caja{
+        width: 50%;
+      }
+      .footer .derecha{
+        margin-top: 40px;
+      }
+    }
+    @media (max-width:560px){
+      footer{
+        position: relative;
+      }
+      footer .footer .caja{
+        width: 100%;
+        margin-top: 30px;
+      }
+      footer .content .medio{
+        padding-left: 0;
+      }
+    }
+  
