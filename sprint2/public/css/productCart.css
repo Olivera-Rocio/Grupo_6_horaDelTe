@@ -309,4 +309,32 @@ main section.caja h3{
 
 }
 
+/*------------desktop-----------------*/
+@media (min-width: 1024px){
+    .carrito main section.caja {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .carrito main section.caja h2 {
+        width: 100%;
+    }
+    .carrito main section.caja a {
+        width: 100%;
+    }
+    .carrito main section.caja h3 {
+        width: 100%;
+    }
+    .carrito main section.caja section.pedido{
+        width: 53%;
+    }
+    .carrito main section.caja section.resumen {
+        width: 45%;
+        height: 290px;
+        margin: 0 10px 0 0;
+    }
+    .carrito main section.resumen article h3.titulo {
+        text-align: center;
+    }
 
+}
