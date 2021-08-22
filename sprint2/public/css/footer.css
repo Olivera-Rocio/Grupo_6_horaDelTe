@@ -1,3 +1,4 @@
+/* ---------------------------------------------------FOOTER*/
 /*Fondo*/
 footer{
     width: 100%;
@@ -5,6 +6,8 @@ footer{
     bottom: 0;
     left: 0;
     background:  rgba(247,211,184,1);
+   
+  
   
   }
   
@@ -95,4 +98,7 @@ footer{
         padding-left: 0;
       }
     }
+  
+  
+  
   
