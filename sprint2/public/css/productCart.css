@@ -1,0 +1,340 @@
+/*------------mobile-----------------*/
+
+ /*contenedor general*/
+.carrito main section.caja{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*titulo*/
+
+.carrito main section.caja h2{
+    margin-left: 20px;
+}
+
+/*volver a inicio*/
+
+.carrito main section.caja a{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--Negro);
+    margin-right: 10px;
+}
+.carrito main section.caja a i{
+    padding: 2px 4px;
+}
+
+/*titulo pedido*/
+
+main section.caja h3{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0px 10px 5px;
+}
+
+/*contenedor general del pedido*/
+
+.carrito main section.pedido article{
+    display: flex;
+    flex-wrap: wrap;
+    /*box-shadow: 0px 0px 8px rgb(100, 100, 100);*/
+    background-color: var(--Rosa);
+    margin: 0 10px 5px;
+    padding: 5px;
+}
+    /*boton eliminar*/
+.carrito main section.pedido article div.caja-eliminar{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.carrito main section.pedido article div.caja-eliminar button{
+    width: 60px;
+    padding: 2px;
+    color: var(--Negro);
+    font-weight: bold;
+    font-size: 10px;
+    border: solid 1px var(--GrisClaro);
+    background-color: var(--Blanco);
+}
+.carrito main section.pedido article div.caja-eliminar button i{
+    margin-left: 5px;
+}
+    /*imagen del pedido*/
+.carrito main section.pedido article div.caja-img{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.carrito main section.pedido article div.caja-img img{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+    /* informacion del pedido*/
+.carrito main section.pedido article div.info{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-self: center;
+}
+.carrito main section.pedido article div.info p{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
+}
+.carrito main section.pedido article div.info div.cantidad-contador{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.carrito main section.pedido article div.info div.cantidad-contador p{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--Negro);
+}
+.carrito main section.pedido article div.info div.cantidad-contador div.contador{
+    display: flex;
+    align-self: center;
+    background-color: var(--GrisClaro);
+}
+.carrito main section.pedido article div.info div.cantidad-contador div.contador button{
+    width: 30px;
+    height: 20px;
+    background-color: var(--Blanco);
+    border: solid 1px var(--GrisClaro);align-self: center;
+}
+.carrito main section.pedido article div.info div.cantidad-contador div.contador button i{
+    color: var(--GrisMedio);
+}
+.carrito main section.pedido article div.info div.cantidad-contador div.contador div.numero{
+    border: solid 1px var(--GrisClaro);
+    
+}
+.carrito main section.pedido article div.info div.cantidad-contador div.contador div.numero input{
+    width: 30px;
+    height: 18px;
+    padding: 0 10px;
+    border: none;
+}
+.carrito main section.pedido article div.info div.caja-precio, div.caja-subtotal{
+    display: flex;
+    justify-content: space-around;
+}
+.carrito main section.pedido article div.info div.caja-precio p{
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--GrisMedio);
+}
+.carrito main section.pedido article div.info div.caja-subtotal p{
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--GrisMedio);
+}
+
+/*resumen del pedido*/
+
+.carrito main section.resumen{
+    background-color: rgb(221, 220, 220);
+    margin: 5px;
+}
+.carrito main section.resumen article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+    /*titulo*/
+.carrito main section.resumen article h3.titulo {
+    text-transform: uppercase;
+    align-self: center;
+    margin-top: 5px;
+}
+    /*sub-total*/
+.carrito main section.resumen article div.subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+    width: 250px;
+    align-self: center;
+}
+.carrito main section.resumen article div.subtotal p{
+    font-size: 12px;
+    color: var(--Negro);
+}
+    /*tipo de entrega*/
+.carrito main section.resumen article div.entrega p{
+    font-size: 12px;
+    color: var(--Negro);
+    margin: 0 10px 5px 10px;
+    padding: 5px;
+}
+.carrito main section.resumen article div.entrega p i{
+    margin: 0 5px;
+}
+.carrito main section.resumen article div.entrega div.caja-envio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 10px 5px 10px;
+    box-shadow: 0px 0px 8px rgb(100, 100, 100);
+}
+.carrito main section.resumen article div.entrega div.caja-envio p.envio{
+    width: 70%;
+    margin: 0;
+    padding: 5px;
+}
+.carrito main section.resumen article div.entrega div.caja-retiro{
+    margin: 0 10px 5px 10px;
+    box-shadow: 0px 0px 8px rgb(100, 100, 100);
+}
+.carrito main section.resumen article div.entrega div.caja-retiro p.envio{
+    margin: 0;
+    padding: 5px;
+}
+.carrito main section.resumen article div.entrega div p.envio input{
+    margin: 0 5px 0 0;
+}
+.carrito main section.resumen article div.entrega div.caja-envio p.valor{
+    width: 50px;
+    align-self: center;
+    margin: 0;
+}
+    /*total*/
+.carrito main section.resumen article div.total{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    
+}
+.carrito main section.resumen article div.total h3{
+    color: var(--GrisObscuro);
+    margin: 10px 0;
+}
+    /*boton compra*/
+.carrito main section.resumen article div.compra{
+    align-self: center;
+}
+.carrito main section.resumen article div.compra button{
+    width: 220px;
+    height: 40px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: solid 2px var(--GrisClaro);
+    background-color: var(--Blanco);
+    color: var(--GrisMedio);
+    margin-bottom: 10px;
+}
+
+    
+/*------------tablet-----------------*/
+@media (min-width: 768px){
+    /*contenedor general del pedido*/
+    .carrito main section.pedido article {
+        height: 200px;
+    }
+    /*imagen del pedido*/
+    .carrito main section.pedido article div.caja-img{
+    width: 30%;
+    }
+    .carrito main section.pedido article div.caja-img img {
+    width: 170px;
+    height: 170px;
+    padding: 0 0 05px;
+    align-self: center;
+    }
+    /* informacion del pedido*/
+    .carrito main section.pedido article div.info{
+    width: 70%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    }
+    .carrito main section.pedido article div.info p{
+        order: -1;
+        width: 100%;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .carrito main section.pedido article div.info div.caja-precio{
+        order: 0;
+        width: 30%;
+        flex-direction: column;
+    }
+    .carrito main section.pedido article div.info div.caja-precio p{
+        font-size: 16px;
+        color: var(--Negro);
+    }
+    .carrito main section.pedido article div.info div.cantidad-contador{
+        order: 1;
+        width: 30%;
+        font-size: 16px;
+    }
+    .carrito main section.pedido article div.info div.cantidad-contador p{
+        font-size: 16px;
+    }
+    .carrito main section.pedido article div.info div.caja-subtotal{
+        order: 2;
+        color: var(--Negro);
+        width: 30%;
+        flex-direction: column;
+        font-size: 16px;
+    }
+    .carrito main section.pedido article div.info div.caja-subtotal p{
+        color: var(--Negro);
+        font-size: 16px;
+    }
+    /*resumen del pedido*/
+    .carrito main section.resumen {
+        margin: 10px 20px;
+    }
+    .carrito main section.resumen article {
+        margin: 10px 20px;
+    }
+    .carrito main section.resumen article div.subtotal {
+        width: 350px;
+    }
+    .carrito main section.resumen article div.total {
+        width: 30%;
+    }
+
+}
+
+/*------------desktop-----------------*/
+@media (min-width: 1024px){
+    .carrito main section.caja {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .carrito main section.caja h2 {
+        width: 100%;
+    }
+    .carrito main section.caja a {
+        width: 100%;
+    }
+    .carrito main section.caja h3 {
+        width: 100%;
+    }
+    .carrito main section.caja section.pedido{
+        width: 53%;
+    }
+    .carrito main section.caja section.resumen {
+        width: 45%;
+        height: 290px;
+        margin: 0 10px 0 0;
+    }
+    .carrito main section.resumen article h3.titulo {
+        text-align: center;
+    }
+
+}
