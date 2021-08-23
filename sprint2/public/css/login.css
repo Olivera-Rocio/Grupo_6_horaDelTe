@@ -87,8 +87,13 @@
 /* derivacion al register*/
 .login main .registrar{
     width: max-content;
-    font-size: 12px;
     margin: 30px auto 0;
+}
+
+
+.login main .registrar p, .login main .registrar a{
+    font-size: 11px;
+
 }
 
 .login main .registrar a{
@@ -155,9 +160,13 @@
 
     /* derivacion al register*/
     .login main .registrar{
-        font-size: 13px;
+        margin: 145px auto 0;
     }
     
+    .login main .registrar p, .login main .registrar a{
+        font-size: 14px;
+    
+    }
     
 }
 
@@ -207,7 +216,11 @@
 
     /* derivacion al register*/
     .login main .registrar{
-        font-size: 22px;
-        margin: 100px auto 0;
+        margin: 180px auto 0;
+    }
+
+    .login main .registrar p, .login main .registrar a{
+        font-size: 20px;
+    
     }
 }
