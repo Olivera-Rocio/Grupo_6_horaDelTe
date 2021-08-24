@@ -1,0 +1,195 @@
+.register a{
+    text-decoration: none;
+}
+
+/*contenido*/
+.register main{
+    font-family:  Roboto, Condensed, sans-serif ;
+
+}
+
+
+/*formulario en general*/
+.register main .formulario{
+    background-color: #f2cdcd     ;
+    margin: 0 auto;
+    margin: 60px 10px;
+    padding: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+
+/* titulo registrate*/
+.register main .formulario p{
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 23px 0;
+    text-align: center;
+}
+
+
+/* caja de formulario */
+.register main .formulario .box-form{
+    display: flex;
+    flex-direction: column;
+    margin: 27px 0;
+    padding: 0 9%;
+}
+
+
+/*titulos de la seccion para rellenar*/
+.register main .formulario .box-form label{
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0 0 2px 10px;
+}
+
+
+/*seccion para rellenar*/
+.register main .formulario .box-form input{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fafafa;
+    border-radius: 100px;
+    border:none;
+    height: 20px;
+}
+
+
+/*boton registrarse*/
+.register main .formulario .registrarse button{
+    border: none;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    width: fit-content;
+    font-size: 7px;
+    margin: 7px auto;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    display: block;
+}
+
+
+
+/* derivacion a inicio de sesion*/
+.register main .iniciar-sesion{
+    width: max-content;
+    margin: 30px auto 0;
+}
+
+
+.register main .iniciar-sesion p, .register main .iniciar-sesion a{
+    font-size: 11px;
+
+}
+
+.register main .iniciar-sesion a{
+    color: fuchsia;
+}
+
+/*TABLET*/
+@media(min-width:768px){
+    /*formulario en general*/
+    .register main .formulario{
+        box-shadow: 6px 6px 10px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 36px;
+        margin: 60px auto;
+        width: 70%;
+    }
+
+    /* titulo inicio de sesion*/
+    .register main .formulario p{
+        font-size: 22px;
+    }
+
+
+    /* caja de formulario */
+    .register main .formulario .box-form{
+        margin: 35px 0;
+    }
+    
+
+    /*titulos de la seccion para rellenar*/
+    .register main .formulario .box-form label{
+        font-size: 14px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    /*seccion para rellenar*/
+    .register main .formulario .box-form input{
+        box-shadow: 6px 7px 3px 0px rgba(0, 0, 0, 0.25);
+        height: 33px;
+        width: 100%;
+        align-self: center;
+    }
+
+
+    /*boton registrarse*/
+    .register main .formulario .registrarse button{
+        border-radius: 12%;
+        width: unset;
+        height: 29px;
+        font-size: 15px;
+        padding: 8px 30px 27px;
+
+    }
+
+/* derivacion a inicio de sesion*/
+    .register main .iniciar-sesion{
+        margin: 145px auto 0;
+    }
+    
+    .register main .iniciar-sesion p, .register main .iniciar-sesion a{
+        font-size: 14px;
+    
+    }
+    
+}
+
+/*DESKTOP*/
+@media(min-width:769px){
+    /*formulario en general*/
+    .register main .formulario{
+        width: 60%;
+    }
+    
+    /* titulo inicio de sesion*/
+    .register main .formulario p{
+        margin: 45px 0;
+        font-size: 20px;
+    }
+
+
+    /* caja de formulario */
+    .register main .formulario .box-form{
+        margin: 40px 0;
+        padding: 0 5%;
+    }
+    
+
+    /*titulos de la seccion para rellenar*/
+    .register main .formulario .box-form label{
+        margin-left: 38px;
+    }
+    
+
+
+    /*seccion para rellenar*/
+    .register main .formulario .box-form input{
+        width: 90%;
+        height: 40px;
+    }
+
+
+/* derivacion a inicio de sesion*/
+    .register main .iniciar-sesion{
+        margin: 180px auto 0;
+    }
+
+    .register main .iniciar-sesion p, .register main .iniciar-sesion a{
+        font-size: 20px;
+    
+    }
+}
