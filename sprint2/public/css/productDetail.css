@@ -70,12 +70,47 @@
 
 
 
-
+ 
 
   
+/*------------tablet-----------------*/
+@media (min-width: 768px) {
+ 
+   
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+  }
+ 
+   
+  .right-column {
+    width: 65%;
+    margin-top: 60px;
+  }
+ 
 
-  /*desktop*/ 
-@media (min-width: 769px) {
+   
+  
+
+   
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+@media (min-width: 1024px) {
 
   body {
     height: 100%;
