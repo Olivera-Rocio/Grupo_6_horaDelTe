@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet" />
+</head>
+<body class="carrito">
+
+    <header>
+        <div class="caja-superior">
+            <a href="/"><img src="/img/Logo.png" alt=""></a>
+            <div class="search" >
+                <input placeholder=" Buscar... " type="search">
+                <i class="fas fa-search"></i>
+            </div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="">Productos</a></li>
+                    <li><a href="">Preguntas frecuentes</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+                <ul class="login-bar">
+                    <li><a href="/register"><i class="far fa-id-card"></i> Registrate </a>
+                    <li><a href="/login"><i class="fas fa-user-circle"></i> Iniciar sesión </a>
+                    <li><a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                </ul>
+            </nav>
+        </div>
+        <div class="caja-inferior">
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="caja">
+            <h2>Tu pedido</h2>
+            <a href="/"><i class="fas fa-angle-left"></i>Continuar comprando</a>
+            <h3>Producto</h3>
+            <section class="pedido">
+                <article>
+                    <div class="caja-eliminar">
+                        <button type="submit">Eliminar<i class="fas fa-trash-alt"></i></button>
+                    </div>
+                    <div class="caja-img">
+                        <img src="/img/Mate-Olaf.jpg" width="100" height="100" alt="">
+                    </div>
+                    <div class="info">
+                        <p class="nombre">Mate-Olaf</p>
+                        <div class="cantidad-contador">
+                            <p class="cantidad">Cantidad:</p>
+                            <div class="contador">
+                                <button type="button">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <div class="numero">
+                                    <input type="number" value="1">
+                                </div>
+                                <button type="button">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="caja-precio">
+                            <p>Precio:</p>
+                            <p>$0,00</p>
+                        </div>
+                        <div class="caja-subtotal">
+                            <p>Sub total:</p>
+                            <p>$0,00</p>
+                        </div>
+                    </div>
+                </article> 
+                <article>
+                    <div class="caja-eliminar">
+                        <button type="submit">Eliminar<i class="fas fa-trash-alt"></i></button>
+                    </div>
+                    <div class="caja-img">
+                        <img src="/img/Taza-Chanchito.jpg" width="100" height="100" alt="">
+                    </div>
+                    <div class="info">
+                        <p class="nombre">Taza-Chanchito</p>
+                        <div class="cantidad-contador">
+                            <p class="cantidad">Cantidad:</p>
+                            <div class="contador">
+                                <button type="button">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <div class="numero">
+                                    <input type="number" value="1">
+                                </div>
+                                <button type="button">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="caja-precio">
+                            <p>Precio:</p>
+                            <p>$0,00</p>
+                        </div>
+                        <div class="caja-subtotal">
+                            <p>Sub total:</p>
+                            <p>$0,00</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="caja-eliminar">
+                        <button type="submit">Eliminar<i class="fas fa-trash-alt"></i></button>
+                    </div>
+                    <div class="caja-img">
+                        <img src="/img/Tetera-Sra Potss.jpg" width="100" height="100" alt="">
+                    </div>
+                    <div class="info">
+                        <p class="nombre">Tetera-Sra Potss</p>
+                        <div class="cantidad-contador">
+                            <p class="cantidad">Cantidad:</p>
+                            <div class="contador">
+                                <button type="button">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <div class="numero">
+                                    <input type="number" value="1">
+                                </div>
+                                <button type="button">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="caja-precio">
+                            <p>Precio:</p>
+                            <p>$0,00</p>
+                        </div>
+                        <div class="caja-subtotal">
+                            <p>Sub total:</p>
+                            <p>$0,00</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="resumen">
+                <article>
+                        <h3 class="titulo">Resumen de la compra</h3>
+                        <div class="subtotal">
+                            <p>SUB TOTAL (sin costo de envío):</p>
+                            <p>$0,00</p>
+                        </div>
+                        <div class="entrega">
+                            <p><i class="fas fa-truck"></i>Envío a domicilio:</p>
+                            <div class="caja-envio">
+                                <p class="envio"><input type="radio" name="entrega" value="Envío a domicilio" />Correo Argentino-Envío a domicilio</p>
+                                <p class="valor">$0,00</p>
+                            </div>
+                            <p><i class="fas fa-map-marker-alt"></i>Retiro del local:</p>
+                            <div class="caja-retiro">
+                                <p class="envio"><input type="radio" name="entrega" value="Retiro del local" />Dirección: Av. Siempre Viva 7777, Springfield</p>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h3>Total:</h3>
+                            <h3>$0,00</h3>
+                        </div>
+                        <div class="compra">
+                            <button type="submit">Realizar compra</button>
+                        </div>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <!---FOOTER------------------------------------------------------------>
+    <footer>
+ 
+        <div class="footer">
+          <div class="envioycontacto caja">
+            <div class="arriba ">
+     
+             
+     
+     
+              <div class="titulofooter">Formas de Envío</div>
+              <div class="correo">
+                 <a href="#"><i class="fas fa-shipping-fast"></i> CORREO ARGENTINO</a>
+              </div>
+              <div class="oca">
+                 <a href="#"><i class="fas fa-truck"></i> OCA</a>
+              </div>
+     
+            </div>
+     
+     
+            
+            <div class="bajo caja">
+     
+     
+              <div class="titulofooter">Contacto</div>
+              <div class="telefono">
+                <a href="#"><i class="fas fa-phone-volume"></i> +541162628888</a>
+              </div>
+              <div class="email">
+                <a href="#"><i class="fas fa-envelope"></i> hirschmannsol@gmail.com</a>
+                <div class="ubicacion">
+                 <a href="#"><i class="fas fa-map-marked-alt"></i> Av. Siempre Viva 7777 , Springfield</a>
+               
+            
+      
+               </div>
+           
+     
+              </div>
+            </div>
+          </div>
+          <div class="medio caja">
+            <div class="titulofooter">Medios de Pago</div>
+            <div class="mercadopagologo">
+          
+        
+         </div>
+     
+          </div>
+     
+     
+          <div class="derecha caja">
+     
+     
+            <div class="titulofooter">Nuestras Redes Sociales</div>
+             
+              <div class="iconos">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                
+              </div>
+      
+          </div>
+        </div>
+      
+      </footer>
+
+      <!---FOOTER------------------------------------------------------------>
+</body>
+
+</body>
+</html>
