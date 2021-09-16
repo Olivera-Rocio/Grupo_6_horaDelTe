@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("partials/head",{title: 'Detalle de producto'}) %>
+ 
+ <!---header-->
+ 
+ <%- include("partials/header") %>
+
+<!---fin de header-->
+    
+     <!--body-->
+
+
+     <body class="detail">
+    
+      <main class="container">
+ 
+        <!-- PRODUCTO -->
+        <div class="left-column">
+          <img src="/img/tazadona.jpg" alt="">
+     
+         
+        </div>
+ 
+        <div class="right-column">
+       
+          <!-- DESCRIPCION -->
+          <div class="product-description">
+            <span>Tazas y Teteras</span>
+            <h1>Taza Dona</h1>
+            <p>Taza de ceramica, pintura duradera, capacidad de 350ml.</p>
+            <div class="precio">
+              <span>2500$</span>
+        
+            </div>
+          </div>
+       
+       
+            <!-- CANTIDAD -->
+            <div class="cantidadboton">
+              <span>Cantidad</span>
+       
+              <div class="botonesmasymenos">
+                <button>   -   </button>
+                <span>1</span>
+                <button>   +     </button>
+              </div>
+              <a href="/productCart" class="myButton">Añadir al carrito</a>
+               
+            </div>
+          </div>
+       
+       
+      
+        </div>
+      </main>
+
+
+
+
+     </body>
+
+ <!---FOOTER------------------------------------------------------------>
+ <%- include("partials/footer") %>
+<!---FOOTER------------------------------------------------------------>
+</body>
+
+</html>
