@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
-const {detail} = require("../controllers/productsController");
+const {detail,cart,add,edit} = require('../controllers/productsController')
 
-/*products */
-router.get('/detail', detail);
+ /* products */
+router.get('/detail',detail)
+router.get('/cart',cart);
+router.get('/add',add);
+router.get('/edit',edit);
+ 
+
 
 module.exports = router;

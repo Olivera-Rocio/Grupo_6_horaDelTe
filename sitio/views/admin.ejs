@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+    <%- include("partials/head-admin",{title: 'Administrador'}) %>
+  <body>
+
+    <%- include("partials/header-admin") %>
+
+    <div class="card text-center" style="background-color: #ffffff">
+      <div class="card-header">
+       <h1> Bienvenido al modo <i>Administrador</i> </h1>
+      </div>
+      <div class="card-body" style="background-color: #ffd8cb">
+        <h5 class="card-title">En está página podrá agregar y modificar sus Productos</h5>
+        <p class="card-text">En caso de necesitar ayuda seleccione la opción deseada</p>
+        <a href="#tutorialAdd" class="btn btn-dark">Agregar Producto</a>
+
+        <a href="#tutorialModify" class="btn btn-dark">Modificar Producto</a>
+      </div>
+    <br><br><br>
+ 
+      <img src="/img/tutorial1.gif" class="img-fluid" alt="..." id="tutorialAdd">
+    <br><br><br>
+      <img src="/img/tutorial2.gif" class="img-fluid" alt="..." id="tutorialModify">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  </body>
+</html>

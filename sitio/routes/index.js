@@ -1,10 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-const {index,carrito} = require("../controllers/mainController");
+const {index, admin} = require('../controllers/maincontroller')
 
 /* GET home page. */
-router.get('/', index);
-router.get("/productCart", carrito);
+router.get('/',index);
+router.get('/admin',admin);
+
+
 
 module.exports = router;

@@ -1,8 +1,9 @@
 module.exports = {
-    index : (req,res) => {
-        return res.render("index")
+    index : (req, res) => {
+return res.render('index')
     },
-    carrito : (req,res) => {
-        return res.render("productCart")
+     admin : (req,res) => {
+        return res.render('admin')
     }
+   
 }
