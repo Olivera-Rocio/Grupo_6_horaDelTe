@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include("partials/head",{title: 'Hora del té'}) %>
+
+ <!---header-->
+
+ <%- include("partials/header") %>
+
+ <!---header-->
+    <body class="home"> 
+    <main>
+        <section>
+            <article class="tazadona">
+                <img src="/img/tazadona.jpg" width="100%" alt="">
+                <div class="detail-product">
+                    <a href="/products/cart" class="myButton"><i class="fas fa-shopping-cart"></i> Añadir al carrito</a>
+                    <h4>Taza Dona</h4>
+                    <div class="contenedor-precio-descuento">
+                        <span class="descuento"> 10% OFF</span>
+                        <p class="precio">$1.770 </p>
+                    </div>
+                <a href="/products/detail" class="myButton">Ver Mas</a>
+                </div>
+            </article>
+        </section>
+    </main>
+  
+    <%- include('partials/footer') %>
+  
+  </body>
+</html>

@@ -9,12 +9,32 @@
 
  
 .contenedor-precio-descuento {
+  padding: 15px;
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
 }
 .precio {
   width: 30%;
 }
+.contenedor-precio-descuento span {
+  font-size: 12px;
+  font-weight: 300;
+  color: green;
+  margin: 0 0 0 10px;
+  order: 0;
+  width: 40%;
+}
 
+.contenedor-precio-descuento p {
+  font-size: 14px;
+  width: 100%;
+  color: var(--gray);
+  margin: 0;
+  height: 0;
+  order: 1;
+  width: 40%;
+}
 
 .home p {
   font-size: 12px;
