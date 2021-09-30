@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Taza con frase"
+    },
+    {
+        "id": 2,
+        "name": "Taza de cerámica"
+    },
+    {
+        "id": 3,
+        "name": "Tetera"
+    },
+    {
+        "id": 4,
+        "name":  "Azucarera"
+    }
+]
