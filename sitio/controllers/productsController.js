@@ -1,7 +1,20 @@
+const fs = require('fs');
+const path = require('path');
+let products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
+
+
+const toDiscount = require('../utils/toDiscount');
 
 module.exports = {
     index: (req, res) => {
-		return res.render("products")
+        let products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
+
+		return res.render("products",{
+            products,
+            categories,
+			toDiscount
+        }
+        )
 	},
     detail : (req,res) => {
         return res.render('productDetail')
@@ -12,8 +25,16 @@ module.exports = {
     add : (req,res) => {
         return res.render('productAdd')
     },
+
+
     edit : (req,res) => {
-        return res.render('productModify')
+        return res.render('productModify',{
+
+        })
     },
+
+    update: (req,res) => {
+        return res.render
+    }
    
 }
