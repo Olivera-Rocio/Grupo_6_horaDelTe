@@ -37,11 +37,11 @@
                 <b><%= product.discount %>% OFF</b>
               </p>
               <p class="precio-total">
-								Precio total: $<%= toDiscount(product.price, product.discount) %>
+								Precio final: $<%= toDiscount(product.price, product.discount) %>
 							</p>
               <% }else{%>
                 <p class="precio">
-                Precio total: $<%= toThousand(product.price) %>
+                Precio: $<%= toThousand(product.price) %>
                 </p>
                 <% } %> 
           </div>
@@ -55,7 +55,7 @@
                 <span>1</span>
                 <button>   +     </button>
               </div>
-              <a href="/products/cart" class="myButton"><i class="fas fa-shopping-cart"></i> Añadir al carrito</a>
+              <a href="/products/cart" class="button-añadir"><i class="fas fa-shopping-cart"></i> Añadir al carrito</a>
                
             </div>
           </div>
