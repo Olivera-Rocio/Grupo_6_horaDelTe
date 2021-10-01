@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("partials/head",{title: 'Detalle de producto'}) %>
- 
- <!---header-->
- 
- <%- include("partials/header") %>
+<%- include("partials/head",{title: 'Detalle de producto' }) %>
 
-<!---fin de header-->
-    
-     <!--body-->
+  <!---header-->
 
+  <%- include("partials/header") %>
 
-     <body class="detail">
+    <!---fin de header-->
+
+    <!--body-->
+
+    <body class="detail">
     
       <main class="container">
  
         <!-- PRODUCTO -->
         <div class="left-column">
-          <img src="/img/tazadona.jpg" alt="">
-     
-         
+          <img src="/img/products/<%= product.image%>" alt="">
         </div>
  
         <div class="right-column">
        
           <!-- DESCRIPCION -->
           <div class="product-description">
-            <span>Tazas y Teteras</span>
-            <h1>Taza Dona</h1>
-            <p>Taza de ceramica, pintura duradera, capacidad de 350ml.</p>
-            <div class="precio">
-              <span>2500$</span>
-        
-            </div>
+            <span><%= product.category%></span>
+            <h1><%= product.name%></h1>
+            <p class="descripcion">
+              <%= product.description%>
+            </p>
+  
+            <% if (product.discount > 0) { %>
+              <p class="precio">
+                <span class="precio">$<%= toThousand(product.price) %></span>
+                /
+                <b><%= product.discount %>% OFF</b>
+              </p>
+              <p class="precio-total">
+								Precio total: $<%= toDiscount(product.price, product.discount) %>
+							</p>
+              <% }else{%>
+                <p class="precio">
+                Precio total: $<%= toThousand(product.price) %>
+                </p>
+                <% } %> 
           </div>
-       
        
             <!-- CANTIDAD -->
             <div class="cantidadboton">
@@ -50,20 +59,16 @@
                
             </div>
           </div>
-       
-       
-      
+  
         </div>
+
       </main>
-
-
-
 
      </body>
 
- <!---FOOTER------------------------------------------------------------>
- <%- include("partials/footer") %>
-<!---FOOTER------------------------------------------------------------>
-</body>
+    <!---FOOTER------------------------------------------------------------>
+    <%- include("partials/footer") %>
+      <!---FOOTER------------------------------------------------------------>
+      </body>
 
 </html>
