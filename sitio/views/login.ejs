@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("partials/head",{title: 'Inicio de sesión'}) %> 
+
+<body class="login">
+   
+    <%- include("partials/header") %>
+
+    <main>
+
+        <div class="formulario">
+            <p>Inicio de sesión</p>
+            <form action="" method="POST">
+                <div class="box-form">
+                    <label class="email" for="email">Email</label>
+                    <input type="email" placeholder="" id="email" name="email">
+                </div>
+                <div class="box-form">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" placeholder="" id="pass" name="password">
+                </div>
+                <div class="iniciar-ayuda">
+                    <button type="submit">Iniciar sesión</button>
+                    <a href="">¿Olvidaste tu contraseña?</a>
+                </div>
+            </form>
+        </div>
+        <div class="registrar">
+            <p>¿No tenes cuenta?<a href="/users/register">Haz click para registrarte</a></p>
+        </div>
+    </main>
+
+    <!---FOOTER------------------------------------------------------------>
+    <%- include('./partials/footer') %>
+</body>
+
+</html>

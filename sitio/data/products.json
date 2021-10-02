@@ -1,0 +1,136 @@
+[
+  {
+    "id": 1,
+    "name": "Taza “Hoy es un buen día”",
+    "description": "Taza con frase “Hoy es un buen día” en fondo celeste vitrificada. Capacidad de 250ml y medidas de 9cm alto x 7cm ancho.",
+    "price": 1600,
+    "discount": 5,
+    "image": "Taza-frase1.jpg",
+    "category": 1
+  },
+  {
+    "id": 2,
+    "name": "Taza “Pura buena vibra”",
+    "description": "Taza con frase “Pura buena vibra” en fondo rosa vitrificada. Capacidad de 250ml y medidas de 9cm alto x 7cm ancho.",
+    "price": 1600,
+    "discount": 5,
+    "image": "Taza-frase2.jpg",
+    "category": 1
+  },
+  {
+    "id": 3,
+    "name": "Taza “hoy, sé tú”",
+    "description": "Taza con frase en fondo “hoy, sé tú” vitrificada. Con etiqueta cerámica horneada y encapsulada en esmalte. Capacidad de 250ml y medidas de 9cm alto x 7cm ancho.",
+    "price": 1600,
+    "discount": 5,
+    "image": "Taza-frase3.jpg",
+    "category": 1
+  },
+  {
+    "id": 4,
+    "name": "Taza “Todo va a estar bien” ",
+    "description": "Taza con frase en fondo “Todo va a estar bien” vitrificada. Capacidad de 250ml y medidas de 9cm alto x 7cm ancho.",
+    "price": 1600,
+    "discount": 5,
+    "image": "Taza-frase4.jpg",
+    "category": 1
+  },
+  {
+    "id": 5,
+    "name": "Taza Manchas",
+    "description": " Taza de cerámica con interior y exterior de color hueso brillante con puntitos y manchas pintadas en tonos maple, rosa palo y flamingo. Capacidad de 250ml y medidas de 9cm alto x 7cm ancho ",
+    "price": 1350,
+    "discount": 0,
+    "image": "Taza-manchas.jpg",
+    "category": 2
+  },
+  {
+    "id": 6,
+    "name": "Taza Flor",
+    "description": " Taza de cerámica con interior de color hueso brillante y exterior con franja de flores. Capacidad de 200ml y medidas de 7cm alto x 6cm ancho ",
+    "price": 1400,
+    "discount": 0,
+    "image": "Taza-flor.jpg ",
+    "category": 2
+  },
+  {
+    "id": 7,
+    "name": "Taza Órbita",
+    "description": " Taza de cerámica con línea grabada en color oro. Capacidad de 350ml y medidas de 9cm alto x 7cm ancho.",
+    "price": 1800,
+    "discount": 0,
+    "image": "Taza-orbita.jpg",
+    "category": 2
+  },
+  {
+    "id": 8,
+    "name": "Taza mar",
+    "description": "Taza de cerámica con interior de color hueso brillante y exterior con franja superior en turqueza. Capacidad de 170ml y medidas de 7cm alto x 7cm ancho",
+    "price": 1000,
+    "discount": 0,
+    "image": "Taza-mar.jpg",
+    "category": 2
+  },
+  {
+    "id": 9,
+    "name": "Tetera Gala",
+    "description": "Tetera de vidrio c/infusor de acero inoxidable con capacidad de 600ml.",
+    "price": 2500,
+    "discount": 5,
+    "image": "Tetera-vidrio.jpg",
+    "category": 3
+  },
+  {
+    "id": 10,
+    "name": "Tetera Terracota",
+    "description": "Tetera de porcelana blanca con diseños. Capacidad de 650ml.",
+    "price": 1600,
+    "discount": 0,
+    "image": "Tetera-terracota.jpg",
+    "category": 3
+  },
+  {
+    "id": 11,
+    "name": "Tetera Curve",
+    "description": "Tetera de porcelana celeste con infusor de acero inoxidable. Capacidad de 500ml.",
+    "price": 1200,
+    "discount": 0,
+    "image": "Tetera-curve.jpg",
+    "category": 3
+  },
+  {
+    "id": 12,
+    "name": "Azucarera Golden",
+    "description": "Azucarera de cerámica blanca con ribete dorado “Linea Golden”, incluye cucharita. Medidas de 7 x 8 cm y capacidad de 200ml.",
+    "price": 1000,
+    "discount": 0,
+    "image": "Azucarera-golden.jpg",
+    "category": 4
+  },
+  {
+    "id": 13,
+    "name": "Azucarera Butterfly",
+    "description": "Azucarera de cerámica blanca con detalles externos de mariposas, incluye cucharita. Medidas de 13 x 8cm y capacidad de 250ml.",
+    "price": 900,
+    "discount": 0,
+    "image": "Azucarera-butterfly.jpg",
+    "category": 4
+  },
+  {
+    "id": 14,
+    "name": "Azucarera Multicolor",
+    "description": "Azucarera de cerámica con detalles externos multicolor, incluye cucharita. Medidas de 7 x 9cm y capacidad de 200ml.",
+    "price": 850,
+    "discount": 0,
+    "image": "Azucarera-multicolor.jpg",
+    "category": 4
+  },
+  {
+    "name": "Taza de los simpsons",
+    "price": 333,
+    "discount": 3,
+    "category": "1",
+    "description": "fsfsfsf",
+    "image": "Taza-flor.jpg"
+  }
+]

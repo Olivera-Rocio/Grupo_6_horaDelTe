@@ -1,0 +1,230 @@
+.login a{
+    text-decoration: none;
+}
+
+/*contenido*/
+.login main{
+    font-family:  Roboto, Condensed, sans-serif ;
+
+}
+
+
+/*formulario en general*/
+.login main .formulario{
+    background-color:#F8D0D0;
+    margin: 0 auto;
+    margin: 60px 10px;
+    padding: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+
+/* titulo inicio de sesion*/
+.login main .formulario p{
+    width: 100%;
+    margin: 30px 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: unset;
+    font-weight: bold;
+}
+
+
+/* caja de formulario */
+.login main .formulario .box-form{
+    display: flex;
+    flex-direction: column;
+    margin: 27px 0;
+    padding: 0 9%;
+}
+
+
+/*titulo email-contraseña*/
+.login main .formulario .box-form label{
+    font-size: 12px;
+    margin: 0 0 2px 10px;
+    text-transform: uppercase;
+}
+
+
+/*seccion para rellenar*/
+.login main .formulario .box-form input{
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    border:none;
+    height: 25px;
+    font-size: 12px;
+}
+
+
+/*boton iniciar y olvido de contraseña*/
+.login main .formulario .iniciar-ayuda{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*boton iniciar*/
+.login main .formulario .iniciar-ayuda button{
+    border-radius: 20%;
+    border: none;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: fit-content;
+    height: 27px;
+    font-size: 10px;
+    margin: auto;
+    padding: 7px 13px;
+}
+
+
+/*olvidaste tu contraseña*/
+.login main .formulario .iniciar-ayuda a{
+    color: black;
+    font-size: 10px;
+    margin: 15px auto 0;
+}
+
+
+/* derivacion al register*/
+.login main .registrar{
+    width: max-content;
+    margin: 30px auto 0;
+}
+
+
+.login main .registrar p, .login main .registrar a{
+    font-size: 11px;
+
+}
+
+.login main .registrar a{
+    color: fuchsia;
+}
+
+/*TABLET*/
+@media(min-width:768px){
+    /*formulario en general*/
+    .login main .formulario{
+        box-shadow: 6px 6px 10px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 36px;
+        margin: 60px auto;
+        width: 70%;
+    }
+
+    /* titulo inicio de sesion*/
+    .login main .formulario p{
+        font-size: 20px;
+    }
+
+
+    /* caja de formulario */
+    .login main .formulario .box-form{
+        margin: 35px 0;
+    }
+    
+
+
+    /*titulo email-contraseña*/
+    .login main .formulario .box-form label{
+        font-size: 14px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    /*seccion para rellenar*/
+    .login main .formulario .box-form input{
+        box-shadow: 6px 7px 3px 0px rgba(0, 0, 0, 0.25);
+        height: 33px;
+        width: 100%;
+        align-self: center;
+        font-size: 18px;
+    }
+
+
+    /*boton iniciar*/
+    .login main .formulario .iniciar-ayuda button{
+        border-radius: 12%;
+        width: unset;
+        height: 29px;
+        font-size: 15px;
+        padding: 8px 30px 27px;
+
+    }
+
+    /*olvidaste tu contraseña*/
+    .login main .formulario .iniciar-ayuda a{
+        font-size: 12px;
+    }
+
+    /* derivacion al register*/
+    .login main .registrar{
+        margin: 145px auto 0;
+    }
+    
+    .login main .registrar p, .login main .registrar a{
+        font-size: 14px;
+    
+    }
+    
+}
+
+/*DESKTOP*/
+@media(min-width:769px){
+    /*formulario en general*/
+    .login main .formulario{
+        width: 60%;
+    }
+    /* titulo inicio de sesion*/
+    .login main .formulario p{
+        margin: 45px 0;
+        font-size: 24px;
+    }
+
+
+    /* caja de formulario */
+    .login main .formulario .box-form{
+        margin: 50px 0;
+        padding: 0 5%;
+    }
+    
+
+    /*titulo email-contraseña*/
+    .login main .formulario .box-form label, .login main .formulario .box-form label.email {
+        font-size: 14px;
+        margin-left: 38px;
+    }
+
+
+    /*seccion para rellenar*/
+    .login main .formulario .box-form input{
+        width: 90%;
+        height: 45px;
+        font-size: 25px;
+    }
+
+    /*boton iniciar*/
+    .login main .formulario .iniciar-ayuda button{
+        font-size: 17px;
+
+    }
+
+
+    /*olvidaste tu contraseña*/
+    .login main .formulario .iniciar-ayuda a{
+        font-size: 16px;
+        margin: 38px auto 3px;
+    }
+
+    /* derivacion al register*/
+    .login main .registrar{
+        margin: 180px auto 0;
+    }
+
+    .login main .registrar p, .login main .registrar a{
+        font-size: 20px;
+    
+    }
+}
