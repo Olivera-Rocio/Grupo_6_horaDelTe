@@ -10,8 +10,8 @@ router.get('/cart',cart);
 router.get('/add',add);
 
 /* edit */
-router.get('/edit',edit);
-router.put('/edit',update);
+router.get('/edit/:id',edit);
+router.put('/edit/:id',update);
  
 
 

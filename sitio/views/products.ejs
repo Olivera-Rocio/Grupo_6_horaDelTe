@@ -11,18 +11,52 @@
     <body class="home"> 
     <main>
         <section>
-            <article class="tazadona">
-                <img src="/img/tazadona.jpg" width="100%" alt="">
-                <div class="detail-product">
-                    <a href="/products/cart" class="myButton"><i class="fas fa-shopping-cart"></i> Añadir al carrito</a>
-                    <h4>Taza Dona</h4>
-                    <div class="contenedor-precio-descuento">
-                        <span class="descuento"> 10% OFF</span>
-                        <p class="precio">$1.770 </p>
+
+
+            <% products.forEach(product=>{ %>
+
+                <article class="product-card">
+
+                    <img src="/img/products/<%= product.image %>" width="100%" alt="">
+                    <div class="detail-product">
+
+                        <a href="/products/cart" class="myButton">
+
+                            <i class="fas fa-shopping-cart"></i> Añadir al carrito</a>
+
+                        <h4>
+                            <%= product.name %>
+                        </h4>
+
+
+
+                        <h5>
+                            <%= product.description %>
+                        </h5>
+
+
+                        <div class="contenedor-precio-descuento">
+
+
+
+                            <p class="precio"> $ <%= product.price %>
+                            </p>
+
+                            <p class="descuento"> <i class="fas fa-user-tag"></i>
+                                % <%= product.discount%>
+                            </p>
+
+                        </div>
+
+
+
+                        <a href="/products/detail" class="myButton">Ver Mas</a>
                     </div>
-                <a href="/products/detail" class="myButton">Ver Mas</a>
-                </div>
-            </article>
+
+                </article>
+
+
+                <% }) %>
         </section>
     </main>
   
