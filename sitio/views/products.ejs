@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include("partials/head",{title: 'Hora del té'}) %>
+<%- include("partials/head",{title: 'Hora del té' }) %>
 
- <!---header-->
+    <!---header-->
 
- <%- include("partials/header") %>
+    <%- include("partials/header") %>
 
- <!---header-->
-    <body class="home"> 
-    <main>
-        <section>
+        <!---header-->
 
-
-            <% products.forEach(product=>{ %>
-
-                <article class="product-card">
-
-                    <img src="/img/products/<%= product.image %>" width="100%" alt="">
-                    <div class="detail-product">
-
-                        <a href="/products/cart" class="myButton">
-
-                            <i class="fas fa-shopping-cart"></i> Añadir al carrito</a>
-
-                        <h4>
-                            <%= product.name %>
-                        </h4>
+        <body class="home">
+            <main>
+                <section>
 
 
+                    <% products.forEach(product=>{ %>
 
-                        <h5>
-                            <%= product.description %>
-                        </h5>
+                        <article class="product-card">
+                            <a href="/products/detail/<%= products.id %>">
+                                <img src="/img/products/<%= product.image %>" width="100%" alt="">
+                                <div class="detail-product">
+                            </a>
+                            <a href="/products/cart" class="myButton">
 
-
-                        <div class="contenedor-precio-descuento">
+                                <i class="fas fa-shopping-cart"></i> Añadir al carrito
+                            </a>
+                            <a href="/products/detail/<%= products.id %>">
+                                <h4>
+                                    <%= product.name %>
+                                </h4>
 
 
 
-                            <p class="precio"> $ <%= product.price %>
-                            </p>
-
-                            <p class="descuento"> <i class="fas fa-user-tag"></i>
-                                % <%= product.discount%>
-                            </p>
-
-                        </div>
+                                <h5>
+                                    <%= product.description %>
+                                </h5>
 
 
+                                <div class="contenedor-precio-descuento">
 
-                        <a href="/products/detail" class="myButton">Ver Mas</a>
-                    </div>
+                                    <% if (product.discount> 0) { %>
+                                        <p class="precio"> $<%= toDiscount(product.price, product.discount) %>
+                                        </p>
+                                        <p class="descuento"><i class="fas fa-user-tag"></i>
+                                            % <%= product.discount%>
+                                        </p>
+                                        <% }else{ %>
+                                            <h2>$<%= toThousand(product.price) %>
+                                            </h2>
+                                            <% } %>
 
-                </article>
 
 
-                <% }) %>
-        </section>
-    </main>
-  
-    <%- include('partials/footer') %>
-  
-  </body>
+
+
+                                </div>
+                            </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <% }) %>
+                </section>
+            </main>
+
+            <%- include('partials/footer') %>
+
+        </body>
+
 </html>

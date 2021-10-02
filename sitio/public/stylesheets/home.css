@@ -8,8 +8,10 @@
 }
 
 .home h1{
+  color: #666666;
   width: 100%;
-  font-size: 20px;
+  font-size: 23px;
+  margin: 32px 27px 31px;
 }
 .product-card {
   width: auto;
@@ -82,10 +84,10 @@
 .home .precio span {
   font-size: 14px;
   font-weight: bold;
-  color: #2d00f3;
+  color:  #27b81a;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: line-through;
 }
 
 
@@ -144,9 +146,14 @@
   font-size: 15px;
   font-weight: 400;
   background-color: rgb(109, 109, 109);
-  color: white;
 margin-left: 30%;
 }
+
+.botones button a{
+  color: white;
+
+}
+
 .myButton {
   display:block;
 margin: 0px 30px 10px   auto;
@@ -164,6 +171,10 @@ margin: 0px 30px 10px   auto;
 
 /*tablet*/
 @media (min-width: 768px) {
+  .home h1{
+    font-size: 33px;
+    margin: 32px 21px 31px;
+  }
    
   .home main article .detail-product {
     border-top: 1px solid #ebebeb;
@@ -209,7 +220,6 @@ margin: 0px 30px 10px   auto;
   font-size: 15px;
   font-weight: 400;
   background-color: rgb(109, 109, 109);
-  color: white;
 margin-left: 38%;
   }
 
@@ -228,7 +238,19 @@ margin-left: 38%;
 
 
 @media screen and (min-width:  1024px) {
+  .home .contenedor-precio-descuento p.precio-total{
+    font-size: 20px;
+    font-weight: bold;
+  }
 
+  .home .contenedor-precio-descuento p.precio-real{
+    font-size: 20px;
+    padding: 0 90px;
+    font-weight: bold;
+  }
+
+  p.precio b {
+    font-size: 16px;}
   
   .home main article {
     width: 24%;
@@ -244,6 +266,10 @@ margin-left: 38%;
 		width: 100%;
 	}
 
+  .botones button {
+    margin-top: 50px ;
+    margin-left: 40%;
+  }
   
 
 }

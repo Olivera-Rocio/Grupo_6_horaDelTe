@@ -54,24 +54,24 @@
                                         <% if (product.discount> 0) { %>
                                             <p class="precio">
                                                 <span class="precio">$<%= toThousand(product.price) %></span>
-                                                /
-                                                <b></i>
+                                                <br>
+                                                <b>
                                                     <%= product.discount %>% OFF
                                                 </b>
                                             </p>
                                             <p class="precio-total">
-                                                Precio: $<%= toDiscount(product.price, product.discount) %>
+                                               $<%= toDiscount(product.price, product.discount) %>
                                             </p>
                                             <% }else{%>
-                                                <p class="precio">
-                                                    Precio: $<%= toThousand(product.price) %>
+                                                <p class="precio-real">
+                                                   $<%= toThousand(product.price) %>
                                                 </p>
                                                 <% } %>
                                     </div>
 
 
 
-                                    <a href="/products/detail/<%= product.id %>" class="myButton">Ver Mas</a>
+                                    <a href="/products/detail/<%= products.id %>" class="myButton">Ver Mas</a>
                                 </div>
 
                             </article>
@@ -100,24 +100,24 @@
                                         <% if (product.discount> 0) { %>
                                             <p class="precio">
                                                 <span class="precio">$<%= toThousand(product.price) %></span>
-                                                /
-                                                <b></i>
+                                                <br>
+                                                <b>
                                                     <%= product.discount %>% OFF
                                                 </b>
                                             </p>
                                             <p class="precio-total">
-                                                Precio: $<%= toDiscount(product.price, product.discount) %>
+                                               $<%= toDiscount(product.price, product.discount) %>
                                             </p>
                                             <% }else{%>
-                                                <p class="precio">
-                                                    Precio: $<%= toThousand(product.price) %>
+                                                <p class="precio-real">
+                                                   $<%= toThousand(product.price) %>
                                                 </p>
                                                 <% } %>
                                     </div>
 
 
 
-                                    <a href="/products/detail/<%= product.id %>" class="myButton">Ver Mas</a>
+                                    <a href="/products/detail/<%= products.id %>" class="myButton">Ver Mas</a>
                                 </div>
 
                             </article>
@@ -146,24 +146,24 @@
                                         <% if (product.discount> 0) { %>
                                             <p class="precio">
                                                 <span class="precio">$<%= toThousand(product.price) %></span>
-                                                /
+                                                <br>
                                                 <b></i>
                                                     <%= product.discount %>% OFF
                                                 </b>
                                             </p>
                                             <p class="precio-total">
-                                                Precio: $<%= toDiscount(product.price, product.discount) %>
+                                               $<%= toDiscount(product.price, product.discount) %>
                                             </p>
                                             <% }else{%>
-                                                <p class="precio">
-                                                    Precio: $<%= toThousand(product.price) %>
+                                                <p class="precio-real">
+                                                   $<%= toThousand(product.price) %>
                                                 </p>
                                                 <% } %>
                                     </div>
 
 
 
-                                    <a href="/products/detail/<%= product.id %>" class="myButton">Ver Mas</a>
+                                    <a href="/products/detail/<%= products.id %>" class="myButton">Ver Mas</a>
                                 </div>
 
                             </article>
@@ -192,24 +192,24 @@
                                         <% if (product.discount> 0) { %>
                                             <p class="precio">
                                                 <span class="precio">$<%= toThousand(product.price) %></span>
-                                                /
+                                                <br>
                                                 <b></i>
                                                     <%= product.discount %>% OFF
                                                 </b>
                                             </p>
                                             <p class="precio-total">
-                                                Precio: $<%= toDiscount(product.price, product.discount) %>
+                                               $<%= toDiscount(product.price, product.discount) %>
                                             </p>
                                             <% }else{%>
-                                                <p class="precio">
-                                                    Precio: $<%= toThousand(product.price) %>
+                                                <p class="precio-real">
+                                                   $<%= toThousand(product.price) %>
                                                 </p>
                                                 <% } %>
                                     </div>
 
 
 
-                                    <a href="/products/detail/<%= product.id %>" class="myButton">Ver Mas</a>
+                                    <a href="/products/detail/<%= products.id %>" class="myButton">Ver Mas</a>
                                 </div>
 
                             </article>
@@ -219,7 +219,7 @@
                         </section>
                     
                     <div class="botones">
-                        <button type="reset" id="reset"><a href="/products/detail/<%= product.id %>">Ver Más Productos</a></button>
+                        <button type="reset" id="reset"><a href="/products"> Ver Más Productos</a></button>
 
                     </div>
                 </main>

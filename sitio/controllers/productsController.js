@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-let products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
+const products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
 
 
 const toThousand = require('../utils/toThousand')
@@ -8,7 +8,7 @@ const toDiscount = require('../utils/toDiscount');
 
 module.exports = {
     index: (req, res) => {
-        let products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
+        const products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
 
 		return res.render("products",{
             products,
@@ -37,7 +37,9 @@ module.exports = {
     },
 
     update: (req,res) => {
-        let { name, price, discount, category, description} = req.body;
+        const { name, price, discount, category, description} = req.body;
+
+        let product =products.find(product => product.id === +req.params.id);
 
         let productEdited = {
             id : +req.params.id,
@@ -46,12 +48,13 @@ module.exports = {
             discount: +discount,
             category,
             description: description.trim(),
+            image: req.file ? req.file.filename : product.image
         };
 
         let productsEdited = products.map(product => product.id === +req.params.id ? productEdited : product)
 
         fs.writeFileSync(path.join(__dirname,'..', 'data', 'products.json'), JSON.stringify(productsEdited,null,3), 'utf-8');
-        res.redirect('/products/detail' + req.params.id)
+        res.redirect('/admin')
     }
    
 }
