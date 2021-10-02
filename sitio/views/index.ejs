@@ -47,20 +47,23 @@
 
 <h4><%= product.name %> </h4>
 
-
- 
-<h5><%= product.description %> </h5>
-                     
-
                           <div class="contenedor-precio-descuento">
-                    
-                          <p class="precio"> $ <%= product.price %></p>
-                       
-                          <p class="descuento">    <i class="fas fa-user-tag"></i>
-                            % <%= product.discount%></p>
-
-                      
-                      </div>
+                        
+                            <% if (product.discount > 0) { %>
+                                <p class="precio">
+                                  <span class="precio">$<%= toThousand(product.price) %></span>
+                                  /
+                                  <b></i><%= product.discount %>% OFF</b>
+                                </p>
+                                <p class="precio-total">
+                                                  Precio: $<%= toDiscount(product.price, product.discount) %>
+                                              </p>
+                                <% }else{%>
+                                  <p class="precio">
+                                  Precio: $<%= toThousand(product.price) %>
+                                  </p>
+                                  <% } %> 
+                        </div>
                           
 
 
