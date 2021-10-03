@@ -33,6 +33,7 @@
   
   .product-description span {
     font-size: 12px;
+<<<<<<< HEAD
     font-weight: bold;
     color: #2d00f3;
     letter-spacing: 1px;
@@ -42,6 +43,8 @@
   .product-description span.precio {
     font-size: 14px;
     font-weight: bold;
+=======
+>>>>>>> origin/jsonadmin
     color: #2d00f3;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -53,6 +56,7 @@
     color: #43484D;
     letter-spacing: -2px;
   }
+<<<<<<< HEAD
   .product-description b {
     font-size: 14px;
     font-weight: bold;
@@ -61,12 +65,18 @@
     text-transform: uppercase;
     text-decoration: none;
   }
+=======
+
+>>>>>>> origin/jsonadmin
   .product-description p {
     font-size: 16px;
     font-weight: 300;
     color: #86939E;
     line-height: 24px;
+<<<<<<< HEAD
     padding: 5px 0;
+=======
+>>>>>>> origin/jsonadmin
   }
  
 
@@ -83,6 +93,7 @@
     background-color: #fff;
   }
 
+<<<<<<< HEAD
   .button-añadir{
       display:inline-block;
       background-color:#ffb8a1;
@@ -104,6 +115,14 @@
     border-color: rgb(200, 50, 50);
   }
   
+=======
+
+
+
+
+ 
+
+>>>>>>> origin/jsonadmin
   
 /*------------tablet-----------------*/
 @media (min-width: 768px) {
@@ -122,9 +141,32 @@
     margin-top: 60px;
   }
  
+<<<<<<< HEAD
 }
 
 
+=======
+
+   
+  
+
+   
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+>>>>>>> origin/jsonadmin
 @media (min-width: 1024px) {
 
   body {
@@ -155,5 +197,14 @@
     width: 60%;
      
   }
+<<<<<<< HEAD
     
+=======
+   
+  
+
+   
+
+     
+>>>>>>> origin/jsonadmin
 }
