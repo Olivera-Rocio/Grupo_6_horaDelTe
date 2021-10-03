@@ -16,7 +16,7 @@
         </div>
   
         <div class="card-body">
-          <form class="row">
+          <form class="row" action="/products/create" method="POST" >
             <div class="mb-3">
               <label for="name" class="form-label">Nombre</label>
               <input name="name" type="text" class="form-control" placeholder="Nombre de Producto" id="name" >
@@ -33,9 +33,10 @@
               <div class="form-floating">
                 <select class="form-select" id="category" aria-label="Floating label select example" name="category" >
                   <option selected>Seleccionar una Categoría</option>
-                  <option value="1">Tazas</option>
-                  <option value="2">Teteras</option>
-                  <option value="3">Otros</option>
+                  <option value="Tazas con frase">Tazas con frase</option>
+                  <option value="Tazas de cerámica">Tazas de cerámica</option>
+                  <option value="Teteras">Teteras</option>
+                  <option value="Azucareras">Azucareras</option>
                 </select>
                 <label for="category">Categoría</label>
               </div>
