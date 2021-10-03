@@ -5,7 +5,7 @@ const {index,detail,cart,add,edit,update} = require('../controllers/productsCont
 
 /* products */
 router.get('/',index); 
-router.get('/detail',detail);
+router.get('/detail/:id',detail);
 router.get('/cart',cart);
 router.get('/add',add);
 
