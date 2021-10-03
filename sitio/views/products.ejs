@@ -17,7 +17,7 @@
                     <% products.forEach(product=>{ %>
 
                         <article class="product-card">
-                            <a href="/products/detail/<%= products.id %>">
+                            <a href="/products/detail/<%= product.id %>">
                                 <img src="/img/products/<%= product.image %>" width="100%" alt="">
                                 <div class="detail-product">
                             </a>
@@ -25,7 +25,7 @@
 
                                 <i class="fas fa-shopping-cart"></i> Añadir al carrito
                             </a>
-                            <a href="/products/detail/<%= products.id %>">
+                            <a href="/products/detail/<%= product.id %>">
                                 <h4>
                                     <%= product.name %>
                                 </h4>
