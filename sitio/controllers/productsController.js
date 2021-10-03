@@ -8,14 +8,15 @@ let products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'pr
 
 const toDiscount = require('../utils/toDiscount');
 const checkId = require('../utils/checkId');
+const toThousand = require('../utils/toThousand') ; 
 
 module.exports = {
     index: (req, res) => {
-        let products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
+        const products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
 
 		return res.render("products",{
             products,
-            categories,
+            toThousand,
 			toDiscount
         }
         )
@@ -48,7 +49,7 @@ store: (req, res) => {
         name,price,discount,description,category
     } = req.body;
     let product = {
-        id: (products[ products.lenght-1].id +1) ,
+        id: (products[products.length-1].id + 1),
         name, 
         price : +price, 
         discount : +discount, 
@@ -65,15 +66,31 @@ return res.redirect ('/')
 }
 
 ,
+edit : (req,res) => {
+        
+    return res.render('productModify',{
+        product : products.find(product => product.id === +req.params.id),
+        toThousand,
+    })
+},
 
-    edit : (req,res) => {
-        return res.render('productModify',{
+update: (req,res) => {
+    const { name, price, discount, category, description} = req.body;
 
-        })
-    },
+    let product =products.find(product => product.id === +req.params.id);
 
-    update: (req,res) => {
-        return res.render
-    }
-   
-}
+    let productEdited = {
+        id : +req.params.id,
+        name: name.trim(),
+        price: +price,
+        discount: +discount,
+        category,
+        description: description.trim(),
+        image: req.file ? req.file.filename : product.image
+    };
+
+    let productsEdited = products.map(product => product.id === +req.params.id ? productEdited : product)
+
+    fs.writeFileSync(path.join(__dirname,'..', 'data', 'products.json'), JSON.stringify(productsEdited,null,3), 'utf-8');
+    res.redirect('/admin') 
+} } 
