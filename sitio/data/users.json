@@ -1,50 +1,59 @@
 [
-    {
-       "id": 1,
-       "name": "Valentina Alegre",
-       "email": "valentinaalegre0715@gmail.com",
-       "telefono":"1161632253",
-       "password": "Z.nHzp6xfzFHHYYvA8omHaKQjoTOera",
-       "categoria": "admin"
-    },
-    {
-       "id": 2,
-       "name": "Lucas",
-       "email": "lucas@mercadolib.com",
-       "telefono": "1135602286",
-       "password": "$2a$10$c9ePQ8QrMPnX",
-       "categoria": "admin"
-    },
-    {
-       "id": 3,
-       "name": "Juana",
-       "email": "juana@misiones.gob",
-       "telefono": "1142619739",
-       "password": "$G.7NsMSyMPLIXnfiiulSBWC6CmSCLsmy6",
-       "categoria": "user"
-    },
-    {
-       "id": 4,
-       "name": "Facundo",
-       "email": "facundo@craftsy.com",
-       "telefono": "1150278916",
-       "password": "$2a$10$MKk88d2CaeDQRqWQfJt.",
-       "categoria": "user"
-    },
-    {
-       "id": 5,
-       "name": "Juliana",
-       "email": "juliana@craftsy.com",
-       "telefono": "1122985544",
-       "password": "Jwlak$5Da80236541GDm",
-       "categoria": "user"
-    },
-    {
-       "id": 6,
-       "name": "Marcos",
-       "email": "marcos@gmail.com",
-       "telefono": "1144032487",
-       "password": "$WL3wpoXOkzLROaMpblKhNgSNj8NIr36",
-       "categoria": "user"
-    }
- ]
+   {
+      "id": 1,
+      "name": "Valentina Alegre",
+      "email": "valentinaalegre0715@gmail.com",
+      "telefono": "1161632253",
+      "password": "Z.nHzp6xfzFHHYYvA8omHaKQjoTOera",
+      "categoria": "admin"
+   },
+   {
+      "id": 2,
+      "name": "Lucas",
+      "email": "lucas@mercadolib.com",
+      "telefono": "1135602286",
+      "password": "$2a$10$c9ePQ8QrMPnX",
+      "categoria": "admin"
+   },
+   {
+      "id": 3,
+      "name": "Juana",
+      "email": "juana@misiones.gob",
+      "telefono": "1142619739",
+      "password": "$G.7NsMSyMPLIXnfiiulSBWC6CmSCLsmy6",
+      "categoria": "user"
+   },
+   {
+      "id": 4,
+      "name": "Facundo",
+      "email": "facundo@craftsy.com",
+      "telefono": "1150278916",
+      "password": "$2a$10$MKk88d2CaeDQRqWQfJt.",
+      "categoria": "user"
+   },
+   {
+      "id": 5,
+      "name": "Juliana",
+      "email": "juliana@craftsy.com",
+      "telefono": "1122985544",
+      "password": "Jwlak$5Da80236541GDm",
+      "categoria": "user"
+   },
+   {
+      "id": 6,
+      "name": "Marcos",
+      "email": "marcos@gmail.com",
+      "telefono": "1144032487",
+      "password": "$WL3wpoXOkzLROaMpblKhNgSNj8NIr36",
+      "categoria": "user"
+   },
+   {
+      "id": 7,
+      "name": "Magali Olivera",
+      "email": "Oliveramagalir@gmail.com",
+      "telefono": "3877440734",
+      "password": "$2a$10$ZSxzzRDGjeioKH1ukpwYA.FuYhbUbtfwCTCXi/aaxkNeHEI1h9bqG",
+      "avatar": "default.png",
+      "rol": "user"
+   }
+]
