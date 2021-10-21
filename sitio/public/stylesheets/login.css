@@ -23,7 +23,7 @@
 /* titulo inicio de sesion*/
 .login main .formulario p{
     width: 100%;
-    margin: 30px 0;
+    margin: 30px 0 25px;
     text-transform: uppercase;
     text-align: center;
     font-weight: unset;
@@ -59,15 +59,22 @@
 }
 
 
-/*boton iniciar y olvido de contraseña*/
-.login main .formulario .iniciar-ayuda{
+/*mensaje de error*/
+.login main .formulario .conteiner-error span {
+    font-size: 14px;
+    color: #D53F25;
+    margin-left: 50px;
+}
+
+
+/*boton iniciar */
+.login main .formulario .iniciar{
     display: flex;
     flex-direction: column;
 }
 
 
-/*boton iniciar*/
-.login main .formulario .iniciar-ayuda button{
+.login main .formulario .iniciar button{
     border-radius: 20%;
     border: none;
     color: #ffffff;
@@ -75,16 +82,8 @@
     width: fit-content;
     height: 27px;
     font-size: 10px;
-    margin: auto;
+    margin: 24px auto 26px;
     padding: 7px 13px;
-}
-
-
-/*olvidaste tu contraseña*/
-.login main .formulario .iniciar-ayuda a{
-    color: black;
-    font-size: 10px;
-    margin: 15px auto 0;
 }
 
 
@@ -124,7 +123,6 @@
     .login main .formulario .box-form{
         margin: 35px 0;
     }
-    
 
 
     /*titulo email-contraseña*/
@@ -143,20 +141,20 @@
         font-size: 18px;
     }
 
+    /*mensaje de error*/
+    .login main .formulario .conteiner-error span {
+        font-size: 18px;
+        margin-left: 70px;
+    }
 
     /*boton iniciar*/
-    .login main .formulario .iniciar-ayuda button{
+    .login main .formulario .iniciar button{
         border-radius: 12%;
         width: unset;
         height: 29px;
         font-size: 15px;
         padding: 8px 30px 27px;
 
-    }
-
-    /*olvidaste tu contraseña*/
-    .login main .formulario .iniciar-ayuda a{
-        font-size: 12px;
     }
 
     /* derivacion al register*/
@@ -205,17 +203,16 @@
         font-size: 25px;
     }
 
-    /*boton iniciar*/
-    .login main .formulario .iniciar-ayuda button{
-        font-size: 17px;
-
+    /* mensaje de error*/
+    .login main .formulario .conteiner-error span{
+        font-size: 21px;
+        margin-left: 90px;
     }
 
+    /*boton iniciar*/
+    .login main .formulario .iniciar button{
+        font-size: 17px;
 
-    /*olvidaste tu contraseña*/
-    .login main .formulario .iniciar-ayuda a{
-        font-size: 16px;
-        margin: 38px auto 3px;
     }
 
     /* derivacion al register*/

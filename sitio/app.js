@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride =  require('method-override');
 var session = require("express-session");
+const localUserCheck = require ('./middlewares/localsUserCheck')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -25,6 +26,7 @@ app.use(methodOverride('_method'));
 app.use(session({
   secret: "Hora del té"
 }))
+app.use(localUserCheck)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
