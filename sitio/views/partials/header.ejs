@@ -13,10 +13,18 @@
                 <li><a href="">Contacto</a></li>
             </ul>
             <ul class="login-bar">
+                <% if (locals.userLogin) { %>
+                <li><a href="/users/profile"><%= locals.userLogin.name %> </a>
+
+                    <% if (locals.userLogin.rol === "admin") { %>
+                        <li><a href="/admin"><i class="far fa-user-circle"></i> Administrador </a>
+                    <% } %>
+                <% } else {%>
                 <li><a href="/users/register"><i class="far fa-id-card"></i> Registrate </a>
                 <li><a href="/users/login"><i class="fas fa-user-circle"></i> Iniciar sesión </a>
+                <% } %>   
                 <li><a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
-                <li><a href="/admin"><i class="far fa-user-circle"></i> Administrador </a>
+
             </ul>
         </nav>
     </div>
