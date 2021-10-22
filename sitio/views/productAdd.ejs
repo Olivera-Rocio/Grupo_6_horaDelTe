@@ -16,47 +16,57 @@
         </div>
   
         <div class="card-body">
-          <form class="row" action="/products/create" method="POST" >
+          <form class="row" action="/products/create" method="POST" enctype="multipart/form-data">
+            
             <div class="mb-3">
-              <label for="name" class="form-label">Nombre</label>
-              <input name="name" type="text" class="form-control" placeholder="Nombre de Producto" id="name" >
+              <div class="form-floating">
+                <input name="name" type="text" class="form-control" placeholder="Leave a comment here" id="name" value="<%= locals.old && old.name ? old.name : null %>">
+                <label for="name" class="form-label">Nombre del producto:</label>
+              </div>
+              <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
             </div>
             
             <div class="mb-3">
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="description"></textarea>
-                <label for="description">Descripción</label>
+                <textarea class="form-control" placeholder="Leave a comment here" id="description" style="height: 100px" name="description" value="<%= locals.old && old.description ? old.description : null %>"></textarea>
+                <label for="description">Descripción:</label>
               </div>
+              <span class="text-danger small"><%= locals.errors && errors.description ? errors.description.msg : null%> </span>
             </div>
   
             <div class="mb-3">
               <div class="form-floating">
-                <select class="form-select" id="category" aria-label="Floating label select example" name="category" >
-                  <option selected>Seleccionar una Categoría</option>
+                <select class="form-select" id="category" placeholder="Leave a comment here" name="category" >
+                  <option value="" selected hidden>Categoría:</option>
                   <option value="Tazas con frase">Tazas con frase</option>
                   <option value="Tazas de cerámica">Tazas de cerámica</option>
                   <option value="Teteras">Teteras</option>
                   <option value="Azucareras">Azucareras</option>
                 </select>
-                <label for="category">Categoría</label>
+                <label for="category">Seleccionar</label>
               </div>
+              <span class="text-danger small"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>
             </div>
             
             <div class="mb-3">
-              <label for="image" class="form-label" >Cargar fotos </label>
+              <label for="image" class="form-label" >Cargar imagen:</label>
               <input class="form-control" type="file" id="image" accept="image/x-png,image/jpeg" name="image" multiple>
             </div>
   
             <div class="mb-3">
-              <label for="price" class="form-label">Precio</label>
-              <input type="number" class="form-control" placeholder="Precio" id="price" name="price" aria-describedby="price">
+              <div class="form-floating">
+                <input type="number" class="form-control" placeholder="Precio" id="price" name="price" aria-describedby="price" value="<%= locals.old && old.price ? old.price : null %>">
+                <label for="price" class="form-label">Precio:</label>
+              </div>
+              <span class="text-danger small"><%= locals.errors && errors.price ? errors.price.msg : null%> </span>
             </div>
   
             <div class="mb-3">
-              <label for="discount" class="form-label">Indicar Descuento</label>
-              <input type="number" class="form-control" 
-              placeholder="Descuento" 
-              id="discount" name="discount" aria-describedby="discount">
+              <div class="form-floating">
+                <input type="number" class="form-control" placeholder="Descuento" id="discount" name="discount" aria-describedby="discount" value="<%= locals.old && old.discount ? old.discount : null %>">
+                <label for="discount" class="form-label">Indicar Descuento:</label>
+              </div>
+              <span class="text-danger small"><%= locals.errors && errors.discount ? errors.discount.msg : null%> </span>
             </div>
             
             <div class="col-12 col-md-6">
