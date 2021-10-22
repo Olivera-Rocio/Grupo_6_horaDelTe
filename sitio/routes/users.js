@@ -9,3 +9,8 @@ router.get('/register',register);
 router.get('/login',login);
 
 module.exports = router;
+
+const sessionCheck = require('../middlewares/sessioncheck')
+
+router.get('/login', sessionCheck, login);
+router.get('/register', sessionCheck, register);
