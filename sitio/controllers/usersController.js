@@ -53,5 +53,9 @@ module.exports = {
                 errores : errors.mapped()
             })
         }
+    },
+    logout : (req,res) =>{
+        req.session.destroy()
+        res.redirect('/')
     }
 }
