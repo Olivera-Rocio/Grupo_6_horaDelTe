@@ -49,11 +49,10 @@
    },
    {
       "id": 7,
-      "name": "Magali Olivera",
+      "name": "Olivera Magali",
       "email": "Oliveramagalir@gmail.com",
-      "telefono": "3877440734",
-      "password": "$2a$10$ZSxzzRDGjeioKH1ukpwYA.FuYhbUbtfwCTCXi/aaxkNeHEI1h9bqG",
-      "avatar": "default.png",
-      "rol": "user"
+      "password": "$2a$10$6A89cJ8YWsPLIJqshrZmheagJLtZmeuJe6VpiLUHHs6MfgXH9ARK.",
+      "avatar": "avatar-1634874703185.png",
+      "rol": "admin"
    }
 ]
