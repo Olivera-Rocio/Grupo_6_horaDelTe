@@ -22,6 +22,7 @@
     font-size: 14px;
     color: var(--Negro);
     margin-right: 10px;
+    text-decoration: none;
 }
 .carrito main section.caja a i{
     padding: 2px 4px;
@@ -330,7 +331,7 @@ main section.caja h3{
     }
     .carrito main section.caja section.resumen {
         width: 45%;
-        height: 290px;
+        height: 325px;
         margin: 0 10px 0 0;
     }
     .carrito main section.resumen article h3.titulo {

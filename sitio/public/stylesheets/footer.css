@@ -11,7 +11,10 @@ footer{
   
   }
   
-   
+  footer a{
+    color: #000000; 
+    text-decoration: none;
+  }
   footer .footer{
     max-width: 1350px;
     margin: auto;

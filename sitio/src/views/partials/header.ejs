@@ -17,7 +17,7 @@
                 <% if (locals.userLogin) { %>
                     <li >
                         <a class="perfil" href="#">
-                            <di class="container-perfil">
+                            <div class="container-perfil">
                                 <div class="img-perfil">
                                     <img src="/img/users/<%= locals.userLogin.avatar %>" alt="">
                                 </div>
@@ -26,10 +26,8 @@
                                 <%= locals.userLogin.name %>
 
                                     <i class="fas fa-caret-down"></i>
-                            </di>
-
-                        </a>
-                        <ul class="sub-menu">
+                            </div>
+                            <ul class="sub-menu">
                             <li>
                                 <a href="/users/profile"><i class="fas fa-user-alt"></i>Mi perfil</a>
                             </li>
@@ -40,6 +38,9 @@
                                     <a href="/users/logout"><i class="fas fa-sign-out-alt"></i>Cerrar sesión</a>
                                 </li>
                         </ul>
+
+                        </a>
+                        
                     </li>
                 <% } else { %>
                         <li><a href="/users/register"><i class="far fa-id-card"></i> Registrate </a>
