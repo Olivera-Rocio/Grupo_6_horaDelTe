@@ -12,7 +12,7 @@ const {register,processRegister,login,processLogin, logout, profile, update} = r
 
  /* users */
 router.get('/register',notEntry,register);
-router.post('/register',registerValidator,processRegister);
+router.post('/register',upload.any(),registerValidator,processRegister);
 router.get('/login',login);
 router.post('/login',loginValidator, processLogin);
 router.get('/logout', logout);
