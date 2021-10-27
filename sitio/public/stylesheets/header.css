@@ -6,6 +6,7 @@
     font-family: 'Roboto', sans-serif; /*tipo de letra*/
 }
 a{
+    color: black;
     text-decoration: none; /*quita subrayado*/
 }
 
@@ -41,6 +42,7 @@ header div.caja-superior{
 header div a{
     width: 50%;
     order: 0;
+    text-decoration: none;
 }
 header div a img{
     width: 100%;
@@ -74,15 +76,71 @@ header div nav ul li a{
     font-size: 12px;
     text-transform: uppercase;
     font-weight: bold;
+    transition: all 0.2s;
 }
+header div nav ul li a:hover{
+    color: var(--GrisMedio); 
+}
+
+header div nav ul li a i{
+    padding: 0 3px;
+}
+
 header nav ul.login-bar{
     display: flex;
     flex-direction: row;
     width: 80%;
     justify-content: space-between;
 }
-header div nav ul.login-bar li a i{
-    padding: 0 3px;
+
+/*Perfil de usuario*/
+
+header  header div nav ul.login-bar{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+header div nav ul.login-bar .container-perfil{
+    display: flex;
+    padding: 0px 20px;
+    font-size: 12px;
+}
+
+header div nav ul.login-bar img{
+    width: 35px;
+    height: 30px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+header div nav ul.login-bar .sub-menu{
+    background-color: #fff;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.1);
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    right: 100px;
+    padding-left: 0;
+}
+
+header div nav ul.login-bar .sub-menu li{
+    transition: all 500ms ;
+    
+    padding: 2px;
+}
+
+header div nav ul.login-bar .sub-menu li:hover{
+    background-color:o var(--Rosa);
+}
+
+header div nav ul.login-bar .sub-menu li a{
+    line-height: 25px;
+    width: 100%;
+}
+
+header div nav ul.login-bar li a:hover + ul,  header div nav ul.login-bar .sub-menu:hover{
+    display: block;
 }
 
 /*Parte inferior del header: menu hamburguesa*/
@@ -114,6 +172,7 @@ header div div.burger-menu{
         width: 35%;
         padding-bottom: 10px;
         order: -1;
+        color: #000000;
     }
     header div.search{
         height: 35px;
@@ -127,7 +186,6 @@ header div div.burger-menu{
         margin-left: 2%;
     }
     header div nav{
-        padding-bottom: 5px;
         justify-content: space-between;
         order: 1;
     }
@@ -137,20 +195,74 @@ header div div.burger-menu{
         display: flex;
         justify-content: space-around;
         align-items:center;
+        margin-bottom: 0;
     }
     header div nav ul.navbar li{
         display: block;
     }
+
+    /*perfil del usuario*/
+    
+ 
+    header  header div nav ul.login-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    header div nav ul.login-bar .container-perfil{
+        display: flex;
+        padding: 0px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header div nav ul.login-bar img{
+        width: 50px;
+        height: 45px;
+        margin-right: 0px;
+        border-radius: 50%;
+    }
+
+    header div nav ul.login-bar .sub-menu{
+        background-color: #fff;
+        box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.1);
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        right: 80px;
+    }
+    
+    header div nav ul.login-bar .sub-menu li{
+        transition: all 500ms ;
+    }
+
+    header div nav ul.login-bar .sub-menu li:hover{
+        background-color: #c4c4c4;
+    }
+
+
+    header div nav ul.login-bar .sub-menu li a{
+        line-height: 30px;
+        width: 100%;
+    }
+    
+    header div nav ul.login-bar li a:hover + ul,  header div nav ul.login-bar .sub-menu:hover{
+        display: block;
+    }
+
     header div nav ul.login-bar{
         width: 35%;
         display: flex;
         justify-content: space-around;
     }
     header div nav ul li a{
-        align-items:center;
-        margin-left: 2px;
         color: var(--Negro);
+        transition: all 0.2s;
     }
+    header div nav ul li a:hover{
+        color: var(--GrisMedio); 
+      }
 } 
 
 /*desktop*/
@@ -162,7 +274,17 @@ header div div.burger-menu{
     header div nav ul.navbar {
         width: 40%;
     }
-    header div nav ul.login-bar {
-        width: 30%;
+    
+    /*perfil del usuario*/
+    header div nav ul.login-bar .sub-menu{
+        right: 122px;
+        width: 125px;
     }
+    header div nav ul.login-bar img{
+        width: 70px;
+        height: 65px;
+    }
+    /*header div nav ul.login-bar {
+        width: 30%;
+    }*/
 }

@@ -18,10 +18,7 @@
   }
   
   .left-column img{
-    width: 100%;
-  
- 
-    
+    width: 90%;
   }
  
 
@@ -101,7 +98,7 @@
        width: 60%;
  }
  .button-añadir:hover {
-    border-color: rgb(200, 50, 50);
+    border-color: var(--GrisMedio);
   }
   
   
