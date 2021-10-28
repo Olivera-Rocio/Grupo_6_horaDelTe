@@ -14,9 +14,7 @@ router.get('/cart',cart);
 router.get('/add',add);
 
 /* edit */
-router.get('/edit',edit);
-router.delete('/destroy/:id',destroy) 
-router.put('/edit',update);
+router.delete('/destroy/:id',destroy);
  
 
 /* create */
@@ -26,7 +24,7 @@ router.post('/create', upload.single('image'),productValidator, productsControll
 
 /* edit */
 router.get('/edit/:id',edit);
-router.put('/edit/:id',update);
+router.put('/edit/:id',upload.single("image"),update);
  
  
 

@@ -1,9 +1,8 @@
 [
-   {
-      "id": 1,
+   {"id": 1,
       "name": "Taza “Hoy es un buen día”",
       "price": 1600,
-      "discount": 5,
+      "discount": 50,
       "category": "Tazas con frase",
       "description": "Taza con frase “Hoy es un buen día” en fondo celeste vitrificada. Capacidad de 250ml y medidas de 9cm alto x 7cm ancho.",
       "image": "Taza-frase1.jpg"

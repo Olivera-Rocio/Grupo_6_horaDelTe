@@ -89,23 +89,39 @@ module.exports = {
         })
     },
     update: (req,res) => {
-        const { name, price, discount, category, description} = req.body;
-    
-        let product =products.find(product => product.id === +req.params.id);
-    
-        let productEdited = {
-            id : +req.params.id,
-            name: name.trim(),
-            price: +price,
-            discount: +discount,
-            category,
-            description: description.trim(),
-            image: req.file ? req.file.filename : product.image
-        };
-    
-        let productsEdited = products.map(product => product.id === +req.params.id ? productEdited : product)
-    
-        fs.writeFileSync(path.join(__dirname,'..', 'data', 'products.json'), JSON.stringify(productsEdited,null,3), 'utf-8');
-        res.redirect('/admin') 
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            const { name, price, discount, category, description } = req.body;
+            let product = products.find(product => product.id === +req.params.id);
+
+            let productEdited = {
+                id: +req.params.id,
+                name: name.trim(),
+                price: +price,
+                discount: +discount,
+                category,
+                image: req.file ? req.file.filename : product.image,
+                description: description.trim()
+            };
+
+            if (req.file) {
+                if (fs.existsSync(path.join(__dirname, '../public/img/product/' + product.image)) && product.image != "default-image.png") {
+                    fs.unlinkSync(path.join(__dirname, '../public/img/product/' + product.image))
+
+                }
+            }
+
+            let productsEdited = products.map(product => product.id === +req.params.id ? productEdited : product)
+
+            fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'), JSON.stringify(productsEdited, null, 3), 'utf-8');
+            
+            res.redirect('/admin')
+        } else {
+            return res.render('productAdd', {
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
     }
  } 
