@@ -5,7 +5,7 @@
       "email": "valentinaalegre0715@gmail.com",
       "telefono": "1161632253",
       "password": "Z.nHzp6xfzFHHYYvA8omHaKQjoTOera",
-      "categoria": "admin"
+      "rol": "admin"
    },
    {
       "id": 2,
@@ -13,7 +13,7 @@
       "email": "lucas@mercadolib.com",
       "telefono": "1135602286",
       "password": "$2a$10$c9ePQ8QrMPnX",
-      "categoria": "admin"
+      "rol": "admin"
    },
    {
       "id": 3,
@@ -21,7 +21,7 @@
       "email": "juana@misiones.gob",
       "telefono": "1142619739",
       "password": "$G.7NsMSyMPLIXnfiiulSBWC6CmSCLsmy6",
-      "categoria": "user"
+      "rol": "user"
    },
    {
       "id": 4,
@@ -29,7 +29,7 @@
       "email": "facundo@craftsy.com",
       "telefono": "1150278916",
       "password": "$2a$10$MKk88d2CaeDQRqWQfJt.",
-      "categoria": "user"
+      "rol": "user"
    },
    {
       "id": 5,
@@ -37,7 +37,7 @@
       "email": "juliana@craftsy.com",
       "telefono": "1122985544",
       "password": "Jwlak$5Da80236541GDm",
-      "categoria": "user"
+      "rol": "user"
    },
    {
       "id": 6,
@@ -45,14 +45,15 @@
       "email": "marcos@gmail.com",
       "telefono": "1144032487",
       "password": "$WL3wpoXOkzLROaMpblKhNgSNj8NIr36",
-      "categoria": "user"
+      "rol": "user"
    },
    {
       "id": 7,
       "name": "Olivera Magali",
       "email": "Oliveramagalir@gmail.com",
-      "password": "$2a$10$6A89cJ8YWsPLIJqshrZmheagJLtZmeuJe6VpiLUHHs6MfgXH9ARK.",
-      "avatar": "avatar-1635442733104.png",
+      "telefono": "3877440734",
+      "password": "$2a$10$fgptL2L8Y3AYwFUUgV/uO.ICv5cDiGwE7fSgdGVUeGdijbr5dYGX6",
+      "avatar": "avatar-1635446949727.png",
       "rol": "admin"
    }
 ]

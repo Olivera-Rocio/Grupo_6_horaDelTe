@@ -1,21 +1,24 @@
-const {check, body} = require('express-validator');
+const { check, body } = require('express-validator');
 
 module.exports = [
 
     check('name')
         .notEmpty().withMessage('El nombre es requerido'),
-   
+
+    check('telefono')
+        .notEmpty().withMessage('El número de teléfono es requerido'),
+
     body('password')
         .custom(value => {
-            if(value.length != 0){
-                if(value.length < 6 || value.length > 12){
+            if (value.length != 0) {
+                if (value.length < 6 || value.length > 12) {
                     return false
-                }else{
+                } else {
                     return true
                 }
-            }else{
+            } else {
                 return true
             }
         }).withMessage('La contraseña debe tener un mínimo de 6 y un máximo de 12 caracteres'),
-    
+
 ]

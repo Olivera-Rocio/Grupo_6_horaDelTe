@@ -86,6 +86,7 @@ module.exports = {
                 id : user.id,
                 name : req.body.name,
                 email : user.email,
+                telefono: req.body.telefono,
                 password : hashPass,
                 avatar : req.file ? req.file.filename : user.avatar,
                 rol : user.rol
