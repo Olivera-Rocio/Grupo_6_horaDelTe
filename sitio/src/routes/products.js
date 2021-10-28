@@ -24,7 +24,7 @@ router.post('/create', upload.single('image'),productValidator, productsControll
 
 /* edit */
 router.get('/edit/:id',edit);
-router.put('/edit/:id',upload.single("image"),update);
+router.put('/edit/:id',upload.single('image'),update);
  
  
 
