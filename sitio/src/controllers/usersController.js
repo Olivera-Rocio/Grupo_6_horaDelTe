@@ -54,6 +54,9 @@ module.exports = {
                 avatar: user.avatar,
                 rol: user.rol
             }
+            if(req.body.remember){
+                res.cookie('horaDelTe',req.session.userLogin,{maxAge : 1000 * 60})
+            }
             return res.redirect('/')
         }else{
             return res.render('login', {
@@ -86,6 +89,7 @@ module.exports = {
                 id : user.id,
                 name : req.body.name,
                 email : user.email,
+                telefono: req.body.telefono,
                 password : hashPass,
                 avatar : req.file ? req.file.filename : user.avatar,
                 rol : user.rol

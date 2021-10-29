@@ -38,6 +38,14 @@
                                                 </div>
                                             </div>
 
+                                            <div class="col-12 mb-4">
+                                                <div class="form-floating">
+                                                    <input type="tel" class="form-control" id="telefono" placeholder="Telefono" name="telefono" value="<%= user.telefono %>">
+                                                    <label for="telefono">Teléfono</label>
+                                                </div>
+                                                <span class="text-danger small ms-2"><%= locals.errors && errors.telefono ? errors.telefono.msg : null%> </span>
+                                            </div>
+
                                             <div class="col-12 mb-2">
                                                 <div class="form-floating">
                                                     <input class="form-control" type="password" id="password" placeholder="Nueva contraseña" name="password">

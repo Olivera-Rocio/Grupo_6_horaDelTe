@@ -19,59 +19,64 @@
         </div>
   
         <div class="card-body">
-          <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" class="row">
+          <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" class="row" enctype="multipart/form-data">
             <div class="mb-3">
-              <label for="name" class="form-label">Nombre</label>
+              <div class="form-floating">
               <input name="name" type="text" class="form-control" placeholder="Nombre de Producto" id="name" value="<%= product.name %> ">
+              <label for="name" class="form-label">Nombre del producto:</label>
+            </div>
+            <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
             </div>
             
+
             <div class="mb-3">
               <div class="form-floating">
                 <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="description"><%= product.description %></textarea>
-                <label for="description">Descripcion</label>
+                <label for="description">Descripción:</label>
               </div>
+              <span class="text-danger small"><%= locals.errors && errors.description ? errors.description.msg : null%> </span>
             </div>
   
             <div class="mb-3">
               <div class="form-floating">
                 <select class="form-select" id="category" aria-label="Floating label select example" name="category" >
-                  <option selected>Seleccionar una Categoría</option>
-
+                  <option value="" selected hidden>Categoría:</option>
                   <option value="Tazas con frase"  <%= product.category === "Tazas con frase" ? 'selected' : null %> >Tazas con frase</option>
-
                   <option value="Tazas de cerámica"  <%= product.category === "Tazas de cerámica" ? 'selected' : null %> >Tazas de cerámica</option>
-
                   <option value="Teteras"  <%= product.category === "Teteras" ? 'selected' : null %> >Teteras</option>
-
                   <option value="Azucareras" <%= product.category === "Azucareras" ? 'selected' : null %> >Azucareras</option>
-                  
                 </select>
-                <label for="category">Categoría</label>
+                <label for="category">Seleccionar</label>
               </div>
+              <span class="text-danger small"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>
             </div>
             
             <div class="mb-3">
-              <label for="image" class="form-label" >Cargar fotos </label>
+              <label for="image" class="form-label" >Cargar imagen:</label>
               <input class="form-control" type="file" id="image" accept="image/x-png,image/jpeg" name="image" multiple>
             </div>
   
             <div class="mb-3">
-              <label for="price" class="form-label">Precio</label>
+              <div class="form-floating">
               <input type="number" class="form-control" placeholder="Precio" id="price" name="price" aria-describedby="price" value= <%=  product.price %> >
+              <label for="price" class="form-label">Precio:</label>
+            </div>
+            <span class="text-danger small"><%= locals.errors && errors.price ? errors.price.msg : null%> </span>
             </div>
   
             <div class="mb-3">
-              <label for="discount" class="form-label">Indicar Descuento</label>
-              <input type="number" class="form-control" 
-              placeholder="Descuento" 
-              id="discount" name="discount" aria-describedby="discount" value= <%= product.discount %> >
+              <div class="form-floating">
+                <input type="number" class="form-control" placeholder="Descuento" id="discount" name="discount" aria-describedby="discount" value= <%= product.discount %> >
+              <label for="discount" class="form-label">Indicar Descuento:</label>
+            </div>
+            <span class="text-danger small"><%= locals.errors && errors.discount ? errors.discount.msg : null%> </span>
             </div>
             
             <div class="col-12 col-md-6">
               <button type="submit" class="btn btn-dark">Agregar</button>
             </div>
           </form>
-        </div>  
+        </div>    
   
       </div>
   

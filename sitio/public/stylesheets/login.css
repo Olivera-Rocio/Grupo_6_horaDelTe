@@ -66,6 +66,12 @@
     margin-left: 50px;
 }
 
+/*recuerdame*/
+.login main .formulario .box-check{
+    display: block;
+    text-align: end;
+    padding-right: 35px;
+}
 
 /*boton iniciar */
 .login main .formulario .iniciar{
@@ -147,6 +153,11 @@
         margin-left: 70px;
     }
 
+    /*recuerdame*/
+    .login main .formulario .box-check{
+        padding-right: 50px;
+    }
+
     /*boton iniciar*/
     .login main .formulario .iniciar button{
         border-radius: 12%;
@@ -207,6 +218,11 @@
     .login main .formulario .conteiner-error span{
         font-size: 21px;
         margin-left: 90px;
+    }
+
+    /*recuerdame*/
+    .login main .formulario .box-check{
+        padding-right: 65px;
     }
 
     /*boton iniciar*/
