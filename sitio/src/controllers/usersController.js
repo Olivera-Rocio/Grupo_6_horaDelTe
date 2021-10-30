@@ -65,8 +65,10 @@ module.exports = {
         }
     },
     logout : (req,res) =>{
-        req.session.destroy()
+        req.session.destroy();
+        res.cookie('horaDelTe',"", { maxAge: -1 });
         res.redirect('/')
+
     },
     profile:  (req, res) => {
         let users = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/users.json'),'utf-8'));
