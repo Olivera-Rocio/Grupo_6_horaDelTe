@@ -19,7 +19,7 @@ router.delete('/destroy/:id',destroy);
  
 
 /* create */
-router.get('/create', productsController.create);
+router.get('/create', adminUserCheck, productsController.create);
 router.post('/create', upload.single('image'),productValidator, productsController.store);
  
 
