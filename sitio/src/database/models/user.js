@@ -13,6 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       User.belongsTo(models.Rol,{
         as : 'rol'
+      }),
+      User.hasMany(models.Product,{
+        as : 'products',
+        through : 'Carts',
+        foreignKey : 'userId',
+        otherKey : 'productId'
       })
     }
   };
