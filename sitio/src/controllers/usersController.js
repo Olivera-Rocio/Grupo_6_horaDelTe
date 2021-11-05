@@ -13,12 +13,12 @@ module.exports = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            const { name, email, telefono, password } = req.body;
+            const { name, email, phone, password } = req.body;
             let user = {
                 id: users[users.length - 1].id + 1,
                 name: name.trim(),
                 email: email.trim(),
-                telefono: telefono.trim(),
+                phone: phone.trim(),
                 password: bcrypt.hashSync(password, 10),
                 avatar: "default.png",
                 rol: "user"
@@ -91,7 +91,7 @@ module.exports = {
                 id : user.id,
                 name : req.body.name,
                 email : user.email,
-                telefono: req.body.telefono,
+                phone: req.body.phone,
                 password : hashPass,
                 avatar : req.file ? req.file.filename : user.avatar,
                 rol : user.rol

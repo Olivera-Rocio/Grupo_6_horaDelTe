@@ -3,7 +3,7 @@
       "id": 1,
       "name": "Valentina Alegre",
       "email": "valentinaalegre0715@gmail.com",
-      "telefono": "1161632253",
+      "phone": "1161632253",
       "password": "Z.nHzp6xfzFHHYYvA8omHaKQjoTOera",
       "rol": "admin"
    },
@@ -11,7 +11,7 @@
       "id": 2,
       "name": "Lucas",
       "email": "lucas@mercadolib.com",
-      "telefono": "1135602286",
+      "phone": "1135602286",
       "password": "$2a$10$c9ePQ8QrMPnX",
       "rol": "admin"
    },
@@ -19,7 +19,7 @@
       "id": 3,
       "name": "Juana",
       "email": "juana@misiones.gob",
-      "telefono": "1142619739",
+      "phone": "1142619739",
       "password": "$G.7NsMSyMPLIXnfiiulSBWC6CmSCLsmy6",
       "rol": "user"
    },
@@ -27,7 +27,7 @@
       "id": 4,
       "name": "Facundo",
       "email": "facundo@craftsy.com",
-      "telefono": "1150278916",
+      "phone": "1150278916",
       "password": "$2a$10$MKk88d2CaeDQRqWQfJt.",
       "rol": "user"
    },
@@ -35,7 +35,7 @@
       "id": 5,
       "name": "Juliana",
       "email": "juliana@craftsy.com",
-      "telefono": "1122985544",
+      "phone": "1122985544",
       "password": "Jwlak$5Da80236541GDm",
       "rol": "user"
    },
@@ -43,7 +43,7 @@
       "id": 6,
       "name": "Marcos",
       "email": "marcos@gmail.com",
-      "telefono": "1144032487",
+      "phone": "1144032487",
       "password": "$WL3wpoXOkzLROaMpblKhNgSNj8NIr36",
       "rol": "user"
    },
@@ -51,9 +51,18 @@
       "id": 7,
       "name": "Olivera Magali",
       "email": "Oliveramagalir@gmail.com",
-      "telefono": "3877440734",
+      "phone": "3877440734",
       "password": "$2a$10$fgptL2L8Y3AYwFUUgV/uO.ICv5cDiGwE7fSgdGVUeGdijbr5dYGX6",
       "avatar": "avatar-1635446949727.png",
       "rol": "admin"
+   },
+   {
+      "id": 8,
+      "name": "natalia escobar",
+      "email": "medaigualqueseafacil@gmail.com",
+      "phone": "111111111",
+      "password": "$2a$10$Dm8aDIaz.PKvjGPkwpZeXe/OvZhvUSojQzHs/Ktc7UbqXF7xTSPtC",
+      "avatar": "default.png",
+      "rol": "user"
    }
 ]

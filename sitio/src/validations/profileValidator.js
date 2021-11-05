@@ -5,7 +5,7 @@ module.exports = [
     check('name')
         .notEmpty().withMessage('El nombre es requerido'),
 
-    check('telefono')
+    check('phone')
         .notEmpty().withMessage('El número de teléfono es requerido'),
 
     body('password')

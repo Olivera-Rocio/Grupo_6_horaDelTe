@@ -3,7 +3,7 @@ const users = require('../data/users.json');
 
 module.exports = [
     check("name")
-    .notEmpty().withMessage("Ingresar nombre y apellido"),
+    .notEmpty().withMessage("Ingresar nombre"),
 
     check("email")
         .notEmpty().withMessage("Ingresar email").bail()
@@ -19,7 +19,7 @@ module.exports = [
             }
         }).withMessage("El email ya se encuentra registrado"),
 
-    check("telefono")
+    check("phone")
      .notEmpty().withMessage("Ingresar número de teléfono"),
 
      check("password")
