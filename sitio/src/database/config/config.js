@@ -1,4 +1,4 @@
-require("dotenv").confing();
+require('dotenv').config()
 
 
 module.exports = {

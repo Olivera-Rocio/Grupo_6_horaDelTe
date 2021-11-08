@@ -5,6 +5,8 @@ let products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'pr
 const toThousand = require('../utils/toThousand')
 const toDiscount = require('../utils/toDiscount');
 
+const db = require('../database/models');
+
 module.exports = {
     index : (req, res) => {
 return res.render('index',{
