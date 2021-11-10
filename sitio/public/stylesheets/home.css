@@ -204,7 +204,10 @@
  .myButton:hover {
    border-color: var(--GrisMedio);
  }
-
+.botones{
+  width: 100%;
+  margin: 10px;
+}
 .botones button{
   width: 40%;
   padding: 10px;
@@ -212,15 +215,16 @@
   border-radius: 5px;
   font-size: 15px;
   font-weight: 400;
-  background-color: rgb(109, 109, 109);
+  background-color:  var(--GrisMedio);
 margin-left: 30%;
 }
-
 .botones button a{
   color: white;
 
 }
-
+.botones button a:hover {
+  color: rgb(3, 3, 3);
+}
 *{
 
   box-sizing: border-box;
@@ -229,7 +233,6 @@ margin-left: 30%;
   font-size: 14px;
  
 }
-
 
 /*tablet*/
 @media (min-width: 768px) {
