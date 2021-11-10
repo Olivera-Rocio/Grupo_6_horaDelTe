@@ -60,7 +60,14 @@ header div.search{
 }
 header div input{
     width: 75%;
+    border: solid 1px white;
+}
+header div.search button{
     border: none;
+    background-color: var(--Blanco); 
+    color: var(--GrisMedio);
+    width: 10px;
+    padding: 1px;
 }
 header div nav{
     width: 100%;

@@ -23,6 +23,13 @@ return res.render('index',{
             toDiscount 
         }
         )
+    },search: (req, res) => {
+        return res.render("search",{
+            products : products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase())),
+            toThousand,
+            toDiscount,
+            keywords : req.query.keywords
+        })
     }
    
 }
