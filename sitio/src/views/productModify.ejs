@@ -41,10 +41,9 @@
               <div class="form-floating">
                 <select class="form-select" id="category" aria-label="Floating label select example" name="category" >
                   <option value="" selected hidden>Categoría:</option>
-                  <option value="Tazas con frase"  <%= product.category === "Tazas con frase" ? 'selected' : null %> >Tazas con frase</option>
-                  <option value="Tazas de cerámica"  <%= product.category === "Tazas de cerámica" ? 'selected' : null %> >Tazas de cerámica</option>
-                  <option value="Teteras"  <%= product.category === "Teteras" ? 'selected' : null %> >Teteras</option>
-                  <option value="Azucareras" <%= product.category === "Azucareras" ? 'selected' : null %> >Azucareras</option>
+                  <% categories.forEach(category => { %>
+                    <option value="<%= category.id %>" <%= product.categoryId === category.id  ? 'selected' : null%> ><%= category.name %></option>
+                   <% }) %>
                 </select>
                 <label for="category">Seleccionar</label>
               </div>
@@ -73,7 +72,7 @@
             </div>
             
             <div class="col-12 col-md-6">
-              <button type="submit" class="btn btn-dark">Agregar</button>
+              <button type="submit" class="btn btn-dark">Modificar</button>
             </div>
           </form>
         </div>    

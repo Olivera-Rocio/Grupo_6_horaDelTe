@@ -25,10 +25,23 @@ module.exports = {
             }
         })
       
-        Promise.all([ofertas])
-        .then(([ofertas]) => {
+        let products = db.Product.findAll(req.params.id, {
+            include: [
+                {
+                    association: 'Category'
+                }
+            ]
+        })  
+
+        let categories = db.Category.findAll()
+
+        Promise.all([ofertas,products,categories])
+        .then(([ofertas,products,categories]) => {
+            //return (res.send(products))
             return res.render('index', { 
                 ofertas,
+                products,
+                categories,
                 toThousand,
                 toDiscount
             });
@@ -43,10 +56,17 @@ module.exports = {
             toDiscount
         }
         )*/
-        let products = db.Product.findAll()
+        let products = db.Product.findAll({
+            include: [
+                {
+                    association: 'Category'
+                }
+            ]
+        }) 
 
         Promise.all([products])
             .then(([products]) => {
+                //return res.send(products)
                 return res.render('admin',{
                     products,
                     toThousand,

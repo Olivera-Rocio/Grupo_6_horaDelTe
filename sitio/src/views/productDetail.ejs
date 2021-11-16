@@ -23,8 +23,8 @@
         <div class="right-column">
        
           <!-- DESCRIPCION -->
-          <div class="product-description">
-            <span><%= product.category%></span>
+          <div class="product-description"> 
+            <span><%= product.Category.name%></span>
             <h1><%= product.name%></h1>
             <p class="descripcion">
               <%= product.description%>
@@ -32,16 +32,16 @@
   
             <% if (product.discount > 0) { %>
               <p class="precio">
-                <span class="precio">$<%= toThousand(product.price) %></span>
+                <span class="precio">$<%= product.price %></span>
                 /
                 <b><%= product.discount %>% OFF</b>
               </p>
               <p class="precio-total">
-								Precio final: $<%= toDiscount(product.price, product.discount) %>
+								Precio final: $<%= product.price, product.discount %>
 							</p>
               <% }else{%>
                 <p class="precio">
-                Precio: $<%= toThousand(product.price) %>
+                Precio: $<%= product.price %>
                 </p>
                 <% } %> 
           </div>

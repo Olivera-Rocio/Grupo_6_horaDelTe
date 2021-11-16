@@ -11,6 +11,14 @@
        <h1> Bienvenido al modo <i>Administrador</i> </h1>
       </div>
 
+      <br><br><br>
+        <div class="card-body mb-3" style="background-color: #ffd8cb">
+          <h5 class="card-title">En está página podrá agregar, modificar y eliminar sus Productos</h5>
+          <p class="card-text">En caso de necesitar ayuda para agregar un producto presione el siguiente botón:</p>
+          <a href="#tutorialAdd" class="btn btn-dark">Agregar Producto</a>
+
+          
+        </div>
 
       <main class="container">
         <div class="tab-content" id="nav-tabContent">
@@ -43,6 +51,7 @@
                           <th scope="col">#</th>
                           <th scope="col">Imagen</th>
                           <th scope="col">Nombre</th>
+                          <th scope="col">Descripción</th>
                           <th scope="col">Precio</th>
                           <th scope="col">Descuento</th>
                           <th scope="col">Categoría</th>
@@ -60,13 +69,16 @@
                               <%= product.name %>
                             </td>
                             <td>
+                              <%= product.description %>
+                            </td>
+                            <td>
                               <%= product.price %>
                             </td>
                             <td>
                               <%= product.discount %>
                             </td>
                             <td>
-                              <%= product.category %>
+                              <%= product.Category.name %>
                             </td>
                             <td class="d-flex justify-content-around">
                               <a href="/products/edit/<%= product.id %>" class="btn btn-sm btn-success"
@@ -94,15 +106,7 @@
         </div>
 
       </main>
-      <br><br><br>
-
-        <div class="card-body" style="background-color: #ffd8cb">
-          <h5 class="card-title">En está página podrá agregar, modificar y eliminar sus Productos</h5>
-          <p class="card-text">En caso de necesitar ayuda para agregar un producto presione el botón</p>
-          <a href="#tutorialAdd" class="btn btn-dark">Agregar Producto</a>
-
-          
-        </div>
+      
         <br><br><br>
 
         <img src="/img/tutorial1.gif" class="img-fluid" alt="..." id="tutorialAdd">

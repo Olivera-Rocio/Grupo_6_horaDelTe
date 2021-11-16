@@ -36,7 +36,6 @@
                         <h1>Ofertas</h1>
                         <% ofertas.forEach(product=>{ %>
                             <article class="product-card">
-
                                 <img src="/img/products/<%= product.image %>" width="100%" alt="">
                                 <div class="detail-product">
                                     <div class="box-botones">
@@ -44,14 +43,11 @@
                                             Añadir al carrito</a>
                                         <a href="/products/detail/<%= product.id %>" class="myButton2">Ver Mas</a>
                                     </div>
-
                                     <h4>
                                         <%= product.name %>
                                     </h4>
-
                                     <div class="contenedor-precio-descuento">
-
-                                        <% if (product.discount> 0) { %>
+                                         <% if (product.discount> 0) { %>
                                             <p class="precio">
                                                 <span class="precio">$<%= toThousand(product.price) %></span>
                                                 <br>
@@ -64,16 +60,159 @@
                                             </p>
                                     </div>
                                     <% } %>
-
-
-
                                 </div>
-
                             </article>
-
-
                             <% }) %>
 
+
+                            <h1>Tazas con frase</h1>
+                            <% products.forEach(product=>{ %>
+                                <% if (product.CategoryId === 1) { %>
+                                <article class="product-card">
+                                    <img src="/img/products/<%= product.image %>" width="100%" alt="">
+                                    <div class="detail-product">
+                                        <div class="box-botones">
+                                            <a href="/products/cart" class="myButton1"><i class="fas fa-shopping-cart"></i> Añadir al carrito</a>
+                                            <a href="/products/detail/<%= product.id %>" class="myButton2">Ver Mas</a>
+                                        </div>
+                                        <h4>
+                                            <%= product.name %>
+                                        </h4>
+                                        <div class="contenedor-precio-descuento">
+                                            <% if (product.discount> 0) { %>
+                                                <p class="precio">
+                                                    <span class="precio">$<%= toThousand(product.price) %></span>
+                                                    <br>
+                                                    <b>
+                                                        <%= product.discount %>% OFF
+                                                    </b>
+                                                </p>
+                                                <p class="precio-total">
+                                                   $<%= toDiscount(product.price, product.discount) %>
+                                                </p>
+                                                <% }else{%>
+                                                    <p class="precio-real">
+                                                       $<%= toThousand(product.price) %>
+                                                    </p>
+                                                    <% } %>
+                                        </div>
+                                    </div>
+                                </article>
+                                <% } %>
+                                <% }) %>
+
+
+                                <h1>Tazas de cerámica</h1>
+                                <% products.forEach(product=>{ %>
+                                    <% if (product.CategoryId === 2) { %>
+                                    <article class="product-card">
+                                        <img src="/img/products/<%= product.image %>" width="100%" alt="">
+                                        <div class="detail-product">
+                                            <div class="box-botones">
+                                                <a href="/products/cart" class="myButton1"><i class="fas fa-shopping-cart"></i> Añadir al carrito</a>
+                                                <a href="/products/detail/<%= product.id %>" class="myButton2">Ver Mas</a>
+                                            </div>
+                                            <h4>
+                                                <%= product.name %>
+                                            </h4>
+                                            <div class="contenedor-precio-descuento">
+                                                <% if (product.discount> 0) { %>
+                                                    <p class="precio">
+                                                        <span class="precio">$<%= toThousand(product.price) %></span>
+                                                        <br>
+                                                        <b>
+                                                            <%= product.discount %>% OFF
+                                                        </b>
+                                                    </p>
+                                                    <p class="precio-total">
+                                                       $<%= toDiscount(product.price, product.discount) %>
+                                                    </p>
+                                                    <% }else{%>
+                                                        <p class="precio-real">
+                                                           $<%= toThousand(product.price) %>
+                                                        </p>
+                                                        <% } %>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <% } %>
+                                    <% }) %>
+        
+
+                                    <h1>Teteras</h1>
+                                <% products.forEach(product=>{ %>
+                                    <% if (product.CategoryId === 3) { %>
+                                    <article class="product-card">
+                                        <img src="/img/products/<%= product.image %>" width="100%" alt="">
+                                        <div class="detail-product">
+                                            <div class="box-botones">
+                                                <a href="/products/cart" class="myButton1"><i class="fas fa-shopping-cart"></i> Añadir al carrito</a>
+                                                <a href="/products/detail/<%= product.id %>" class="myButton2">Ver Mas</a>
+                                            </div>
+                                            <h4>
+                                                <%= product.name %>
+                                            </h4>
+                                            <div class="contenedor-precio-descuento">
+                                                <% if (product.discount> 0) { %>
+                                                    <p class="precio">
+                                                        <span class="precio">$<%= toThousand(product.price) %></span>
+                                                        <br>
+                                                        <b></i>
+                                                            <%= product.discount %>% OFF
+                                                        </b>
+                                                    </p>
+                                                    <p class="precio-total">
+                                                       $<%= toDiscount(product.price, product.discount) %>
+                                                    </p>
+                                                    <% }else{%>
+                                                        <p class="precio-real">
+                                                           $<%= toThousand(product.price) %>
+                                                        </p>
+                                                        <% } %>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <% } %>
+                                    <% }) %>
+        
+
+                                    <h1>Azucareras</h1>
+                                <% products.forEach(product=>{ %>
+                                    <% if (product.CategoryId === 4) { %>
+                                    <article class="product-card">
+                                        <img src="/img/products/<%= product.image %>" width="100%" alt="">
+                                        <div class="detail-product">
+                                            <div class="box-botones">
+                                                <a href="/products/cart" class="myButton1"><i class="fas fa-shopping-cart"></i> Añadir al carrito</a>
+                                                <a href="/products/detail/<%= product.id %>" class="myButton2">Ver Mas</a>
+                                            </div>
+                                            <h4>
+                                                <%= product.name %>
+                                            </h4>
+                                            <div class="contenedor-precio-descuento">
+                                                <% if (product.discount> 0) { %>
+                                                    <p class="precio">
+                                                        <span class="precio">$<%= toThousand(product.price) %></span>
+                                                        <br>
+                                                        <b></i>
+                                                            <%= product.discount %>% OFF
+                                                        </b>
+                                                    </p>
+                                                    <p class="precio-total">
+                                                       $<%= toDiscount(product.price, product.discount) %>
+                                                    </p>
+                                                    <% }else{%>
+                                                        <p class="precio-real">
+                                                           $<%= toThousand(product.price) %>
+                                                        </p>
+                                                        <% } %>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <% } %>
+                                    <% }) %>
+
+                                
                                 <div class="botones">
                                     <button type="reset" id="reset"><a href="/products"> Ver más productos</a></button>
 

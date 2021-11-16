@@ -14,7 +14,7 @@ module.exports = [
     .notEmpty().withMessage('Indicar categoría'),
     
     check('price')
-    .isInt({
+    .isDecimal({
         min: 1
     }).withMessage('Ingresar un número válido'),
 
