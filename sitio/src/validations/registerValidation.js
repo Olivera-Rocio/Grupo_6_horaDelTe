@@ -29,11 +29,23 @@ module.exports = [
         }).withMessage("La contraseña debe tener un mínimo de 6 y un máximo de 12 caracteres"),
     
     body("password2")
-        .custom((value,{req}) => {
-            if(value !== req.body.password){
+    .custom(value  => {
+        return db.User.findOne({
+            where : { 
+                email : value
+              }
+        }).then( user => {
+            if(user){
+                return Promise.reject('El email ya se encuentra registrado')
+            }
+        })
+      }),
+        /*.custom(value  => {
+            let user = users.find(user => user.email === value);
+            if(user){
                 return false
             }else{
                 return true
             }
-        }).withMessage("Las contraseñas no coinciden"),
+        }).withMessage("El email ya se encuentra registrado"),*/
 ]
