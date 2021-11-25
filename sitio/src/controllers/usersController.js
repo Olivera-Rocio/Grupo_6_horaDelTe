@@ -48,21 +48,27 @@ module.exports = {
     processLogin: (req, res) => {
         let errors = validationResult(req);
 
-        if(errors.isEmpty()){
-            let user = users.find(user => user.email === req.body.email);
-            req.session.userLogin = {
-                id: user.id,
-                name: user.name,
-                avatar: user.avatar,
-                rol: user.rol
-            }
-            if(req.body.remember){
-                res.cookie('horaDelTe',req.session.userLogin,{maxAge : 1000 * 60})
-            }
-            return res.redirect('/')
-        }else{
+        if (errors.isEmpty()) {
+            db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            }).then(user => {
+                req.session.userLogin = {
+                    id: user.id,
+                    name: user.name,
+                    avatar: user.avatar,
+                    rol: user.rolId
+                }
+                if (req.body.remember) {
+                    res.cookie('horaDelTe', req.session.userLogin, { maxAge: 1000 * 60 })
+                }
+                return res.redirect('/')
+            })
+                .catch(error => console.log(error))
+        } else {
             return res.render('login', {
-                errores : errors.mapped()
+                errores: errors.mapped()
             })
         }
     },

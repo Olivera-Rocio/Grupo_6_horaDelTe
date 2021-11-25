@@ -4,12 +4,24 @@ const bcrypt = require('bcryptjs');
 
 module.exports = [
     body('email')
-        .custom((value,{req}) => {
-            let user = users.find(user => user.email === value && bcrypt.compareSync(req.body.password, user.password));
-            if(user){
-                return true
-            }else{
-                return false
+    .custom((value,{req}) => {
+        return db.User.findOne({
+            where : {
+                email : value,
             }
-        }).withMessage('● Credenciales inválidas')
+        })
+        .then(user => {
+            if(!user || !bcrypt.compareSync(req.body.password, user.password)){
+                return Promise.reject()
+            }
+            }).catch( () => Promise.reject('● Credenciales inválidas'))
+    })
+    /*.custom((value,{req}) => {
+        let user = users.find(user => user.email === value && bcrypt.compareSync(req.body.password, user.password));
+        if(user){
+            return true
+        }else{
+            return false
+        }
+    }).withMessage('● Credenciales inválidas')*/
 ]
