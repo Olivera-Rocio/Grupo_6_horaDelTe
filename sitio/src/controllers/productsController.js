@@ -109,6 +109,7 @@ module.exports = {
             fs.writeFileSync(productFilePath,JSON.stringify(products, null, 2),'utf-8');
             return res.redirect ('/admin')*/
 
+           
             db.Product.create({
                 name : name.trim(),
                 description : description.trim(),
@@ -177,24 +178,37 @@ module.exports = {
                 description: description.trim()
             };*/
 
-            db.Product.update(
-                {
-                    name : name.trim(),
-                    description : description.trim(),
-                    price,
-                    discount,
-                    image: req.file ? req.file.filename : Product.image,
-                    CategoryId: category
-                },
-                {
-                    where : {
-                        id : req.params.id
+            db.Product.findByPk(req.params.id)
+            .then( product => {
+
+                db.Product.update(
+                    {
+                        name : name.trim(),
+                        description : description.trim(),
+                        price,
+                        discount,
+                        image: req.file ? req.file.filename : product.image,
+                        CategoryId: category
+                    },
+                    {
+                        where : {
+                            id : req.params.id
+                        }
                     }
-                }
-            )
-            .then( () => {
-                //return (res.send(product))
-                return res.redirect('/admin')
+                )
+                .then( () => {
+                    //return (res.send(product))
+                    let exist = fs.existsSync(path.join(__dirname, "../../public/img/products/" + product.image))
+
+
+                    if ( req.file && exist && product.image != "default-image.png") {    
+                       
+                        fs.unlinkSync(path.join(__dirname, "../../public/img/products/" + product.image))
+                      
+                    }
+                    return res.redirect('/admin')
+                })
+                .catch(error => console.log(error))
             })
             .catch(error => console.log(error))
 
@@ -241,12 +255,27 @@ module.exports = {
         .then(product => {
             if(fs.existsSync('../public/img/products' + product.image)){
                 fs.unlinkSync('../public/img/products' + product.image)}*/
-               db.Product.destroy({
+
+            let product = db.Product.findByPk(req.params.id)// trae el producto 
+
+
+              let resultDestroy = db.Product.destroy({// elimina la imagen 
                    where : {
                        id : req.params.id,
                     }
                 }) 
-                .then( () => {
+                Promise.all([product, resultDestroy])
+                .then( ([product, resultDestroy]) => {
+
+                    let exist = fs.existsSync(path.join(__dirname, "../../public/img/products/" + product.image))
+
+
+                    if ( exist && product.image != "default-image.png") {    
+                        
+                        fs.unlinkSync(path.join(__dirname, "../../public/img/products/" + product.image))
+                        
+                    }
+
                     return res.redirect('/admin')
                 })
                 .catch(error => console.log(error))
