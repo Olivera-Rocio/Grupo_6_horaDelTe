@@ -63,12 +63,20 @@ module.exports = {
                 }
             ]
         }) 
+        let users = db.User.findAll({
+            include: [
+                {
+                    association: 'rol'
+                }
+            ]
+        })
 
-        Promise.all([products])
-            .then(([products]) => {
-                //return res.send(products)
+        Promise.all([products,users])
+            .then(([products,users]) => {
+                //return res.send(users)
                 return res.render('admin',{
                     products,
+                    users,
                     toThousand,
                     toDiscount
                 })
@@ -100,6 +108,17 @@ module.exports = {
                 })
             })
             .catch(error => console.log(error))
+    },
+    destroy : (req, res) => {
+               db.User.destroy({
+                   where : {
+                       id : req.params.id,
+                    }
+                }) 
+                .then( () => {
+                    return res.redirect('/admin')
+                })
+                .catch(error => console.log(error))
+        
     }
-
 }

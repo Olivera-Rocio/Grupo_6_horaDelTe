@@ -252,5 +252,31 @@ module.exports = {
                 .catch(error => console.log(error))
             //})
         //.catch(error => console.log(error))
+    },
+    searchAdmin: (req, res) => {
+
+        let products = db.Product.findAll({
+            where: {
+                name: {
+                    [Op.substring]: req.query.keywords
+                }
+            },
+            include: [
+                {
+                    association: 'Category'
+                }
+            ]
+        })
+
+        Promise.all([products])
+
+            .then(([products]) => {
+                //return (res.send(product))
+                return res.render('searchAdmin', {
+                    products,
+                    keywords: req.query.keywords
+                })
+            })
+            .catch(error => console.log(error))
     }
  } 

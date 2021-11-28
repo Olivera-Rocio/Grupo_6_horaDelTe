@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const upload = require('../middlewares/multerImageProduct');
 
-const {index,detail,cart,add,create,store,edit,update, destroy} = require('../controllers/productsController')
+const {index,detail,cart,add,create,store,edit,update, destroy,searchAdmin} = require('../controllers/productsController')
 
 const productValidator = require('../validations/productValidator');
 const adminUserCheck = require('../middlewares/adminUserCheck');
@@ -13,9 +13,11 @@ router.get('/detail/:id',detail);
 router.get('/cart',cart);
 router.get('/add',adminUserCheck,add);
 
-/* edit */
+/* eliminar */
 router.delete('/destroy/:id',destroy);
  
+/*busqueda*/
+router.get('/search',searchAdmin);
 
 /* create */
 router.get('/create', adminUserCheck, create);
