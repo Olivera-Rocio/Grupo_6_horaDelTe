@@ -26,7 +26,7 @@ module.exports = {
                     avatar: "default.png",
                     rolId: 1
                 }
-            ).then(() => {
+            ).then( user => {
                 //return res.send(user)
                 req.session.userLogin = {
                     id: user.id,
@@ -56,7 +56,7 @@ module.exports = {
                 where: {
                     email: req.body.email
                 }
-            }).then(user => {
+            }).then( user => {
                 req.session.userLogin = {
                     id: user.id,
                     name: user.name,
@@ -103,6 +103,11 @@ module.exports = {
         if (errors.isEmpty()) {
 
             const { name, email, telefono, password } = req.body;
+
+            let avatarProfile = req.file && req.file.filename;
+            req.session.userLogin.avatar = avatarProfile
+
+
             try {
 
                 let user = await db.User.findByPk(req.session.userLogin.id)
@@ -112,7 +117,7 @@ module.exports = {
                         email: email,
                         telefono: telefono,
                         password: req.body.password ? bcrypt.hashSync(password, 10) : user.password,
-                        avatar: req.file ? req.file.filename : user.avatar
+                        avatar: avatarProfile ? avatarProfile : user.avatar
                     }, {
                     where: {
                         id: req.session.userLogin.id
@@ -121,8 +126,8 @@ module.exports = {
                 
                 req.session.userLogin = {
                     id: req.session.userLogin.id,
-                    name: userModified.name,
-                    avatar: userModified.avatar,
+                    name,
+                    avatar: avatarProfile ? avatarProfile : user.avatar ,
                     rol: user.rolId
                 }
 
