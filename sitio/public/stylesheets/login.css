@@ -4,26 +4,29 @@
 
 /*contenido*/
 .login main{
-    font-family:  Roboto, Condensed, sans-serif ;
-
+    font-family:  Roboto, Condensed, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-self: center;
 }
 
 
 /*formulario en general*/
 .login main .formulario{
     background-color:#F8D0D0;
-    margin: 0 auto;
-    margin: 60px 10px;
-    padding: 10px;
+    margin: 25px 0px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
+    width: 300px;
+    align-self: center; 
 }
 
 
 /* titulo inicio de sesion*/
 .login main .formulario p{
     width: 100%;
-    margin: 30px 0 25px;
+    margin: 25px 0px 10px;
     text-transform: uppercase;
     text-align: center;
     font-weight: unset;
@@ -35,7 +38,7 @@
 .login main .formulario .box-form{
     display: flex;
     flex-direction: column;
-    margin: 27px 0;
+    margin: 15px 0;
     padding: 0 9%;
 }
 
@@ -54,8 +57,9 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 100px;
     border:none;
-    height: 25px;
+    height: 30px;
     font-size: 12px;
+    padding: 15px;
 }
 
 
@@ -81,22 +85,22 @@
 
 
 .login main .formulario .iniciar button{
-    border-radius: 20%;
+    border-radius: 50px;
     border: none;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.8);
     width: fit-content;
     height: 27px;
-    font-size: 10px;
+    font-size: 12px;
     margin: 24px auto 26px;
-    padding: 7px 13px;
+    padding: 5px 12px;
 }
 
 
 /* derivacion al register*/
 .login main .registrar{
-    width: max-content;
-    margin: 30px auto 0;
+    margin: 10px 0px 10px;
+    align-self: center;
 }
 
 
@@ -114,37 +118,34 @@
     /*formulario en general*/
     .login main .formulario{
         box-shadow: 6px 6px 10px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 36px;
-        margin: 60px auto;
-        width: 70%;
+        width: 400px;
+        margin: 40px 0px 10px;
     }
 
     /* titulo inicio de sesion*/
     .login main .formulario p{
-        font-size: 20px;
+        font-size: 16px;
     }
 
 
     /* caja de formulario */
     .login main .formulario .box-form{
-        margin: 35px 0;
+        margin: 20px 0;
     }
 
 
     /*titulo email-contraseña*/
     .login main .formulario .box-form label{
         font-size: 14px;
-        margin-left: 10px;
         margin-bottom: 10px;
     }
 
     /*seccion para rellenar*/
     .login main .formulario .box-form input{
         box-shadow: 6px 7px 3px 0px rgba(0, 0, 0, 0.25);
-        height: 33px;
+        height: 35px;
         width: 100%;
-        align-self: center;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     /*mensaje de error*/
@@ -160,17 +161,13 @@
 
     /*boton iniciar*/
     .login main .formulario .iniciar button{
-        border-radius: 12%;
-        width: unset;
-        height: 29px;
-        font-size: 15px;
+        font-size: 14px;
         padding: 8px 30px 27px;
-
     }
 
     /* derivacion al register*/
     .login main .registrar{
-        margin: 145px auto 0;
+        margin: 25px 0px 0px;
     }
     
     .login main .registrar p, .login main .registrar a{
@@ -181,29 +178,29 @@
 }
 
 /*DESKTOP*/
-@media(min-width:769px){
+@media(min-width:1024px){
     /*formulario en general*/
     .login main .formulario{
-        width: 60%;
+        width: 500px
     }
     /* titulo inicio de sesion*/
     .login main .formulario p{
-        margin: 45px 0;
-        font-size: 24px;
+        margin: 35px 0px 15px;
+        font-size: 18px;
     }
 
 
     /* caja de formulario */
     .login main .formulario .box-form{
-        margin: 50px 0;
-        padding: 0 5%;
+        margin: 25px 0px 25px 40px;
+        padding: 0 2%;
     }
     
 
     /*titulo email-contraseña*/
     .login main .formulario .box-form label, .login main .formulario .box-form label.email {
-        font-size: 14px;
-        margin-left: 38px;
+        font-size: 16px;
+        margin-left: 25px;
     }
 
 
@@ -211,7 +208,7 @@
     .login main .formulario .box-form input{
         width: 90%;
         height: 45px;
-        font-size: 25px;
+        font-size: 16px;
     }
 
     /* mensaje de error*/
@@ -227,13 +224,13 @@
 
     /*boton iniciar*/
     .login main .formulario .iniciar button{
-        font-size: 17px;
-
+        font-size: 16px;
+        padding: 8px 30px 32px;
     }
 
     /* derivacion al register*/
     .login main .registrar{
-        margin: 180px auto 0;
+        margin: 35px 0px 0px;
     }
 
     .login main .registrar p, .login main .registrar a{
