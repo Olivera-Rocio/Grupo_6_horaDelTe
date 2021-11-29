@@ -26,7 +26,7 @@ module.exports = {
                     avatar: "default.png",
                     rolId: 1
                 }
-            ).then(() => {
+            ).then( user => {
                 //return res.send(user)
                 req.session.userLogin = {
                     id: user.id,
@@ -56,7 +56,7 @@ module.exports = {
                 where: {
                     email: req.body.email
                 }
-            }).then(user => {
+            }).then( user => {
                 req.session.userLogin = {
                     id: user.id,
                     name: user.name,
@@ -126,8 +126,8 @@ module.exports = {
                 
                 req.session.userLogin = {
                     id: req.session.userLogin.id,
-                    name: userModified.name,
-                    avatar: avatarProfile ? avatarProfile : userModified.avatar ,
+                    name,
+                    avatar: avatarProfile ? avatarProfile : user.avatar ,
                     rol: user.rolId
                 }
 
