@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const productFilePath = path.join(__dirname, '../data/products.json');
+//const productFilePath = path.join(__dirname, '../data/products.json');
 
-let products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
+//let products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
 
 const toDiscount = require('../utils/toDiscount');
 const checkId = require('../utils/checkId');
@@ -16,20 +16,13 @@ const { Op } = require('sequelize');
 
 module.exports = {
     index: (req, res) => {
-        /*const products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'),'utf-8'));
-		return res.render("products",{
-            products,
-            toThousand,
-			toDiscount
-        }
-        )*/
 
         let products = db.Product.findAll()
 
         Promise.all([products])
 
         .then(([products]) => {
-            //return (res.send(products))
+            //return res.send(products)
             return res.render("products",{
                 products,
                 toThousand,
@@ -41,13 +34,6 @@ module.exports = {
 
 	},
     detail : (req,res) => {
-        /*let product = products.find(product => product.id === +req.params.id);
-        //return res.send(req.params)
-        return res.render("productDetail",{
-			product,
-            toDiscount,
-			toThousand
-		})*/
         
         db.Product.findByPk(req.params.id, {
             include: [
@@ -57,7 +43,7 @@ module.exports = {
             ]
         }) 
             .then(product => { 
-               // return (res.send(product))
+               // return res.send(product)
                         return res.render('productDetail', {
                             product
                         })
@@ -73,7 +59,7 @@ module.exports = {
         //return res.render('productAdd')
         db.Category.findAll()
             .then(categories => {
-                //return (res.send(categories))
+                //return res.send(categories)
                 return res.render('productAdd', {
                     categories
                 })
@@ -84,7 +70,7 @@ module.exports = {
         //return res.render('productAdd')
         db.Category.findAll()
             .then(categories => {
-                //return (res.send(categories))
+                //return res.send(categories)
                 return res.render('productAdd', {
                     categories
                 })
@@ -95,21 +81,9 @@ module.exports = {
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
-            const { name,price,discount,description,category} = req.body;
-            /*let product = {
-                id: (products[products.length-1].id + 1),
-                name, 
-                price : +price, 
-                discount : +discount, 
-                category, 
-                description, 
-                image : req.file ? req.file.filename :'default-image.png'
-            }
-            products.push(product);
-            fs.writeFileSync(productFilePath,JSON.stringify(products, null, 2),'utf-8');
-            return res.redirect ('/admin')*/
 
-           
+            const { name,price,discount,description,category} = req.body;
+            
             db.Product.create({
                 name : name.trim(),
                 description : description.trim(),
@@ -126,10 +100,6 @@ module.exports = {
                 })
                 .catch(error => console.log(error))
         }else{
-            /*return res.render('productAdd',{
-                errors : errors.mapped(),
-                old : req.body
-            })*/
 
             db.Category.findAll()
             .then(categories => {
@@ -143,10 +113,7 @@ module.exports = {
         }
     },
     edit : (req,res) => {
-        /*return res.render('productModify',{
-            product : products.find(product => product.id === +req.params.id),
-            toThousand,
-        })*/
+
         let product = db.Product.findByPk(req.params.id) 
         let categories = db.Category.findAll()
 
@@ -166,18 +133,9 @@ module.exports = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            const { name, price, discount, category, description } = req.body;
-            /*let product = products.find(product => product.id === +req.params.id);
-            let productEdited = {
-                id: +req.params.id,
-                name: name.trim(),
-                price: +price,
-                discount: +discount,
-                category,
-                image: req.file ? req.file.filename : product.image,
-                description: description.trim()
-            };*/
 
+            const { name, price, discount, category, description } = req.body;
+            
             db.Product.findByPk(req.params.id)
             .then( product => {
 
@@ -212,19 +170,7 @@ module.exports = {
             })
             .catch(error => console.log(error))
 
-           /* if (req.file) {
-                if (fs.existsSync(path.join(__dirname, '../public/img/product/' + product.image)) && product.image != "default-image.png") {
-                    fs.unlinkSync(path.join(__dirname, '../public/img/product/' + product.image))
-                }
-            }
-            let productsEdited = products.map(product => product.id === +req.params.id ? productEdited : product)
-            fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'), JSON.stringify(productsEdited, null, 3), 'utf-8');
-            res.redirect('/admin')*/
         } else {
-            /*return res.render('productAdd', {
-                errors: errors.mapped(),
-                old: req.body
-            })*/
 
             let product = db.Product.findByPk(req.params.id)
             let categories = db.Category.findAll()
@@ -243,18 +189,6 @@ module.exports = {
         }
     },
     destroy : (req, res) => {
-        /*let product = products.find((producto) => producto.id === +req.params.id)
-        let productsModified = products.filter(product => product.id !== +req.params.id );
-        if (fs.existsSync(path.join(__dirname, "../public/img/products" + product.image) && product.image != "default-image.png")) {        
-            fs.unlinkSync(path.join(__dirname, "../public/img/products" + product.image))
-        }
-        fs.writeFileSync(path.join(__dirname,'..', 'data', 'products.json'),JSON.stringify(productsModified,null,3), 'utf-8');
-        res.redirect('/admin')*/
-
-        /*db.Product.findByPk(req.params.id)
-        .then(product => {
-            if(fs.existsSync('../public/img/products' + product.image)){
-                fs.unlinkSync('../public/img/products' + product.image)}*/
 
             let product = db.Product.findByPk(req.params.id)// trae el producto 
 
@@ -279,12 +213,10 @@ module.exports = {
                     return res.redirect('/admin')
                 })
                 .catch(error => console.log(error))
-            //})
-        //.catch(error => console.log(error))
     },
     searchAdmin: (req, res) => {
 
-        let products = db.Product.findAll({
+        db.Product.findAll({
             where: {
                 name: {
                     [Op.substring]: req.query.keywords
@@ -297,10 +229,8 @@ module.exports = {
             ]
         })
 
-        Promise.all([products])
-
-            .then(([products]) => {
-                //return (res.send(product))
+            .then((products) => {
+                //return (res.send(products))
                 return res.render('searchAdmin', {
                     products,
                     keywords: req.query.keywords

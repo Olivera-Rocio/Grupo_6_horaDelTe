@@ -147,5 +147,29 @@ module.exports = {
         }
 
 
+    },
+    destroy : (req, res) => {
+
+        let user = db.User.findByPk(req.params.id)
+        let resultDestroy = db.User.destroy({
+                   where : {
+                       id : req.params.id,
+                    }
+                })
+
+                Promise.all([user, resultDestroy]) 
+                .then( ([user, resultDestroy]) => {
+
+                    let exist = fs.existsSync(path.join(__dirname, "../../public/img/users/" + user.avatar))
+
+                    if ( exist && user.avatar != "default.png") {    
+                        
+                        fs.unlinkSync(path.join(__dirname, "../../public/img/users/" + user.avatar))
+                        
+                    }
+                    return res.redirect('/admin')
+                })
+                .catch(error => console.log(error))
+        
     }
 }

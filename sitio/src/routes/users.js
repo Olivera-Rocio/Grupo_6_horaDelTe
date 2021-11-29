@@ -8,7 +8,7 @@ const profileValidator = require('../validations/profileValidator');
 const notEntry = require('../middlewares/notEntry');
 
  
-const {register,processRegister,login,processLogin, logout, profile, update} = require('../controllers/usersController')
+const {register,processRegister,login,processLogin, logout, profile, update,destroy} = require('../controllers/usersController')
 
  /* users */
 router.get('/register',notEntry,register);
@@ -18,7 +18,7 @@ router.post('/login',loginValidator, processLogin);
 router.get('/logout', logout);
 router.get('/profile',userLoginCheck, profile);
 router.post('/profile',upload.single('avatar'),profileValidator, update);
-
+router.delete('/destroy/:id',destroy); 
 
 
 module.exports = router;

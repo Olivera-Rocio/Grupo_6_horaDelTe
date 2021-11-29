@@ -11,11 +11,6 @@ const { Op } = require('sequelize');
 
 module.exports = {
     index: (req, res) => {
-        /*return res.render('index', {
-            products,
-            toThousand,
-            toDiscount
-        })*/
 
         let ofertas = db.Product.findAll({
             where : {
@@ -49,13 +44,7 @@ module.exports = {
         .catch(error => console.log(error))
     },
     admin: (req, res) => {
-        /*let products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'products.json'), 'utf-8'));
-        return res.render('admin', {
-            products,
-            toThousand,
-            toDiscount
-        }
-        )*/
+
         let products = db.Product.findAll({
             include: [
                 {
@@ -83,12 +72,7 @@ module.exports = {
             })
             .catch(error => console.log(error))
     }, search: (req, res) => {
-        /*return res.render("search",{
-            products : products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase())),
-            toThousand,
-            toDiscount,
-            keywords : req.query.keywords
-        })*/
+
         let products = db.Product.findAll({
             where: {
                 name: {
@@ -108,17 +92,5 @@ module.exports = {
                 })
             })
             .catch(error => console.log(error))
-    },
-    destroy : (req, res) => {
-               db.User.destroy({
-                   where : {
-                       id : req.params.id,
-                    }
-                }) 
-                .then( () => {
-                    return res.redirect('/admin')
-                })
-                .catch(error => console.log(error))
-        
     }
 }

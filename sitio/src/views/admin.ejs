@@ -12,7 +12,7 @@
       </div>
 
         <div class="card-body mb-3" style="background-color: #ffd8cb">
-          <h5 class="card-title">En está página podrá agregar, modificar y eliminar sus Productos</h5>
+          <h5 class="card-title">En está página podrá agregar, modificar y eliminar sus Productos como también visualizar y eliminar Usuarios</h5>
           <p class="card-text">En caso de necesitar ayuda para agregar un producto presione el siguiente botón:</p>
           <a href="#tutorialAdd" class="btn btn-dark">Agregar Producto</a>
 
@@ -140,7 +140,7 @@
                             </td>
                             <td class="d-flex justify-content-around">
                               <div>
-                                <form action="/destroy/<%= user.id %>?_method=DELETE" method="POST">
+                                <form action="/users/destroy/<%= user.id %>?_method=DELETE" method="POST">
                                   <button type="submit" class="btn btn-sm btn-danger" style="width: 35px;"><i
                                       class="fas fa-trash"></i></button>
                                 </form>
