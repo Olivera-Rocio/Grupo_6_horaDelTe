@@ -5,18 +5,21 @@
 /*contenido*/
 .register main{
     font-family:  Roboto, Condensed, sans-serif ;
-
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-self: center;
 }
 
 
 /*formulario en general*/
 .register main .formulario{
-    background-color: #f2cdcd     ;
-    margin: 0 auto;
-    margin: 60px 10px;
-    padding: 10px;
+    background-color: #f2cdcd;
+    margin: 25px 0px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
+    width: 300px;
+    align-self: center;
 }
 
 
@@ -58,7 +61,9 @@
     background-color: #fafafa;
     border-radius: 100px;
     border:none;
-    height: 20px;
+    height: 30px;
+    font-size: 12px;
+    padding: 15px;
 }
 
 
@@ -68,10 +73,10 @@
     color: #ffffff;
     background-color: rgb(0, 0, 0);
     width: fit-content;
-    font-size: 7px;
-    margin: 7px auto;
+    font-size: 12px;
+    margin: 24px auto 26px;
     text-transform: uppercase;
-    padding: 5px 8px;
+    padding: 5px 12px;
     border-radius: 50px;
     display: block;
 }
@@ -80,8 +85,8 @@
 
 /* derivacion a inicio de sesion*/
 .register main .iniciar-sesion{
-    width: max-content;
-    margin: 30px auto 0;
+    margin: 10px 0px 10px;
+    align-self: center;
 }
 
 
@@ -99,14 +104,13 @@
     /*formulario en general*/
     .register main .formulario{
         box-shadow: 6px 6px 10px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 36px;
-        margin: 60px auto;
-        width: 70%;
+        width: 400px;
+        margin: 40px 0px 10px;
     }
 
     /* titulo inicio de sesion*/
     .register main .formulario p{
-        font-size: 22px;
+        font-size: 18px;
     }
 
 
@@ -126,9 +130,9 @@
     /*seccion para rellenar*/
     .register main .formulario .box-form input{
         box-shadow: 6px 7px 3px 0px rgba(0, 0, 0, 0.25);
-        height: 33px;
+        height: 35px;
         width: 100%;
-        align-self: center;
+        font-size: 14px;
     }
 
 
@@ -143,7 +147,7 @@
 
 /* derivacion a inicio de sesion*/
     .register main .iniciar-sesion{
-        margin: 145px auto 0;
+        margin: 25px 0px 0px;
     }
     
     .register main .iniciar-sesion p, .register main .iniciar-sesion a{
@@ -154,10 +158,10 @@
 }
 
 /*DESKTOP*/
-@media(min-width:769px){
+@media(min-width:1024px){
     /*formulario en general*/
     .register main .formulario{
-        width: 60%;
+        width: 500px;
     }
     
     /* titulo inicio de sesion*/
@@ -169,14 +173,14 @@
 
     /* caja de formulario */
     .register main .formulario .box-form{
-        margin: 20px 0;
-        padding: 0 5%;
+        margin: 25px 0px 25px 40px;
+        padding: 0 2%;
     }
     
 
     /*titulos de la seccion para rellenar*/
     .register main .formulario .box-form label{
-        margin-left: 38px;
+        margin-left: 20px;
     }
     
 
@@ -184,7 +188,8 @@
     /*seccion para rellenar*/
     .register main .formulario .box-form input{
         width: 90%;
-        height: 40px;
+        height: 45px;
+        font-size: 16px;
     }
 
     .register main .formulario .box-form span {
@@ -194,7 +199,7 @@
 
 /* derivacion a inicio de sesion*/
     .register main .iniciar-sesion{
-        margin: 180px auto 0;
+        margin: 35px 0px 0px;
     }
 
     .register main .iniciar-sesion p, .register main .iniciar-sesion a{

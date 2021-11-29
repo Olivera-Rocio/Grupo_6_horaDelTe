@@ -124,7 +124,7 @@
 
     /* titulo inicio de sesion*/
     .login main .formulario p{
-        font-size: 16px;
+        font-size: 18px;
     }
 
 
@@ -186,7 +186,7 @@
     /* titulo inicio de sesion*/
     .login main .formulario p{
         margin: 35px 0px 15px;
-        font-size: 18px;
+        font-size: 20px;
     }
 
 
@@ -213,7 +213,7 @@
 
     /* mensaje de error*/
     .login main .formulario .conteiner-error span{
-        font-size: 21px;
+        font-size: 18px;
         margin-left: 90px;
     }
 
