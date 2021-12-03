@@ -41,7 +41,6 @@
                   <% categories.forEach(category => { %>
                     <option value="<%= category.id %>" <%= category.id === category.id  ? 'selected' : null%> ><%= category.name %></option>
                    <% }) %>
-  
                 </select>
                 <label for="category">Seleccionar</label>
               </div>
@@ -50,7 +49,8 @@
             
             <div class="mb-3">
               <label for="image" class="form-label" >Cargar imagen:</label>
-              <input class="form-control" type="file" id="image" accept="image/x-png,image/jpeg" name="image" multiple>
+              <input class="form-control" type="file" id="image" accept="image/x-png,image/jpeg" name="image" >
+              <span class="text-danger small"><%= locals.errors && errors.image ? errors.image.msg : null%> </span>
             </div>
   
             <div class="mb-3">
