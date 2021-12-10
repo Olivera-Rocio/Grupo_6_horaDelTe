@@ -16,7 +16,7 @@ const fileFilter = function(req, file,callback){
         req.fileValidationError = "Sólo se permiten archivos jpg, jpeg, png, gif, webp.";
         return callback(null,false,req.fileValidationError);
     }
-    callaback(null,true);
+    callback(null,true);
 }
 
 const upload = multer({
