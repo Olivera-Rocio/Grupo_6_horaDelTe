@@ -11,18 +11,19 @@
 
         <div class="formulario">
             <p>Inicio de sesión</p>
-            <form action="" method="POST">
+            <form id="form-login" action="" method="POST">
                 
                 <div class="conteiner-error">
                     <span class= "error"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
                 </div>
                 <div class="box-form">
                     <label class="email" for="email">Email</label>
-                    <input type="email" placeholder="" id="email" name="email">
+                    <input type="email" placeholder="" id="email" name="email" value="<%= (typeof datos!='undefined' && datos.email)?datos.email : "" %>" >
+                    
                 </div>
                 <div class="box-form">
                     <label for="pass">Contraseña</label>
-                    <input type="password" placeholder="" id="pass" name="password">
+                    <input type="password" placeholder="" id="pass" name="password" value="<%= (typeof datos!='undefined' && datos.pass)?datos.pass : "" %>" >
                 </div>
                 <div class="box-check">
                     <input type="checkbox" id="remember" name="remember">
@@ -40,6 +41,7 @@
 
     <!---FOOTER------------------------------------------------------------>
     <%- include('./partials/footer') %>
+    <script src="/javascripts/login.js"></script>
 </body>
 
 </html>
