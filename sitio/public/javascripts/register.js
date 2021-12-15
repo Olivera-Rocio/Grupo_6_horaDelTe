@@ -12,13 +12,26 @@ window.addEventListener('load', () => {
     let regExEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]:+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/
     let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
     let regExLetras = /^[a-zA-Z\sñáéíóúü]*$/
+
+let nombreSeparado = nombre.value.split(" ")
+
+console.log(nombreSeparado)
+
+let nombre = nombreSeparado[0]
+
+let apellido = nombreSeparado[1]
+
+console.log(nombre)
+
+
+console.log(apellido)
     nombre.addEventListener('blur', () => {
         switch (true) {
-            case !nombre.value:
-                errorName.innerHTML = "obligatorio";
+            case !nombre||!apellido:
+                errorName.innerHTML = "nombre y apellido obligatorio";
                 nombre.classList.add('is-invalid');
                 break;
-            case !regExLetras.test(nombre.value):
+            case !regExLetras.test(nombre||apellido):
                 errorName.innerHTML = "Solo letras por favor";
                 nombre.classList.add('is-invalid');
                 break;
