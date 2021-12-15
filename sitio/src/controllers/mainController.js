@@ -32,7 +32,7 @@ module.exports = {
 
         Promise.all([ofertas,products,categories])
         .then(([ofertas,products,categories]) => {
-            //return (res.send(products))
+            //return res.send(categories)
             return res.render('index', { 
                 ofertas,
                 products,
