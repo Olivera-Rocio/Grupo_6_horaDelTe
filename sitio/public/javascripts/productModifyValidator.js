@@ -120,6 +120,12 @@ formAddProduct.elements[5].addEventListener('blur', function () {
             this.classList.add('is-invalid');
             discountError.innerHTML = 'Debe indicar descuento (si no lo tiene, indicar 0).';
             break;
+            
+        case this.value >0:
+            this.classList.add('is-invalid');
+            priceError.innerHTML = 'Se requiere un número valido';
+            break;
+
         default:
             this.classList.remove('is-invalid');
             this.classList.add('is-valid');
@@ -144,50 +150,3 @@ formAddProduct.addEventListener('submit', function(e) {
     }
     !error && this.submit();
 })
-
-/*const preview = document.getElementById('preview');
-
-const showPreview = array => {
-    preview.innerHTML = null;
-    array.forEach(image => {
-        preview.innerHTML += `
-        <div >
-            <img width="200" src="/img/products/${image.file}" alt="">
-            
-        </div>
-        `
-    })
-    return false
-}
-
-/*
-const deleteImage = async id => {
-    try {
-        let response = await fetch('/api/delete-image/' + id, {
-            method: 'POST',
-        })
-        let result = await response.json()
-        showPreview(result.images)
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-const addImage = async (id,files) => {
-    let data = new FormData()
-    for (const file of files) {
-        data.append('images',file,file.name)
-    }
-    console.log(data)
-
-    try {
-        let response = await fetch('/api/add-images/' + id, {
-            method: 'POST',
-            body : data,
-        })
-        let result = await response.json()
-        showPreview(result.images)
-    } catch (error) {
-        
-    }
-}*/

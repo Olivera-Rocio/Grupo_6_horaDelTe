@@ -127,6 +127,11 @@ formAddProduct.elements[5].addEventListener('blur', function () {
             discountError.innerHTML = 'Debe indicar descuento (si no lo tiene, indicar 0).';
             break;
 
+        case this.value >0:
+            this.classList.add('is-invalid');
+            priceError.innerHTML = 'Se requiere un número valido';
+            break;
+
         default:
             this.classList.remove('is-invalid');
             this.classList.add('is-valid');
