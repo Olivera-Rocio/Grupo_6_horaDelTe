@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const fs = require('fs');
 const path = require('path');
 //const users = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'users.json'), 'utf-8'));
-const { validationResult } = require("express-validator");
+const { validationResult } = require('express-validator');
 
 /* base de datos */
 const db = require('../database/models');
@@ -98,7 +98,7 @@ module.exports = {
     },
     update: async (req, res) => {
         //return res.send(req.file)
-        let errors = validationResult(req);
+        let errors = validationResult(req)
 
         if (errors.isEmpty()) {
 
@@ -109,7 +109,6 @@ module.exports = {
 
 
             try {
-
                 let user = await db.User.findByPk(req.session.userLogin.id)
                 let userModified = await db.User.update(
                     {
@@ -140,13 +139,25 @@ module.exports = {
 
 
         } else {
-            res.render('profile', {
+           /*  res.render('profile', {
                 user,
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session
+            }) */
+            db.User.findByPk(req.session.userLogin.id, {
+                include: [{ all: true }]
             })
+                .then(user => {
+                    return res.render('profile', {
+                        user,
+                        errors: errors.mapped(),
+                        old: req.body,
+                        session: req.session
+                    })
+                })
+                
         }
-
-
     },
     destroy : (req, res) => {
 
