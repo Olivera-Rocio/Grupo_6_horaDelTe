@@ -100,7 +100,7 @@ module.exports = {
         //return res.send(req.file)
         let errors = validationResult(req)
 
-        if (errors.isEmpty()) {
+        if (errors.isEmpty() && req.fileValidationError ) {
 
             const { name, email, telefono, password } = req.body;
 
@@ -122,6 +122,19 @@ module.exports = {
                         id: req.session.userLogin.id
                     }
                 })
+                .then( () => {
+                    //return (res.send(product))
+                    let exist = fs.existsSync(path.join(__dirname, "../../public/img/users/" + user.avatar))
+
+
+                    if ( req.file && exist && user.avatar != "default.png") {    
+                       
+                        fs.unlinkSync(path.join(__dirname, "../../public/img/users/" + user.avatar))
+                      
+                    }
+                    return res.redirect('/users/profile')
+                })
+                .catch(error => console.log(error))
                 
                 req.session.userLogin = {
                     id: req.session.userLogin.id,
@@ -139,6 +152,16 @@ module.exports = {
 
 
         } else {
+            errors = errors.mapped()
+
+            if (req.fileValidationError) {
+                errors = {
+                    ...errors,
+                    avatar: {
+                        msg: req.fileValidationError,
+                    },
+                };
+            }
            /*  res.render('profile', {
                 user,
                 errors: errors.mapped(),

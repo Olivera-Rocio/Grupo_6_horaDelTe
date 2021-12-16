@@ -9,17 +9,13 @@ const inputTelefono = $('telefono');
 const inputPassword = $('password');
 const inputAvatar = $('avatar');
 const btnWatch = $('watch');
+const btnSubmit =  $('error-empty');
 
 //expresiones regulares
 const regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/; //Que introduzcan letras
 const regExPassword = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/
+const regExPhone = /^[0-9]\S{7,16}$/
 
-//para separar nombre
- let nombreSeparado = inputName.value.split(" ");
-
- let nombre = nombreSeparado[0];
-
- let apellido = nombreSeparado[1];
 
 //Nombre
 inputName.addEventListener('focus', function () {
@@ -34,19 +30,27 @@ inputName.addEventListener('keydown', function () {// keydown es cuando presiona
 
 
 inputName.addEventListener('blur', function () {
+    let nombreSeparado = inputName.value.split(" ");
+
+    let nombre = nombreSeparado[0];
+
+    let apellido = nombreSeparado[1];
+
     switch (true) {
-        case !nombre|| !apellido:
-            $('error-name').innerText = 'Este acmpo es obligatorio';
+        case !nombre || !apellido:
+            $('error-name').innerText = 'Este campo es obligatorio';
             this.classList.add('is-invalid');
             $('info-name').innerText = null;
             break;
         case !regExAlpha.test(this.value):
             $('error-name').innerText = 'Ingresa un nombre valido';
             this.classList.add('is-invalid');
+            $('info-name').innerText = null;
             break;
-        case this.value.trim().length < 2:
-            $('error-name').innerText = 'El nombre debe tener más de 2 caracteres';
+        case nombre.trim().length < 2 || apellido.trim().length < 2 :
+            $('error-name').innerText = 'El nombre y el apellido debe tener 2 o más caracteres';
             this.classList.add('is-invalid');
+            $('info-name').innerText = null;
             break;
         default:
             this.classList.remove('is-invalid');
@@ -64,7 +68,11 @@ inputTelefono.addEventListener('blur', function () {
             $('error-telefono').innerText = 'El campo teléfono es requerido';
             this.classList.add('is-invalid');
             break;
-        case this.value.trim().length < 10:
+        case !regExPhone.test(this.value):
+            $('error-telefono').innerText = 'Ingresa un numero valido';
+            this.classList.add('is-invalid');
+            break;
+        case this.value.trim().length < 8:
             $('error-telefono').innerText = 'El número ingresado no contiene los caracteres requeridos';
             this.classList.add('is-invalid');
             break;
@@ -116,9 +124,9 @@ inputAvatar.addEventListener('change',
             this.value = '';
             $('img-preview').innerText = '';
             return false;
-        } else {
+        } /* else {
             // Image preview
-            console.log(this.files);
+           console.log(this.files);
             if (this.files && this.files[0]) {
                 let reader = new FileReader();
                 reader.onload = function (e) {
@@ -128,31 +136,30 @@ inputAvatar.addEventListener('change',
                 $('error-file').innerText = '';
                 this.classList.remove('is-invalid')
             }
-        }
+        }*/
     })
 
-    
-// Botón de envio
-$form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    let error = false;
-    let formElements = this.elements;
-    console.log(formElements);
 
-    for (let index = 0; index < formElements.length - 1; index++) {
-        if (
-            formElements[index].value === "" ||
-            formElements[index].classList.contains('is-invalid')
-        ) {
-            formElements[index].classList.add('is-invalid');
-            submitErrors.innerText = "Los campos señalados son obligatorios";
+// Botón de envio
+formulario.addEventListener('submit', e => {
+    
+    e.preventDefault();
+    
+    let error = false;
+    const elementos = formulario.elements;
+    
+    for (let i = 0; i < elementos.length - 3; i++) {
+        
+        if(!elementos[i].value){
+            elementos[i].classList.add('is-invalid');
+            $('error-empty').innerText = "Los campos señalados son obligatorios";
             error = true;
         }
+        
     }
 
-    if (!error) {
-        console.log('Todo bien');
-        $form.submit();
+    if(!error){
+        formulario.submit()
     }
-});
 
+})
