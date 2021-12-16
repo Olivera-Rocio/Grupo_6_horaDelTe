@@ -13,39 +13,39 @@
             <main>
 
                 <section>
-                        <% products.forEach(product=>{ %>
+                        <% categories.forEach(category=>{ %>
                             <h1>
-                            <%= product.Category.name%>
+                            <%= category.name%>
                         </h1>
                         
-                            <% if (product.CategoryId===product.Category.name) { %>
+                            <% if (category.products.CategoryId===category.products.Category.name) { %>
                                 <article class="product-card">
-                                    <img src="/img/products/<%= product.image %>" width="100%" alt="">
+                                    <img src="/img/products/<%= category.products.image %>" width="100%" alt="">
                                     <div class="detail-product">
                                         <div class="box-botones">
                                             <a href="/products/cart" class="myButton1"><i
                                                     class="fas fa-shopping-cart"></i>
                                                 Añadir al carrito</a>
-                                            <a href="/products/detail/<%= product.id %>" class="myButton2">Ver Mas</a>
+                                            <a href="/products/detail/<%= category.product.id %>" class="myButton2">Ver Mas</a>
                                         </div>
                                         <h4>
-                                            <%= product.name %>
+                                            <%= category.product.name %>
                                         </h4>
                                         <div class="contenedor-precio-descuento">
-                                            <% if (product.discount> 0) { %>
+                                            <% if (category.product.discount> 0) { %>
                                                 <p class="precio">
-                                                    <span class="precio">$<%= toThousand(product.price) %></span>
+                                                    <span class="precio">$<%= toThousand(category.product.price) %></span>
                                                     <br>
                                                     <b>
-                                                        <%= product.discount %>% OFF
+                                                        <%= category.product.discount %>% OFF
                                                     </b>
                                                 </p>
                                                 <p class="precio-total">
-                                                    $<%= toDiscount(product.price, product.discount) %>
+                                                    $<%= toDiscount(category.product.price, category.product.discount) %>
                                                 </p>
                                                 <% }else{%>
                                                     <p class="precio-real">
-                                                        $<%= toThousand(product.price) %>
+                                                        $<%= toThousand(category.product.price) %>
                                                     </p>
                                             <% } %>
                                         </div>

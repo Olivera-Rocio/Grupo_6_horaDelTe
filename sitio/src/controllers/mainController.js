@@ -28,7 +28,13 @@ module.exports = {
             ]
         })  
 
-        let categories = db.Category.findAll()
+        let categories = db.Category.findAll({
+            include: [
+                {
+                    association: 'products'
+                }
+            ]
+        })
 
         Promise.all([ofertas,products,categories])
         .then(([ofertas,products,categories]) => {

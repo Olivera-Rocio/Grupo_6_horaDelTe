@@ -53,24 +53,33 @@ module.exports = {
 
     },
     category: (req, res) => {
-
-        let products = db.Product.findByPk(req.params.id, {
+        
+        let categories = db.Category.findAll({
+            where: { id: req.params.id },
+            include: [
+                {
+                    association: 'products'
+                }
+            ]
+        })
+         products = db.Product.findByPk(req.params.id, {
+            where: { categoryId: req.params.id }
+            ,
             include: [
                 {
                     association: 'Category'
                 }
             ]
         })
-        
-        let categories = db.Category.findAll()
 
-        Promise.all([products,categories])
+        Promise.all([categories,products])
 
-            .then(([products,categories]) => {
-                // return res.send(product)
+            .then(([categories,products]) => {
+                 //return res.send(categories)
                 return res.render('categories', {
-                    products,
-                    categories
+                    categories,
+                    products
+                    
                 })
 
             })
