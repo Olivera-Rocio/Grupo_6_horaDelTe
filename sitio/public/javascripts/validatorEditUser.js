@@ -4,6 +4,7 @@ const $ = id => document.getElementById(id);
 
 const formulario = $('form-perfil');
 
+const imgPreview =   $('img-preview')
 const inputName = $('name');
 const inputTelefono = $('telefono');
 const inputPassword = $('password');
@@ -124,11 +125,13 @@ inputAvatar.addEventListener('change',
             this.value = '';
             $('img-preview').innerText = '';
             return false;
-        } /* else {
+        } else {
             // Image preview
            console.log(this.files);
             if (this.files && this.files[0]) {
+
                 let reader = new FileReader();
+
                 reader.onload = function (e) {
                     $('img-preview').innerText = '<img src="' + e.target.result + '"/>';
                 };
@@ -136,7 +139,7 @@ inputAvatar.addEventListener('change',
                 $('error-file').innerText = '';
                 this.classList.remove('is-invalid')
             }
-        }*/
+        }
     })
 
 

@@ -97,20 +97,38 @@ module.exports = {
         })*/
     },
     update: async (req, res) => {
-        //return res.send(req.file)
-        let errors = validationResult(req)
+      
+        let errors = validationResult(req);
 
-        if (errors.isEmpty() && req.fileValidationError ) {
+        errors = errors.mapped()
+
+        if (req.fileValidationError) {
+            errors = {
+                ...errors,
+                avatar: {
+                    msg: req.fileValidationError,
+                },
+            };
+        }
+
+        function isObjEmpty(obj) {
+            for (var prop in obj) {
+              if (obj.hasOwnProperty(prop)) return false;
+            }
+          
+            return true;
+          }
+        
+       
+        if (isObjEmpty(errors)) {
 
             const { name, email, telefono, password } = req.body;
 
             let avatarProfile = req.file && req.file.filename;
-            req.session.userLogin.avatar = avatarProfile
-
 
             try {
                 let user = await db.User.findByPk(req.session.userLogin.id)
-                let userModified = await db.User.update(
+                db.User.update(
                     {
                         name: name,
                         email: email,
@@ -123,58 +141,42 @@ module.exports = {
                     }
                 })
                 .then( () => {
-                    //return (res.send(product))
                     let exist = fs.existsSync(path.join(__dirname, "../../public/img/users/" + user.avatar))
-
 
                     if ( req.file && exist && user.avatar != "default.png") {    
                        
                         fs.unlinkSync(path.join(__dirname, "../../public/img/users/" + user.avatar))
                       
                     }
+                    req.session.userLogin = {
+                        id: req.session.userLogin.id,
+                        name,
+                        avatar: avatarProfile ? avatarProfile : user.avatar ,
+                        rol: user.rolId
+                    }
+    
+                    res.locals.userLogin = req.session.userLogin
+
                     return res.redirect('/users/profile')
+
                 })
                 .catch(error => console.log(error))
                 
-                req.session.userLogin = {
-                    id: req.session.userLogin.id,
-                    name,
-                    avatar: avatarProfile ? avatarProfile : user.avatar ,
-                    rol: user.rolId
-                }
-
-                res.locals.userLogin = req.session.userLogin
-
-                return res.redirect('/users/profile')
+              
             } catch (error) {
                 console.log(error)
             }
 
 
         } else {
-            errors = errors.mapped()
-
-            if (req.fileValidationError) {
-                errors = {
-                    ...errors,
-                    avatar: {
-                        msg: req.fileValidationError,
-                    },
-                };
-            }
-           /*  res.render('profile', {
-                user,
-                errors: errors.mapped(),
-                old: req.body,
-                session: req.session
-            }) */
+         
             db.User.findByPk(req.session.userLogin.id, {
                 include: [{ all: true }]
             })
                 .then(user => {
                     return res.render('profile', {
                         user,
-                        errors: errors.mapped(),
+                        errors,
                         old: req.body,
                         session: req.session
                     })
