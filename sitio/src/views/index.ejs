@@ -22,6 +22,7 @@
                 <button aria-label="Next" class="glider-next">»</button>
                 <div role="tablist" class="dots"></div>
             </div>
+        </div>
 
             <script src="javascripts/glider.js"> </script>
             <script src="javascripts/home.js"></script>
@@ -218,6 +219,44 @@
 
                                 </div>
                     </section>
+
+                    <section class="section-form" id="video">
+                        <div class="form-contact">
+                            <div class="texto">
+                                <h4 class="titulo">Contacto</h4>
+                                <p class="sub-titulo">Si tenés alguna consulta, o simplemente queres mandarnos un
+                                    mensaje, ¡No dudes en hacerlo! Pronto te daremos una respuesta.</p>
+                            </div>
+                            <form class="form" action="https://formsubmit.co/horadelte21@gmail.com" method="POST">
+
+                                <div class="box-formulario">
+                                    <label for="nombre">Nombre y apellido</label>
+                                    <input type="text" id="nombre" name="name" placeholder="Tu nombre y apellido">
+                                </div>
+
+                                <div class="box-formulario">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="name@example.com">
+                                </div>
+
+                                <div class="box-formulario">
+                                    <label for="msj">Mensaje</label>
+                                    <textarea type="text" id="msj" name="msj" rows="3"
+                                        placeholder="Tu mensaje"></textarea>
+                                </div>
+
+                                <div class="box-button">
+                                    <button type="submit">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="box-video">
+                            <video muted autoplay loop>
+                                <source src="/video/Tea.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </section>
+
                 </main>
 
                 <%- include('partials/footer') %>
