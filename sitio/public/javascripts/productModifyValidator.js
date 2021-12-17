@@ -12,7 +12,7 @@ formAddProduct.elements[0].addEventListener('blur', function () {
             this.classList.add('is-invalid');
             nameError.innerHTML = 'Nombre de producto obligatorio.';
             break;
-    
+
         default:
             this.classList.remove('is-invalid');
             this.classList.add('is-valid');
@@ -47,7 +47,7 @@ formAddProduct.elements[2].addEventListener('blur', function () {
             this.classList.add('is-invalid');
             categoryError.innerHTML = 'Debe indicar una categoría.';
             break;
-    
+
         default:
             this.classList.remove('is-invalid');
             this.classList.add('is-valid');
@@ -101,9 +101,9 @@ formAddProduct.elements[4].addEventListener('blur', function () {
             priceError.innerHTML = 'Debe indicar precio.';
             break;
 
-        case this.value <= 0:
+        case this.value < 0:
             this.classList.add('is-invalid');
-            priceError.innerHTML = 'Se requiere un número mayor a cero.';
+            discountError.innerHTML = 'Se requiere un número valido';
             break;
 
         default:
@@ -120,8 +120,8 @@ formAddProduct.elements[5].addEventListener('blur', function () {
             this.classList.add('is-invalid');
             discountError.innerHTML = 'Debe indicar descuento (si no lo tiene, indicar 0).';
             break;
-            
-        case this.value >0:
+
+        case this.value > 0:
             this.classList.add('is-invalid');
             priceError.innerHTML = 'Se requiere un número valido';
             break;
@@ -134,11 +134,11 @@ formAddProduct.elements[5].addEventListener('blur', function () {
     }
 })
 
-formAddProduct.addEventListener('submit', function(e) {
+formAddProduct.addEventListener('submit', function (e) {
     e.preventDefault();
     let error = false;
     for (let i = 0; i < this.elements.length - 1; i++) {
-        if(this.elements[i].classList.contains('is-invalid') || !this.elements[i].value){
+        if (this.elements[i].classList.contains('is-invalid') || !this.elements[i].value) {
             error = true
             this.elements[i].classList.add('is-invalid');
             errorEmpty.innerHTML = "*Los campos indicados son obligatorios"
