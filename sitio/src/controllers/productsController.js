@@ -52,6 +52,28 @@ module.exports = {
             .catch(error => console.log(error))
 
     },
+    category: (req, res) => {
+
+        db.Category.findByPk(req.params.id, {
+            include: [
+                {
+                    association: 'products'
+                }
+            ]
+        })
+
+            .then(category => {
+                return res.render('categories', {
+                    category,
+                    toThousand,
+                    toDiscount
+
+                })
+
+            })
+            .catch(error => console.log(error))
+
+    },
     cart: (req, res) => {
         return res.render('productCart')
     },
