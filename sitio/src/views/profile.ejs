@@ -17,8 +17,8 @@
                                 </div>
 
                                 <div class="card-body row justify-content-center">
-                                    <div class="col-10 col-md-4 " id="img-preview" >
-                                        <img class="img-fluid rounded-start" src="/img/users/<%= user.avatar %>" alt="">
+                                    <div class="col-10 col-md-4 " >
+                                        <img id="img-preview" class="img-fluid rounded-start" src="/img/users/<%= user.avatar %>" alt="">
                                         <span id="fileErrors"></span>
                                     </div>
                                     <div class="col-12 col-md-8">
@@ -88,8 +88,10 @@
                     </div>
 
                 </div>
-                <script src="/javascripts/validatorEditUser.js"></script>
+                
             </main>
+
+            <script src="/javascripts/validatorEditUser.js"></script>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"

@@ -4,13 +4,13 @@ const $ = id => document.getElementById(id);
 
 const formulario = $('form-perfil');
 
-const imgPreview =   $('img-preview')
+const imgPreview = $('img-preview')
 const inputName = $('name');
 const inputTelefono = $('telefono');
 const inputPassword = $('password');
 const inputAvatar = $('avatar');
 const btnWatch = $('watch');
-const btnSubmit =  $('error-empty');
+const btnSubmit = $('error-empty');
 
 //expresiones regulares
 const regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/; //Que introduzcan letras
@@ -48,7 +48,7 @@ inputName.addEventListener('blur', function () {
             this.classList.add('is-invalid');
             $('info-name').innerText = null;
             break;
-        case nombre.trim().length < 2 || apellido.trim().length < 2 :
+        case nombre.trim().length < 2 || apellido.trim().length < 2:
             $('error-name').innerText = 'El nombre y el apellido debe tener 2 o más caracteres';
             this.classList.add('is-invalid');
             $('info-name').innerText = null;
@@ -56,6 +56,7 @@ inputName.addEventListener('blur', function () {
         default:
             this.classList.remove('is-invalid');
             this.classList.add('is-valid');
+            $('info-name').innerText = null;
             $('error-name').innerText = "";
             break;
     }
@@ -127,41 +128,40 @@ inputAvatar.addEventListener('change',
             return false;
         } else {
             // Image preview
-           console.log(this.files);
+            console.log(this.files);
             if (this.files && this.files[0]) {
 
                 let reader = new FileReader();
-
-                reader.onload = function (e) {
-                    $('img-preview').innerText = '<img src="' + e.target.result + '"/>';
-                };
                 reader.readAsDataURL(this.files[0]);
-                $('error-file').innerText = '';
-                this.classList.remove('is-invalid')
-            }
+
+                reader.onload = () => imgPreview.src = reader.result;
+            };
+            $('error-file').innerText = '';
+            this.classList.remove('is-invalid')
         }
-    })
+    }
+)
 
 
 // Botón de envio
 formulario.addEventListener('submit', e => {
-    
+
     e.preventDefault();
-    
+
     let error = false;
     const elementos = formulario.elements;
-    
+
     for (let i = 0; i < elementos.length - 3; i++) {
-        
-        if(!elementos[i].value){
+
+        if (!elementos[i].value) {
             elementos[i].classList.add('is-invalid');
             $('error-empty').innerText = "Los campos señalados son obligatorios";
             error = true;
         }
-        
+
     }
 
-    if(!error){
+    if (!error) {
         formulario.submit()
     }
 
