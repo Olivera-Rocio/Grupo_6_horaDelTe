@@ -92,5 +92,8 @@ module.exports = {
                 })
             })
             .catch(error => console.log(error))
+    },
+    nosotras: (req, res) => {
+        return res.render('nosotras')
     }
 }

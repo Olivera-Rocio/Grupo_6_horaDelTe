@@ -55,39 +55,3 @@ const confirmUser = (id, e) => {
     }
   })
 }
-
-
-/*function AlertarEliminacion (){
-
-  var respuesta = confirm("Seguro que desea eliminar el producto?");
-  if (respuesta === true) {
-    return true;
-  } else {
-    return null;
-  }
-}
-
-const formAdmin = document.getElementById('form-admin');
-console.log(formAdmin);
-
-formAdmin.addEventListener('submit', function AlertarEliminacion ()
-{
-    Swal.fire({
-        title: 'Está seguro?',
-        text: "No podra revertirlo",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si!'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire(
-            'Eliminado!',
-            'Producto eliminado.',
-            'success'
-          )
-        }
-      })
-})*/
-
