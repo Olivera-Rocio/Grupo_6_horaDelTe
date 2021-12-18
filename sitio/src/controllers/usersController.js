@@ -148,9 +148,16 @@ module.exports = {
                         fs.unlinkSync(path.join(__dirname, "../../public/img/users/" + user.avatar))
                       
                     }
+                    let passChange = false;
+
+                    if(password  !== req.session.userLogin.password){
+                        passChange = true
+                        }
+
                     req.session.userLogin = {
                         id: req.session.userLogin.id,
                         name,
+                        passChange,
                         avatar: avatarProfile ? avatarProfile : user.avatar ,
                         rol: user.rolId
                     }

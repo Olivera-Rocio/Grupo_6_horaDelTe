@@ -56,7 +56,6 @@ inputName.addEventListener('blur', function () {
         default:
             this.classList.remove('is-invalid');
             this.classList.add('is-valid');
-            $('info-name').innerText = null;
             $('error-name').innerText = "";
             break;
     }
