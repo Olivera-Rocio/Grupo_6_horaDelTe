@@ -8,7 +8,7 @@ const formSearch = $('form-search');
     e.preventDefault();
     
     if (this.value.length === "") {
-        
+        console.log(value.length);
         return false
     } else {
         return true
