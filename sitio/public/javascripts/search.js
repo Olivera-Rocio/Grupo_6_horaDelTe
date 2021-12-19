@@ -1,15 +1,17 @@
-console.log('header sucess');
+console.log('header, header-admin sucess');
+
 const $ = id => document.getElementById(id);
 const formSearch = $('form-search');
 
  formSearch.addEventListener('submit', function (e) {
     
     e.preventDefault();
-    console.log(this.value.length);
+    var inputSearch = $("input-search")
+    console.log(inputSearch.value.trim().length);
     
-    if (this.value.length == 0) {
+    if (inputSearch.value.trim().length != 0) {
         
-        return false
+        this.submit()
     } 
     
 })
