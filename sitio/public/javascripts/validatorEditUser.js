@@ -12,6 +12,20 @@ const inputAvatar = $('avatar');
 const btnWatch = $('watch');
 const btnSubmit = $('error-empty');
 
+const query = new URLSearchParams(location.search);
+if(query.has('passChange') && query.get('passChange') === "true"){
+    console.log(query.get('passChange'));
+    Swal.fire(
+        'Contraseña cambiada con éxito!',
+        '',
+        'success'
+        )
+        window.setTimeout(function() {
+            window.location  = '/users/profile'
+        }, 1500);
+        
+}
+
 //expresiones regulares
 const regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/; //Que introduzcan letras
 const regExPassword = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/

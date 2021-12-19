@@ -150,7 +150,7 @@ module.exports = {
                     }
                     let passChange = false;
 
-                    if(password  !== req.session.userLogin.password){
+                    if(req.body.password){
                         passChange = true
                         }
 
@@ -164,7 +164,8 @@ module.exports = {
     
                     res.locals.userLogin = req.session.userLogin
 
-                    return res.redirect('/users/profile')
+                    return res.redirect('/users/profile?passChange=' + passChange)
+
 
                 })
                 .catch(error => console.log(error))
