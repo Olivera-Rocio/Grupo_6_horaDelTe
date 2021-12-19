@@ -16,8 +16,8 @@ router.post('/register',registerValidator,processRegister);
 router.get('/login',notEntry, login);
 router.post('/login',loginValidator, processLogin);
 router.get('/logout', logout);
-router.get('/profile',userLoginCheck, profile);
-router.post('/profile',upload.single('avatar'),profileValidator, update);
+router.get('/profile', userLoginCheck, profile);
+router.post('/profile' , upload.single('avatar'), profileValidator, update);
 router.delete('/destroy/:id',destroy); 
 
 

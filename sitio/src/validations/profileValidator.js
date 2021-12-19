@@ -11,7 +11,7 @@ module.exports = [
     body('password')
         .custom(value => {
             if (value.length != 0) {
-                if (value.length < 6 || value.length > 12) {
+                if (value.length < 8 || value.length > 16) {
                     return false
                 } else {
                     return true
@@ -19,6 +19,6 @@ module.exports = [
             } else {
                 return true
             }
-        }).withMessage('La contraseña debe tener un mínimo de 6 y un máximo de 12 caracteres'),
+        }).withMessage('La contraseña debe tener un mínimo de 8 y un máximo de 16 caracteres'),
 
 ]
