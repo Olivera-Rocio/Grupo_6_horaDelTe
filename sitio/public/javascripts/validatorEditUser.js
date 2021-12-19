@@ -29,7 +29,7 @@ if(query.has('passChange') && query.get('passChange') === "true"){
 //expresiones regulares
 const regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/; //Que introduzcan letras
 const regExPassword = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/
-const regExPhone = /^[0-9]\S{7,16}$/
+const regExPhone = /^[0-9]/
 
 
 //Nombre
