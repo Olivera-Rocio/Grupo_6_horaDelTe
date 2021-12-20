@@ -46,71 +46,64 @@
                     </span>
                   </div>
 
-                  <div class="d-flex justify-content-between">
-
-                    <div class="col-12 col-md-6 mx-1">
-
-                      <div class="col-12 mb-3">
-                        <div class="form-floating">
-                          <select class="form-select" id="category" aria-label="Floating label select example"
-                            name="category">
-                            <option value="" selected hidden>Categoría:</option>
-                            <% categories.forEach(category=> { %>
-                              <option value="<%= category.id %>" <%=product.categoryId===category.id ? 'selected' :
-                                null%> ><%= category.name %>
-                              </option>
-                              <% }) %>
-                          </select>
-                          <label for="category">Seleccionar</label>
-                        </div>
-                        <span id="categoryError" class="text-danger small">
-                          <%= locals.errors && errors.category ? errors.category.msg : null%>
-                        </span>
-                      </div>
-
-                      <div class="col-12 mb-4">
-                        <div class="mb-3">
-                          <label for="image" class="btn btn-outline-secondary w-100 mt-2"class="form-label" id="btnImagen">Cambiar imagen:</label>
-                          <input hidden class="form-control" type="file" id="image" name="image" multiple>
-                          <span id="imageError" class="text-danger small">
-                            <%= locals.errors && errors.image ? errors.image.msg : null%>
-                          </span>
-                        </div>
-                      </div>
-
-                      <div class="col-12 mb-4">
-                        <div class="form-floating">
-                          <input type="number" class="form-control" placeholder="Precio" id="price" name="price"
-                            aria-describedby="price" value=<%=product.price %> >
-                          <label for="price" class="form-label">Precio:</label>
-                        </div>
-                        <span id="priceError" class="text-danger small">
-                          <%= locals.errors && errors.price ? errors.price.msg : null%>
-                        </span>
-                      </div>
-
-                      <div class="col-12 mb-4">
-                        <div class="form-floating">
-                          <input type="number" class="form-control" placeholder="Descuento" id="discount" name="discount"
-                            aria-describedby="discount" value=<%=product.discount %> >
-                          <label for="discount" class="form-label">Descuento:</label>
-                        </div>
-                        <span id="discountError" class="text-danger small">
-                          <%= locals.errors && errors.discount ? errors.discount.msg : null%>
-                        </span>
-                      </div>
-
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="form-floating">
+                      <select class="form-select" id="category" aria-label="Floating label select example"
+                        name="category">
+                        <option value="" selected hidden>Categoría:</option>
+                        <% categories.forEach(category=> { %>
+                          <option value="<%= category.id %>" <%=product.categoryId===category.id ? 'selected' : null%>
+                            ><%= category.name %>
+                          </option>
+                          <% }) %>
+                      </select>
+                      <label for="category">Seleccionar</label>
                     </div>
+                    <span id="categoryError" class="text-danger small">
+                      <%= locals.errors && errors.category ? errors.category.msg : null%>
+                    </span>
+                </div>
 
-                    <div class="col-12 col-md-5 mb-3 mx-1">
-                      <div class="d-flex justify-content-center form-control row" id="preview">
-                        <p>Vista previa de imagen</p>
-                        <img src="/img/products/<%= product.image %>" alt="imagen">
-                      </div>
-                    </div>
-
+                  <div class="col-12 col-md-6 mb-3">
+                      <label for="image" class="btn btn-outline-secondary w-100 mt-2" class="form-label"
+                        id="btnImagen">Cambiar imagen:</label>
+                      <input hidden class="form-control" type="file" id="image" name="image" multiple>
+                      <span id="imageError" class="text-danger small">
+                        <%= locals.errors && errors.image ? errors.image.msg : null%>
+                      </span>
                   </div>
-                  
+
+                  <div class="mb-3">
+                    <div class="col-12 mb-6">
+                      <div class="text-center form-control" id="preview">
+                        <p>Vista previa de imagen</p>
+                        <img src="/img/products/<%= product.image %>" alt="imagen" style="width:150px;height:150px">
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                      <div class="form-floating">
+                        <input type="number" class="form-control" placeholder="Precio" id="price" name="price"
+                          aria-describedby="price" value=<%=product.price %> >
+                        <label for="price" class="form-label">Precio:</label>
+                      </div>
+                      <span id="priceError" class="text-danger small">
+                        <%= locals.errors && errors.price ? errors.price.msg : null%>
+                      </span>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                      <div class="form-floating">
+                        <input type="number" class="form-control" placeholder="Descuento" id="discount"
+                          name="discount" aria-describedby="discount" value=<%=product.discount %> >
+                        <label for="discount" class="form-label">Descuento:</label>
+                      </div>
+                      <span id="discountError" class="text-danger small">
+                        <%= locals.errors && errors.discount ? errors.discount.msg : null%>
+                      </span>
+                    </div>
+
                   <span id="errorEmpty" class="text-danger small"></span>
 
                   <div class="d-flex justify-content-center">
@@ -118,7 +111,7 @@
                     <button type="submit" class="btn btn-dark mx-2">Modificar</button>
                   </div>
 
-                </form>
+              </form>
               </div>
 
             </div>
@@ -130,11 +123,11 @@
 
       </main>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-      <script src="/javascripts/productModifyValidator.js"></script>
-
   </body>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+  <script src="/javascripts/productModifyValidator.js"></script>
+  
 </html>

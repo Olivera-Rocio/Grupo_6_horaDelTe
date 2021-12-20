@@ -9,27 +9,44 @@
 
         <!---header-->
 
-        <!--carrousel-->
-        <div class="glider-contain">
-            <div class="glider">
-                <button aria-label="Previous" class="glider-prev">«</button>
-                <div><img src="/img/img-home-banner.jpg" alt=""></div>
-                <div><img src="/img/2.jpg" alt=""></div>
-                <div><img src="/img/1.jpg" alt=""></div>
-                <div><img src="/img/3.jpg" alt=""></div>
-                <div><img src="/img/4.jpg" alt=""></div>
-                <div><img src="/img/5.jpg" alt=""></div>
-                <button aria-label="Next" class="glider-next">»</button>
-                <div role="tablist" class="dots"></div>
-            </div>
-        </div>
-
-        <script src="javascripts/glider.js"> </script>
-        <script src="javascripts/home.js"></script>
-
-        <!--fin carrousel-->
-
         <body class="home">
+
+            <!--carrousel-->
+            <section class="banner">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div id="carousel1" class="carousel-item active">
+                            <img src="/img/baner/envio.png" alt="" style="width:100%;">
+                        </div>
+                        <div id="carousel2" class="carousel-item">
+                            <img src="/img/baner/pagos.png" alt="" style="width:100%;">
+                        </div>
+                        <div id="carousel3" class="carousel-item">
+                            <img src="/img/baner/compra-segura.png" alt="" style="width:100%;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+            <!--fin carrousel-->
+
             <main>
 
                 <div class="contenedor">
@@ -153,5 +170,9 @@
             <%- include('partials/footer') %>
 
         </body>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous"></script>
 
 </html>

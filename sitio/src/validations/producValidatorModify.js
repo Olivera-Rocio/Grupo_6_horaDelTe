@@ -21,11 +21,6 @@ module.exports = [
         min: 1
     }).withMessage('*Ingresar un número válido.'),
 
-    check('price')
-    .isInt({
-        min: 1
-    }).withMessage('*Ingresar un número válido.'),
-
     check('discount')
     .notEmpty().withMessage('*Debe indicar descuento (si no lo tiene, indicar 0).'),
 
