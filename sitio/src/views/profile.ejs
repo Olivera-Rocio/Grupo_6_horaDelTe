@@ -17,17 +17,19 @@
                                 </div>
 
                                 <div class="card-body row justify-content-center">
-                                    <div class="col-10 col-md-4">
-                                        <img class="img-fluid rounded-start" src="/img/users/<%= user.avatar %>" alt="">
+                                    <div class="col-10 col-md-4 " >
+                                        <img id="img-preview" class="img-fluid rounded-start" src="/img/users/<%= user.avatar %>" alt="">
+                                        <span id="fileErrors"></span>
                                     </div>
                                     <div class="col-12 col-md-8">
-                                        <form class="row" method="POST" enctype="multipart/form-data">
+                                        <form class="row" id="form-perfil" method="POST" enctype="multipart/form-data" autocomplete="off">
 
                                             <div class="col-12 mb-2">
                                                 <div class="form-floating">
-                                                    <input name="name" type="text" class="form-control<%= locals.errors && errors.name ? 'is-invalid' : null %>" placeholder="Nuevo nombre" id="name"  value="<%= user.name %>">
+                                                    <input name="name" type="text" class="form-control" placeholder="Nuevo nombre" id="name"  value="<%= user.name %>">
                                                     <label for="name" class="form-label">Nuevo nombre</label>
-                                                    <span class="text-danger small ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
+                                                    <span id="error-name" class="text-danger small ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
+                                                    <span id="info-name" class=" small text-info" ></span> 
                                                 </div>
                                             </div>
 
@@ -43,24 +45,35 @@
                                                     <input type="tel" class="form-control" id="telefono" placeholder="Telefono" name="telefono" value="<%= user.telefono %>">
                                                     <label for="telefono">Teléfono</label>
                                                 </div>
-                                                <span class="text-danger small ms-2"><%= locals.errors && errors.telefono ? errors.telefono.msg : null%> </span>
+                                                <span id="error-telefono" class="text-danger small ms-2"><%= locals.errors && errors.telefono ? errors.telefono.msg : null%> </span>
+                                                <span class="error-msg" id="info-telefono"></span> 
                                             </div>
 
                                             <div class="col-12 mb-2">
                                                 <div class="form-floating">
-                                                    <input class="form-control" type="password" id="password" placeholder="Nueva contraseña" name="password">
-                                                    <label for="pass" class="form-label">Nueva contraseña</label>
-                                                    <span class="text-danger small ms-2"><%= locals.errors && errors.password ? errors.password.msg : null%> </span>
+                                                    <div class="d-flex">
+                                                        <input class="form-control" type="password" id="password" placeholder="Nueva contraseña" name="password">
+                                                        <a class="btn btn-outline-dark ms-2" type="button" id="watch" style="width:50px">
+                                                            <i class="fa fa-eye"></i>
+                                                        </a>
+                                                    </div>
+                                                    <span id="error-password" class="text-danger small ms-2"><%= locals.errors && errors.password ? errors.password.msg : null%> </span>
                                                 </div> 
                                             </div>
 
                                             <div class="col-12 mb-3">
                                                 <label for="avatar" class="form-label">Subir imagen de perfil</label>
                                                 <input class="form-control" type="file" id="avatar" name="avatar" >
+                                                <% if (locals.errors && errors.avatar) { %>
+                                                    <small class="text-danger"><%= errors.avatar.msg %></small>
+                                                <% } %>
+                                                <span class="error-msg text-danger" id="error-file"></span> 
                                             </div>
-
-                                            <div class="col-12 col-md-6">
+                                            <div class="col-12 col-md-6 w-25">
                                                 <button type="submit" class="btn btn-dark">Guardar</button>
+                                            </div>
+                                            <div class="col-12 w-75">
+                                                <span id="error-empty" class="small text-danger"></span>
                                             </div>
                                         </form>
                                     </div>
@@ -75,7 +88,10 @@
                     </div>
 
                 </div>
+                
             </main>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="/javascripts/validatorEditUser.js"></script>
 
 
     </body>
