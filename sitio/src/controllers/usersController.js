@@ -41,7 +41,9 @@ module.exports = {
 
         } else {
             return res.render('register', {
-                errores: errors.mapped()
+                errores: errors.mapped(),
+                old : req.body
+
             })
         }
     },

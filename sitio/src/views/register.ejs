@@ -13,22 +13,22 @@
             <form action="" method="POST">
                 <div class="box-form">
                     <label class="nombreCompleto" for="nombre">Nombre y apellido</label>
-                    <input type="text" id="nombre" name="name">
+                    <input type="text" id="nombre" name="name" value="<%= locals.errores && errores.name ? "" : (locals.old && old.name ? old.name : "") %>">
                     <span class= "error"><%= locals.errores && errores.name ? errores.name.msg : null %></span>
                 </div>
                 <div class="box-form">
                     <label class="email" for="email">Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" value="<%= locals.errores && errores.email ? "" : (locals.old && old.email ? old.email: "") %>">
                     <span class= "error"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
                 </div>
                 <div class="box-form">
                     <label class="telefono" for="telefono">telefono</label>
-                    <input type="tel" id="telefono" name="telefono">
+                    <input type="tel" id="telefono" name="telefono" value="<%= locals.errores && errores.telefono ? "" : (locals.old && old.telefono ? old.telefono: "") %>">
                     <span class= "error"><%= locals.errores && errores.telefono ? errores.telefono.msg : null %></span>
                 </div>
                 <div class="box-form">
                     <label for="pass">Contraseña</label>
-                    <input type="password" id="pass" name="password">
+                    <input type="password" id="pass" name="password" >
                     <span class= "error"><%= locals.errores && errores.password ? errores.password.msg : null %></span>
                 </div>
                 <div class="box-form">
