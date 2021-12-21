@@ -29,7 +29,8 @@
                         </div>
                         <div class="box-form">
                             <label class="telefono" for="telefono">telefono</label>
-                            <input type="tel" id="telefono" name="telefono">
+                            <input type="telefono" id="telefono" name="telefono"
+                                value="<%= (typeof datos !='undefined' && datos.telefono ? datos.telefono : null) %>">
                             <span class="error">
                                 <%= locals.errores && errores.telefono ? errores.telefono.msg : null %>
                             </span>
@@ -56,6 +57,7 @@
                 <div class="iniciar-sesion">
                     <p>¿Tenes cuenta?<a href="/users/login"> Haz click para iniciar sesion</a></p>
                 </div>
+                <script src="/javascripts/register.js"></script>
             </main>
 
             <%- include("partials/footer") %>

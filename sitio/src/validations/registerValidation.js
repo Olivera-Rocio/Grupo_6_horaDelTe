@@ -20,7 +20,7 @@ module.exports = [
         }).withMessage("El email ya se encuentra registrado"),
 
     check("telefono")
-     .notEmpty().withMessage("Ingresar número de teléfono"),
+        .notEmpty().withMessage("Ingresar número de teléfono"),
 
      check("password")
         .isLength({

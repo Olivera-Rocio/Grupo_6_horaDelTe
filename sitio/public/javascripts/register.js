@@ -63,6 +63,29 @@ console.log(apellido)
                 break;
         }
     })
+    telefono.addEventListener('blur', function () {
+        console.log(telefono.value.trim());
+        switch (true) {
+            case !telefono.value.trim():
+                $('error-telefono').innerText = 'El campo teléfono es requerido';
+                telefono.classList.add('is-invalid');
+                break;
+            case !regExPhone.test(telefono.value):
+                $('error-telefono').innerText = 'Ingresa un numero valido';
+                telefono.classList.add('is-invalid');
+                break;
+            case telefono.value.trim().length < 8:
+                $('error-telefono').innerText = 'El número ingresado no contiene los caracteres requeridos';
+                telefono.classList.add('is-invalid');
+                break;
+            default:
+                telefono.classList.remove('is-invalid');
+                telefono.classList.add('is-valid');
+                $('error-telefono').innerText = "";
+                break;
+        }
+    });
+    
     pass1.addEventListener('blur', () => {
         switch (true) {
             case !pass1.value:
